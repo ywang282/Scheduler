@@ -1,0 +1,760 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Variables
+# Bootstrap
+# Layout
+# Modules
+# State
+# Theme
+--------------------------------------------------------------*/
+
+/*------------------------------------------------------------
+Variables & Mixins
+------------------------------------------------------------*/
+$color__dark-blue-illinois: #022544;
+$med-blue: #1f3762;
+$color__text-med-blue: #1d407b;
+$light-blue: #CCDFF6;
+
+$color__med-gray: #f3f2f2;
+$color__med-gray-text: #333;
+$color__background-body: #dddddd;
+
+$light-orange: #DD6C2A;
+$med-orange: #C95F17;
+$dark-orange: #8d3400;
+$hr-orange:  #ffa466;
+
+
+$color__background-main-column: #fff;
+$header-color: $color__dark-blue-illinois;
+$panel-border: 1px solid  #bbb;
+$askalibrarian-color: $color__dark-blue-illinois;
+
+@mixin border-rad(){
+  border-radius: 0;
+}
+
+
+
+/*------------------------------------------------------------
+Bootstrap
+------------------------------------------------------------*/
+// $border-color:  #83EB0E;
+// $wfw-border-width: 2px;
+// $cursor-disabled:not-allowed;
+// $gray-base:   #000000;
+// $body-bg: #000000;
+@import "bootstrap-custom";
+
+/*------------------------------------------------------------
+Bourbon, Neat
+------------------------------------------------------------*/
+
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/neat/app/assets/stylesheets/neat";
+
+.tab-link {
+  text-align: center;
+}
+@media (min-width:768px) {
+  .tab-link {
+    width: 19.55%;
+  }
+}
+@media (min-width:992px) {
+  .tab-link {
+    width: 19.65%;
+  }
+}
+
+@media (min-width:1200px) {
+  .tab-link {
+    width: 19.71%;
+  }
+}
+
+.accordion-tabs-minimal {
+  $base-spacing: 1.5em !default;
+  $tab-mode: 768px;
+
+  @include clearfix;
+  line-height: 1.5;
+  padding: 0;
+
+  li.tab-header-and-content {
+    list-style: none;
+
+    @include media($tab-mode) {
+      display: inline;
+    }
+  }
+  a.tab-link {
+    display: block;
+    text-decoration: none;
+    @include media($tab-mode) {
+      @include inline-block;
+    }
+  }
+  .tab-content-bourbon {
+    display: none;
+    padding: $base-spacing $gutter;
+    width: 100%;
+
+    @include media($tab-mode) {
+      //border-top: $tab-border;
+      float: left;
+    }
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Modules
+--------------------------------------------------------------*/
+
+/*alerts*/
+/*------------------------------------------------------------*/
+/* OVERRIDE THE BOOTSTRAP DEFAULT */
+.alert a {
+-moz-text-decoration-line: underline;
+text-decoration: underline;
+}
+
+.alert-info {
+background-color: #ccdff6;
+}
+
+
+/*ask a librarian*/
+/*------------------------------------------------------------*/
+.ask-lib-box {
+  background-color: $askalibrarian-color;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#iwonder_client {
+  min-height: 255px;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+}
+
+/*dynamic tabs*/
+/*------------------------------------------------------------*/
+
+h3.dynamictabs {
+  color:#1d407b;
+}
+
+.accordion-tabs-minimal {
+  border: $panel-border;
+}
+
+a.dynamictabs {
+  background-color: $med-orange;
+  @include border-rad();
+  color: #fff;
+}
+a:hover.dynamictabs {
+  background-color: $light-orange;
+  border: 2px solid #fff;
+}
+a.is-active.dynamictabs {
+  background-color: $dark-orange;
+}
+a.dynamictabs{
+  border: 2px solid transparent;
+  padding: 10px 11px;
+}
+.dynamic-tab-label {
+  display: inline-block;
+  font-size: 1.3em;
+  letter-spacing: .05em;
+  line-height: 104%;
+  padding-left: 8px;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  a.tab-link.dynamictabs {
+    border-top:1px solid #fff;
+  }
+  .tab-header-and-content {
+    border-bottom: $panel-border;
+  }
+} 
+@media (min-width: 768px) and (max-width: 991px) {
+  .dynamic-tab-text {
+    font-size: 10px;
+  }
+  a.dynamictabs{
+  padding: 10px 11px;
+  }
+}
+
+/*easy search*/
+/*------------------------------------------------------------*/
+$easysearch-text: #fff;
+$easysearch-color: $color__dark-blue-illinois;
+
+#easysearch-wrapper {
+  form {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  h3 {
+    color:#fff;
+    margin-top: 0;
+  }
+  li.active>a {
+    background-color:$easysearch-color;
+    color: $easysearch-text;
+  }
+  li>a {
+    background-color: $color__background-body;
+    border: 0;
+    color: $easysearch-color;
+    font-weight: 700;
+    margin-right: 5px;
+    @include border-rad();
+  }
+  p {
+    color: #b3b3b3;
+    margin-top: 5px;
+  }
+  .form-control, input {
+    margin-bottom: 10px;
+  }
+  .btn-primary {
+    color: #1F3762;
+    background-color: #efefef;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .tab-content {
+    background-color: $easysearch-color;
+    padding:10px;
+  }
+  #search-for-text {
+    display: inline-block;
+    float: left;
+    padding: 8px 15px;
+    margin-right: 2px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .tab-content a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  @media (min-width:495px) and (max-width: 767px) {
+    .easy-search-text-input.form-control,.form-control  {
+      width: 48%;
+      display: inline-block;
+      box-sizing:border-box;
+    }
+    .easy-search-text-input.form-control.es-text-no-select {
+      width:100%;
+    }
+    .easy-search-select {
+      float:right;
+    }
+    .btn {
+      float:right;
+      display:block;
+    }
+  }
+  @media (min-width:495px) {
+   .easy-search-text-input {
+    width: 300px;
+    margin-right:10px;
+    }
+  }
+  @media (max-width:494px) {
+   .btn {
+      float:right;
+    }
+   .easy-search-select {
+      float:right;
+    }
+    #easysearch-tab-list {
+      display:none;
+    }
+  }
+}
+
+/* footer */
+/*------------------------------------------------------------*/
+.footer-icon-social {
+  border: 1px solid #BCBCBC;
+  padding: .2em;
+  min-width: 25px;
+  margin-bottom: .2em;
+}
+
+.footer-block-top-space {
+  margin-top:15px;
+}
+
+.footer-info {
+  background-color: $color__med-gray;
+  padding-bottom: 20px; 
+  margin-top: 15px;
+}
+
+.copyright-footer {
+  background-color: $color__dark-blue-illinois;
+  border-top: 5px solid $color__background-body;  
+  color: $color__med-gray;
+  font-size: .7em;
+  min-height: 90px;
+  padding: 15px;
+  text-align:center
+}
+
+a.footer-link {
+  color: $color__med-gray-text;
+}
+
+h3.footerheading {
+  color: $color__text-med-blue;
+  font-size: 1em;
+  text-transform: none;
+  font-weight: bold;
+  letter-spacing: inherit;
+  text-decoration: none;
+  margin-bottom:0px;
+}
+
+.text-block {
+  display:block;
+}
+
+footer .text-block {
+  margin: 8px 0;
+  line-height: 1.3;
+}
+
+/* header */
+/*------------------------------------------------------------*/
+header {
+  background-color: $header-color;
+  border-bottom: 5px solid $color__background-body;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.dark-button {
+  color: #fff;
+  background-color: $header-color;
+}
+#mobile-header-img {
+  width: 245px;
+  height: auto;
+}
+#site-header-controls-small {
+  margin-top:10px;
+  form {
+    margin-top:15px;
+  }
+  .btn {
+    font-size:14px;
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+}
+/* @media (max-width: 767px) {
+  #library-brand-img {
+    margin: auto;
+  }
+} */
+
+/* hours */
+/*------------------------------------------------------------*/
+#library-hours-header {
+  padding: 10px;
+  background-color: $color__med-gray;
+  border-right: $panel-border;
+  border-left: $panel-border;
+  border-top: $panel-border;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-bottom: -10px;
+}
+
+.library-item-hrs {
+  border-right: none;
+  border-left: none;
+  border-top: $panel-border;
+  border-bottom: none;
+}
+
+#show-open-lib-label {
+  font-weight: 500;
+  color: #696969;
+}
+
+#libs>.list-group-item:first-child,#libs>.list-group-item:last-child {
+  @include border-rad();
+  border-right:none;
+}
+
+#library-location-panel {
+
+  border-right: $panel-border;
+  border-left: $panel-border; 
+  border-bottom: $panel-border;
+  margin-bottom: 8px;
+}
+
+#library-links-hours-loc-row {
+  margin-top: -15px;
+}
+
+.badge-green {
+  background-color: #ACBE38;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.badge-red {
+  background-color: #c02c2c;
+  text-transform: uppercase;
+}
+
+.light-area .btn-primary {
+  color: #fff;
+  background-color: #2d4f8e;
+  text-transform: uppercase;
+}
+
+.hoursMoreButton {
+  padding: 2px 10px;
+}
+
+/* for proper alignment of days of the week*/
+.hoursListClass td {
+  vertical-align: top !important;
+  text-align: left !important;
+}
+
+.hours-width {
+  display:inline-block;
+  width:4.5em;
+}
+
+.hours-highlight {
+  background-color: #fed9bf;
+  font-weight: bold;
+}
+
+.hoursListClass td:nth-child(2) {
+  //width: 6em;
+}
+
+/* for proper alignment of days of the week*/
+td[rowspan] {
+  vertical-align: top !important;
+  text-align: left !important;
+}
+
+#open-filter-button {
+  display:inline-block;
+}
+.library-status-show .library-closed {
+  display:none;
+}
+
+#libs .library-item-hrs-hide {
+  display:none;
+}
+
+div#libevents li {
+  border-bottom: 1px #bbb solid;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+#libs .list-group-item {
+  padding: 5px 15px;
+}
+
+.hoursMoreButton {
+  padding: 2px 10px;
+}
+
+.hiddenContent .hourshide {
+  display:none;
+}
+
+.showContent .hourshide {
+  display:block;
+}
+
+.hiddenContent .hoursMoreButtonExpand {
+  display:inline;
+}
+
+.showContent .hoursMoreButtonExpand {
+  display:none;
+}
+
+.hiddenContent .hoursMoreButtonContract {
+  display:none;
+}
+
+.showContent .hoursMoreButtonContract {
+  display:inline;
+}
+
+/*Library Technology, Dynamic Tabs*/
+/*------------------------------------------------------------*/
+#uglTech ul, #mpalTech ul {
+  list-style-type: disc;
+  margin-top: 10px;
+  .badge {
+    margin-left: 5px;
+  }
+  li {
+  border-bottom: $panel-border;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  }
+}
+#tech {
+  .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  border: $panel-border;
+  border-bottom-color: transparent;
+  }
+  .nav-tabs {
+  border-bottom: $panel-border;
+  }
+}
+
+/*mobile specific*/
+/*------------------------------------------------------------*/
+@media (max-width: 767px) {
+  .mobile-col-negative-padding {
+    padding-left:0;
+    padding-right:0;
+  }
+  #dynamictabs .tab-content-bourbon {
+    padding: 0 0 0 0;
+  }
+}
+
+/*navbar*/
+/*------------------------------------------------------------*/
+nav {
+}
+#site-nav {
+  border: 0;
+  background-color: $color__med-gray;
+  border-radius: 0;
+
+  li a {
+    color: $color__med-gray-text;
+  }
+
+}
+.navbar {
+  @include border-rad();
+}
+nav .navbar-nav.nav {
+  width:100%;
+}
+/*off-canvas navbar*/
+/*http://www.smashingmagazine.com/2013/01/15/off-canvas-navigation-for-responsive-website/ */
+@media (max-width:767px) {
+  #site-nav {
+    right: -70%;
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    margin-right:0;
+    margin-left:0;
+    padding-left:15px;
+  }
+  header {
+    margin-bottom: 15px;
+  }
+  #inner-wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  #inner-wrap.off-canvas {
+    right:70%;
+    right:0;
+    transform: translateX(-70%);
+  }
+
+  #inner-wrap {
+    transition: transform 500ms ease;
+  }
+
+  .mobile-overlay.off-canvas {
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  #mobile-canvas-button {
+    color: $color__background-main-column;
+    background-color: transparent;
+  }
+
+  #outer-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+@media (max-width:550px) {
+  #mobile-canvas-button>i {
+    font-size:2em;    
+  }
+}
+
+@media (min-width:551px) {
+  #mobile-canvas-button>i {
+    font-size:3em;    
+  }
+}
+
+/*News & Events, Dynamic Tabs*/
+/*------------------------------------------------------------*/
+#news {
+  ul {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+  .panel {
+    border: $panel-border;
+  }
+}
+#library_featured_news {
+  width: 100%;
+}
+#news_feat_cont {
+  padding-left: 0px;
+}
+
+/*resource-dropdowns*/
+/*------------------------------------------------------------*/
+#resource-dropdowns {
+  background-color: $light-blue;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  a {
+    color: $color__dark-blue-illinois;
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .resource-dd-wrap {
+    display: block;
+  }
+  .resource-dd-line {
+    line-height: 300%;
+  }
+}
+
+/*Resource Guides, Dynamic Tabs*/
+/*------------------------------------------------------------*/
+#help{
+  .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  border: $panel-border;
+  border-bottom-color: transparent;
+  }
+  .nav-tabs {
+  border-bottom: $panel-border;
+  }
+  .panel-default {
+  border: $panel-border;
+  }
+  .panel-heading {
+    border-bottom: $panel-border;
+  }
+  .libguides ul {
+    margin-top: 10px;
+  }
+}
+
+#title18826504, #title18828737, #title18829900, #title18829943{
+  display: none;
+}
+
+.tab-content.libguides {
+    border-left: $panel-border;
+    border-right: $panel-border;
+    border-bottom: $panel-border;
+}
+
+.nav-tabs.libguides {
+  margin-bottom: 0px;
+  display: block !important;
+}
+
+#subject, #librarian, #featured, #popular, #recent, #all, #uglTech, #mpalTech, #libsearchpanel {
+    height: 300px;
+    overflow-y: scroll;
+    
+}
+
+#example_info {
+  display: none;
+}
+
+#example_filter {
+  float: left;
+}
+
+#libsearchbox{
+    border-top: 1px solid #bbb;
+    border-left: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+}
+
+/*--------------------------------------------------------------
+# State
+--------------------------------------------------------------*/
+.display-block {
+  display:block;
+}
+/*--------------------------------------------------------------
+# Theme
+--------------------------------------------------------------*/
+body {
+  background-color: $color__background-body;
+}
+.container {
+  background-color: $color__background-main-column;
+  box-shadow: 0px 0px 10px 2px  #858585;
+}
+
+h3 {
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.hr-orange {
+  border: 3px solid $hr-orange;
+}
+.text-block-display {
+  display:block;
+}
