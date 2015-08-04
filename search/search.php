@@ -1,9 +1,7 @@
 <div class="hero-unit">
-	<div class="container" >
-		<h2> Website Search Results </h2>
-	</div>
+	<h2> Website Search Results </h2>
 </div>
-<div class="container clearfix" id="main-content">
+<div id="main-content">
 <script>
   (function() {
     var cx = '017347579179282122800:9tzlyw-ydlq';
