@@ -1,6 +1,7 @@
 <?php
 //To enable a manual alert, copy the commented out HTML and paste it and the bottom of this page, below the closing php end tag
-//and update ITEM TITLE GOES HERE and ITEM CONTENT GOES HERE with the relevant information
+//and update ITEM TITLE GOES HERE and ITEM CONTENT GOES HERE with the relevant information.  ITEM CONTENT is optional, and if not needed
+//<span class="alert-item-desc">ITEM CONTENT GOES HERE</span> can be removed entirely.
 /*
 <div id="alert-div">
 	<div class="alert alert-danger" role="alert">
