@@ -275,10 +275,10 @@
     	<div class="col-md-3 light-area hidden-xs" id="ask-lib-col">
     		<div id="ask-lib-collapse">
     			<div class="ask-lib-box">
-            <div id="chatbox" class="span6">
-              <iframe title="Ask A Librarian" id="iwonder_client" height="440px" width="100%" frameborder="0" src=""></iframe>
-              <script type="text/javascript">var iwonder_css="http://chat.library.illinois.edu/widgeta/css/homepage.css"</script>
-              <script src="http://chat.library.illinois.edu/widgeta/scripts/iwonder_clienta.js" type="text/javascript"></script>
+					<div id="chatbox" class="span6">
+					  <iframe title="Ask A Librarian" id="iwonder_client" height="440px" width="100%" frameborder="0" src=""></iframe>
+					  <script type="text/javascript">var iwonder_css="https://www-s2.library.illinois.edu/css/iwonder/homepage.css"</script>
+					  <script src="http://chat.library.illinois.edu/widget/scripts/iwonder_client.js" type="text/javascript"></script>
     				</div>
     			</div>
     		</div>
