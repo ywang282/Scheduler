@@ -7,12 +7,21 @@
       <div class="mobile-overlay" role="button" aria-label="hide mobile navigation"></div>
       <div class="container">
         <header class="row" role="banner" aria-label="University of Illinois Library Banner">
-          <div class="col-sm-6 col-xs-10">
+          <div class="col-sm-6 col-xs-10 header-banner-image">
             <h1 class="sr-only">University Library, University of Illinois at Urbana-Champaign</h1>
-            <a href="http://library.illinois.edu">
-              <img alt="University of Illinois libary" class="img-responsive hidden-xs" src="./assets/university_libraries_wordmark_with_imark_reverse.png">
-              <img alt="University of Illinois libary" id="mobile-header-img" class="img-responsive visible-xs" src="./assets/university_libraries_wordmark_with_imark_short.png">
-            </a>  
+            <div class="table-row">
+              <div class="table-cell banner-image-imark-div">
+                <a href="http://illinois.edu"><img class="img-responsive col-xs-12 banner-image-imark" alt="University of Illinois I-Mark" src="./assets/imark.png"></a>
+              </div>
+              <div class="table-cell banner-table-spacer">
+              </div>
+              <div class="table-cell banner-image-library-div hidden-xs">
+                <a href="http://www.library.illinois.edu"><img class="img-responsive col-xs-12 banner-image-library" alt="University Library, University of Illinois at Urbana-Champaign" src="./assets/university_libraries_wordmark.png" ></a>
+              </div>
+              <div class="table-cell banner-image-library-div visible-xs">
+                <a href="http://www.library.illinois.edu"><img class="img-responsive col-xs-12 banner-image-library banner-mobile-img" alt="Library" src="./assets/library_wordmark.png" ></a>
+              </div>
+            </div>
           </div>
           <div class="col-xs-2 visible-xs">
             <a id="mobile-canvas-button" class="pull-right" href="javascript:void(0)">

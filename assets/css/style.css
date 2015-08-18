@@ -2958,6 +2958,12 @@ html {
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
+.table-row {
+  display: table-row; }
+
+.table-cell {
+  display: table-cell; }
+
 /*--------------------------------------------------------------
 # Modules
 --------------------------------------------------------------*/
@@ -3146,16 +3152,33 @@ header {
   padding-top: 15px;
   padding-bottom: 15px; }
 
+.banner-table-spacer {
+  width: 5%; }
+
+@media (max-width: 767px) {
+  .banner-image-imark {
+    width: 26px;
+    height: auto; }
+  .banner-mobile-img {
+    width: 207px;
+    height: auto; }
+  .banner-table-spacer {
+    width: 8%; } }
+
+.banner-image-library, .banner-image-imark {
+  padding: 0 0;
+  transition: all .15s ease-in-out; }
+
+.banner-image-library:hover, .banner-image-imark:hover {
+  opacity: .7;
+  transition: all .15s ease-in-out; }
+
 .dark-button {
   color: #fff;
   background-color: #022544; }
 
-#mobile-header-img {
-  width: 245px;
-  height: auto; }
-
 #site-header-controls-small {
-  margin-top: 10px; }
+  margin-top: 15px; }
   #site-header-controls-small form {
     margin-top: 15px; }
   #site-header-controls-small .btn {
@@ -3163,11 +3186,6 @@ header {
   #site-header-controls-small .form-group {
     margin-bottom: 0; }
 
-/* @media (max-width: 767px) {
-  #library-brand-img {
-    margin: auto;
-  }
-} */
 /* hours */
 /*------------------------------------------------------------*/
 #library-hours-header {
@@ -3294,7 +3312,7 @@ div#libevents li {
 #tech .nav-tabs {
   border-bottom: 1px solid #bbb; }
 
-/*mobile specific*/
+/*mobile theme specific*/
 /*------------------------------------------------------------*/
 @media (max-width: 767px) {
   .mobile-col-negative-padding {
