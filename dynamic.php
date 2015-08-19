@@ -73,39 +73,46 @@
                       <div class="col-sm-6">
                         <h4>Resource Guides:</h4>
                         <ul id="libguidelist" class="nav nav-tabs libguides" role="tablist">
+
                           <li class="active">
-                            <a href="#all" role="tab" data-toggle="tab">All</a>
+                            <a href="#subject" role="tab" data-toggle="tab">By Subject</a>
                           </li>
                           <li>
-                            <a href="#popular" role="tab" data-toggle="tab">Popular</a>
+                            <a href="#libguide-type" role="tab" data-toggle="tab">By Type</a>
                           </li>
                           <li>
-                            <a href="#subject" role="tab" data-toggle="tab">Subject</a>
-                          </li>
-                          <li>
-                            <a href="#librarian" role="tab" data-toggle="tab">Librarians</a>
+                            <a href="#librarian" role="tab" data-toggle="tab">By Librarian or Library</a>
                           </li>
                         </ul>               
                         <div class="tab-content libguides"><!-- Resource Guides Tab panes -->
-                          <div class="tab-pane" id="all">
-                            <div id="api_box_iid28_bid18829943"></div>
-                            <script defer type="text/javascript" src="http://api.libguides.com/api_box.php?iid=28&target=_self&bid=18829943&context=object&format=js&css=0"></script>
+                          <div class="tab-pane active padding-all" id="subject">
+                            <script>
+                            springshare_widget_config_1439931085461 = { path: 'subjects' };
+                            </script>
+                            <div id="s-lg-widget-1439931085461"></div>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://lgapi.libapps.com/widgets.php?site_id=31&widget_type=4&load_type=2&widget_embed_type=1&output_format=1&list_format=1&drop_text=Select+a+Subject...&sort_type=0&widget_title=Subject+List&widget_height=250&widget_width=100%25&widget_link_color=2954d1&guide_published=2&show_guides=3&window_target=1&config_id=1439931085461";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","s-lg-widget-script-1439931085461");</script>
                           </div>
-                          <div class="tab-pane" id="popular">
-                            <div id="api_box_iid28_bid18828737"></div>
-                            <script defer type="text/javascript" src="http://api.libguides.com/api_box.php?iid=28&target=_self&bid=18828737&context=object&format=js&css=0"></script>
-                          </div>
-                          <div class="tab-pane active" id="subject">
+
+                          <div class="tab-pane padding-all" id="libguide-type">
                             <ul>
-                            <div id="api_subjects_iid28"></div>
-                            <script defer type="text/javascript" src="http://api.libguides.com/api_subjects.php?iid=28&target=_self&break=li&incempty=false&context=object&format=js"> </script>
+                              <li><a href="http://illinois.beta.libguides.com/srch.php?guide_type=course">Course Guides</a>
+                                <p>Guides specifically designed for your class.</p>
+                              </li>
+                              <li><a href="http://illinois.beta.libguides.com/srch.php?guide_type=general">Subject/Topic Guides</a>
+                                <p>Guides that help you get started on a particular research subject or topic. </p>
+                              </li>
+                              <li><a href="http://illinois.beta.libguides.com/srch.php?guide_type=subject">How To Guides</a>
+                                <p>Guides on how to use library tools and find specific kinds of materials.</p>
+                              </li>
                             </ul>
-                          </div>
-                          <div class="tab-pane" id="librarian">
-                            <ul>
-                              <div id="api_users_iid28"></div>
-                              <script defer type="text/javascript" src="http://api.libguides.com/api_users.php?iid=28&target=_self&break=li&incempty=false&context=object&format=js"> </script>
-                            </ul>
+                          </div>                          
+
+                          <div class="tab-pane padding-all" id="librarian">
+                            <script>
+                            springshare_widget_config_1439934280789 = { path: 'accounts' };
+                            </script>
+                            <div id="s-lg-widget-1439934280789"></div>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://lgapi.libapps.com/widgets.php?site_id=31&widget_type=5&load_type=2&widget_embed_type=1&output_format=1&list_format=1&drop_text=Select+a+User...&sort_type=0&widget_title=User+List&widget_height=250&widget_width=100%25&widget_link_color=2954d1&guide_published=2&window_target=1&config_id=1439934280789";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","s-lg-widget-script-1439934280789");</script>
                           </div>
                         </div>
                       </div><!-- end Resource Guides column -->
@@ -117,12 +124,23 @@
                               <div class="form-group">
                                 <div class="input-group">
                                   <label for="resource-guide-search-button" class="sr-only">Search Resource Guides</label>
-                                  <input id="resource-guide-search-button" type="text" class="form-control input-sm" name="search" maxlength="250" placeholder="Search Guides" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Guides'" />
-                                  <input name="type" value="guides" type="hidden" />
-                                  <input name="iid" value="28" type="hidden" />
-                                  <input name="sortby" value="relevance" type="hidden" />
-                                  <input name="break" value="li" type="hidden" />
-                                  <input name="target" value="_self" type="hidden" />
+                                  <input id="resource-guide-search-button" type="text" class="form-control input-sm" name="search_terms" maxlength="250" placeholder="Search Guides" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Guides'" />
+                                  <input name="config_id" value="1440017390788" type="hidden"  />
+                                  <input name="drop_text" value="Select++Guide..." type="hidden"  />
+                                  <input name="enable_description" value="0" type="hidden"  />
+                                  <input name="enable_group_search_limit" value="0" type="hidden"  />
+                                  <input name="enable_more_results" value="1" type="hidden"  />
+                                  <input name="enable_subject_search_limit" value="0" type="hidden"  />
+                                  <input name="list_format" value="1" type="hidden"  />
+                                  <input name="load_type" value="2" type="hidden"  />
+                                  <input name="num_results" value="10" type="hidden"  />
+                                  <input name="output_format" value="1" type="hidden"  />
+                                  <input name="search_match" value="2" type="hidden"  />
+                                  <input name="site_id" value="31" type="hidden"  />
+                                  <input name="sort_by" value="relevance" type="hidden"  />
+                                  <input name="widget_embed_type" value="2" type="hidden"  />
+                                  <input name="widget_type" value="1" type="hidden"  />
+                                  <input name="window_target" value="2" type="hidden"  />
                                   <span class="input-group-btn">
                                    <button id="guidesearch" type="submit" class="btn btn-primary btn-sm">Search</button>
                                   </span> 
@@ -235,7 +253,6 @@
                         </div>
                       </div>
                       </br>
-                      <p><a target="_blank" href="http://www.library.illinois.edu/ugl/about/LoanableTechnology/campusequipment.html">Other campus units with loanable technology</a></p>
                     </div><!-- end Loanable Technology column -->                 
                   </div><!-- end fluid row -->
                 </div><!-- should be end container-fluid -->

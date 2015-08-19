@@ -1,7 +1,7 @@
 <?php
 header('Content-type: text/html');
 
-$libguidesURL = "http://api.libguides.com/api_search.php";
+$libguidesURL = "http://lgapi.libapps.com/widgets.php";
 $query_string = $_SERVER["QUERY_STRING"];
 $fixed_url = $libguidesURL . "?" . $query_string;
                 
