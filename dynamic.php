@@ -95,13 +95,13 @@
 
                           <div class="tab-pane padding-all" id="libguide-type">
                             <ul>
-                              <li><a href="http://illinois.beta.libguides.com/srch.php?guide_type=course">Course Guides</a>
+                              <li><a href="http://illinois.libguides.com/guides/course">Course Guides</a>
                                 <p>Guides specifically designed for your class.</p>
                               </li>
-                              <li><a href="http://illinois.beta.libguides.com/srch.php?guide_type=general">Subject/Topic Guides</a>
+                              <li><a href="http://illinois.libguides.com/guides/subject-topic">Subject/Topic Guides</a>
                                 <p>Guides that help you get started on a particular research subject or topic. </p>
                               </li>
-                              <li><a href="http://illinois.beta.libguides.com/srch.php?guide_type=subject">How To Guides</a>
+                              <li><a href="http://illinois.libguides.com/guides/howto">How To Guides</a>
                                 <p>Guides on how to use library tools and find specific kinds of materials.</p>
                               </li>
                             </ul>
@@ -118,7 +118,7 @@
                       </div><!-- end Resource Guides column -->
                       <div class="col-sm-6"><!--begin Search Resource Guides column -->
                         <h4>Search Resource Guides:</h4>
-                        <div class="panel panel-default">
+                        <div class="panel panel-default libguides">
                           <div class="panel-heading" role="search"  aria-label="Search resource guides">
                             <form class="form-inline" id="libSearchForm">
                               <div class="form-group">
