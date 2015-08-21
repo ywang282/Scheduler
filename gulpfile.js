@@ -22,6 +22,7 @@ script_array = [
   './assets/js/orange_bar_scroll.js', 
   './assets/js/jquery.fracs-0.15.0.min.js',
   './assets/js/easy_search_text.js',
+  './assets/js/easy-search-form-select.js',
   './assets/js/libguide-search.js',
   './assets/js/news-events.js',
   './assets/js/loan-tech.js',
