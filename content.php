@@ -51,8 +51,8 @@
                           <option value="Socsci">Social Sciences</option>                                
                         </select>
                         <input type="hidden" alt="submit" value="keyword" name="typeofsearch" class="es-bento">
-                        <input type="hidden" alt="submit" value="direct" name="s2" class="es-classic" disabled>
-                        <input type="hidden" alt="submit" value="gateway" name="project" class="es-classic" disabled>
+                        <input type="hidden" alt="submit" value="direct" name="s2" >
+                        <input type="hidden" alt="submit" value="gateway" name="project" >
                         <input type="hidden" alt="submit" value="opac" name="selection" class="es-classic" disabled>
                         <input type="hidden" alt="submit" value="web" name="selection" class="es-classic" disabled>
                         <label class="sr-only" for="easy-search-all-full">Search</label>
