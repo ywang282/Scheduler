@@ -713,6 +713,7 @@ nav .navbar-nav.nav {
   }
   .libguides ul {
     margin-top: 10px;
+    list-style-type: disc;
   }
 }
 
@@ -731,7 +732,7 @@ nav .navbar-nav.nav {
   display: block !important;
 }
 
-#subject, #librarian, #featured, #popular, #recent, #all, #uglTech, #mpalTech, #libsearchpanel {
+#subject, #librarian, #featured, #recent, #uglTech, #mpalTech, #libsearchpanel, #libguide-type {
     height: 300px;
     overflow-y: scroll;
     
@@ -779,4 +780,8 @@ h3 {
 }
 .text-block-display {
   display:block;
+}
+
+.padding-all {
+  padding:15px;
 }

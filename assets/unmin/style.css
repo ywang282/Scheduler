@@ -3830,7 +3830,8 @@ nav .navbar-nav.nav {
 #help .panel-heading {
   border-bottom: 1px solid #bbb; }
 #help .libguides ul {
-  margin-top: 10px; }
+  margin-top: 10px;
+  list-style-type: disc; }
 
 #title18826504, #title18828737, #title18829900, #title18829943 {
   display: none; }
@@ -3844,7 +3845,7 @@ nav .navbar-nav.nav {
   margin-bottom: 0px;
   display: block !important; }
 
-#subject, #librarian, #featured, #popular, #recent, #all, #uglTech, #mpalTech, #libsearchpanel {
+#subject, #librarian, #featured, #recent, #uglTech, #mpalTech, #libsearchpanel, #libguide-type {
   height: 300px;
   overflow-y: scroll; }
 
@@ -3886,6 +3887,11 @@ h3 {
 .text-block-display {
   display: block; }
 
+<<<<<<< HEAD
+=======
+.padding-all {
+  padding: 15px; }
+>>>>>>> remotes/origin/master
 /*! jQuery UI - v1.11.2 - 2014-11-03
 * http://jqueryui.com
 * Includes: core.css, datepicker.css, theme.css
