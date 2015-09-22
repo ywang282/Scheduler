@@ -237,7 +237,7 @@
                   <li role="presentation" class="divider"></li>
                   <li role="presentation" class="dropdown-header">Reserves Help</li>
                   <li><a href="http://www.library.illinois.edu/ugl/howdoi/reserves.html">Searching Reserves</a></li>
-                  <li><a href="http://uiuc.libguides.com/reserves">Guide to Electronic Reserves</a></li>
+                  <li><a href="http://guides.library.illinois.edu/reserves">Guide to Electronic Reserves</a></li>
                   <li><a href="http://www.library.illinois.edu/cmservices/reserve.html">Placing Physical Materials on Reserve</a></li>
                 </ul>
               </li>
