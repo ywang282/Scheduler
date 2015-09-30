@@ -34,7 +34,7 @@
           <div class="col-md-6">
             <span class="text-block"><a class="footer-link" href="http://www.library.illinois.edu/learn/users/affiliates.html">Affiliated Organizations</a></span>
             <span class="text-block"><a class="footer-link" href="http://www.library.illinois.edu/learn/users/usersdisabilities.html">Users with Disabilities</a></span>
-            <span class="text-block"><a class="footer-link" href="http://www.library.illinois.edu/distance/">Distance Learners</a></span>
+            <span class="text-block"><a class="footer-link" href="http://guides.library.illinois.edu/distance_learners/">Distance Learners</a></span>
             <span class="text-block"><a class="footer-link" href="http://www.library.illinois.edu/staff/">Library Staff</a></span>
           </div>
         </div>
