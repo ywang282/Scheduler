@@ -3546,7 +3546,7 @@ footer .text-block {
 
 /* header */
 /*------------------------------------------------------------*/
-header {
+.lib-shared-header {
   background-color: #022544;
   border-bottom: 5px solid #dddddd;
   padding-top: 15px;
