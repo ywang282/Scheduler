@@ -28,14 +28,13 @@
                   </div>
                   <div class="row">
                     <form class="form-inline" role="form" method="get"
-                        action="http://search.grainger.illinois.edu/searchaid2/saresultsug.asp"
+                        action="http://search.grainger.uiuc.edu/discovery/splitsearch.asp"
                         id="search_everything">
                         <label for="keyword" class="sr-only">Enter search terms</label>
                         <input type="text" class="form-control easy-search-text-input" id="keyword" 
-                            name="keyword" maxlength="255" placeholder="Enter search terms" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter search terms'"  aria-required="true"/>
-                        <input type="hidden" alt="submit" value="direct" name="s2">
+                            name="searcharg" maxlength="255" placeholder="Enter search terms" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter search terms'"  aria-required="true"/>
                         <label for="dropdown" class="sr-only">Subject Selection</label>
-                        <select id="dropdown" class="form-control easy-search-select" name="selection" aria-required="true">
+                        <select id="dropdown" class="form-control easy-search-select" name="selection" aria-required="true" >
                           <option value="gen">Multi-Subject Resources</option>
                           <option value="news">Current News Sources</option>
                           <option value="ArHu">Arts &amp; Humanities</option>
@@ -51,9 +50,11 @@
                           <option value="Physsci">Physical Sciences/Math</option>
                           <option value="Socsci">Social Sciences</option>                                
                         </select>
-                        <input type="hidden" alt="submit" value="gateway" name="project">
-                        <input type="hidden" alt="submit" value="opac" name="selection">
-                        <input type="hidden" alt="submit" value="web" name="selection">
+                        <input type="hidden" alt="submit" value="keyword" name="typeofsearch" class="es-bento">
+                        <input type="hidden" alt="submit" value="direct" name="s2" >
+                        <input type="hidden" alt="submit" value="gateway" name="project" >
+                        <input type="hidden" alt="submit" value="opac" name="selection" class="es-classic" disabled>
+                        <input type="hidden" alt="submit" value="web" name="selection" class="es-classic" disabled>
                         <label class="sr-only" for="easy-search-all-full">Search</label>
                         <input class="btn btn-primary" type="submit" alt="submit" value="Search" name="searchbutton">
 

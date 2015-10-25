@@ -44,6 +44,7 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
             <ul class="dropdown-menu">
+              <li><a href="http://www.library.illinois.edu/afx/unit.htm">African American Research Center</a></li>
     					<li><a href="http://www.library.illinois.edu/bix/">Biology Virtual Library</a></li>
     					<li><a href="http://www.library.illinois.edu/bis/">Business Information Services</a></li>
     					<li><a href="http://www.library.illinois.edu/gex/">Geology Virtual Library</a></li>
