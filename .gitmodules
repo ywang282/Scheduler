@@ -1,0 +1,3 @@
+[submodule "shared_content"]
+	path = shared_content
+	url = https://weathrs2@code.library.illinois.edu/scm/gat/shared_content.git
