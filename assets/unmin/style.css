@@ -3528,14 +3528,16 @@ a.dynamictabs {
 a.footer-link {
   color: #333; }
 
-h3.footerheading {
+.footerheading {
   color: #1d407b;
+  display: block;
   font-size: 1em;
   text-transform: none;
   font-weight: bold;
   letter-spacing: inherit;
   text-decoration: none;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  margin-top: 20px; }
 
 .text-block {
   display: block; }

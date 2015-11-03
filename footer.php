@@ -1,5 +1,6 @@
   <footer role="contentinfo"> 
-    <div class="row footer-info">
+    <?php require_once( 'shared_footer.php' ); ?>
+<!--     <div class="row footer-info">
       <h2 class="sr-only">library Website footer information</h2>
       <div class="col-md-3 col-sm-3 col-xs-12" role="region" aria-label="contact us">
         <div class="dropdown" aria-labelledby="address">
@@ -57,7 +58,7 @@
           <p><a href="http://illinois.edu" aria-label="University of Illinois website link"><img src="./assets/illinois_wordmark_footer.png" alt="University of Illinois Logo" /></a></p>
               <p>© 2014 University of Illinois Board of Trustees</p>
         </div>
-      </div>
+      </div> -->
   </footer>
 </div><!--closing for container-->
 </div>
