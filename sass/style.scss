@@ -350,9 +350,15 @@ footer .text-block {
 
 /* header */
 /*------------------------------------------------------------*/
-.lib-shared-header {
-  background-color: $header-color;
-  border-bottom: 5px solid $color__background-body;
+
+$header-common-background: $header-color;
+$header-common-border: $color__background-body;
+
+@import '../shared_content/header-style';
+
+/* .lib-shared-header {
+  background-color: $header-common-background;
+  border-bottom: 5px solid $header-common-border;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -382,7 +388,7 @@ footer .text-block {
 }
 .dark-button {
   color: #fff;
-  background-color: $header-color;
+  background-color: $header-common-background;
 }
 
 #site-header-controls-small {
@@ -396,7 +402,7 @@ footer .text-block {
   .form-group {
     margin-bottom: 0;
   }
-}
+} */
 
 /* hours */
 /*------------------------------------------------------------*/

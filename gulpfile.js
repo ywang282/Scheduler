@@ -8,6 +8,23 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var preprocess = require('gulp-preprocess');
+
+gulp.task('html', function() {
+  gulp.src('./shared_content/shared_header.php')
+    .pipe(preprocess( 
+      {context: 
+        { 
+          ENV_VAR: 'gateway', 
+          SEARCH_ACTION: 'search.php',
+          I_MARK_SRC: './assets/imark.png',
+          UNI_LIB_MARK_SRC: './assets/university_libraries_wordmark.png',
+          LIB_MARK_SRC: './assets/library_wordmark.png',
+          DEBUG: true
+        }
+      })) //To set environment variables in-line 
+    .pipe(gulp.dest('.'))
+});
 
 script_array = [
   './assets/js/utilities.js',

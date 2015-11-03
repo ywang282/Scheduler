@@ -3186,6 +3186,53 @@ footer .text-block {
   #site-header-controls-small .form-group {
     margin-bottom: 0; }
 
+/* .lib-shared-header {
+  background-color: $header-common-background;
+  border-bottom: 5px solid $header-common-border;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+ .banner-table-spacer {
+  width:5%;
+ }
+@media (max-width: 767px) {
+  .banner-image-imark {
+    width: 26px;
+    height:auto;
+  }
+  .banner-mobile-img {
+    width:207px;
+    height:auto;
+  }
+  .banner-table-spacer {
+    width:8%;
+ }
+}
+.banner-image-library,.banner-image-imark {
+  padding:0 0;
+  transition: all .15s ease-in-out;
+} 
+.banner-image-library:hover,.banner-image-imark:hover {
+  opacity:.7;
+  transition: all .15s ease-in-out;
+}
+.dark-button {
+  color: #fff;
+  background-color: $header-common-background;
+}
+
+#site-header-controls-small {
+  margin-top:15px;
+  form {
+    margin-top:15px;
+  }
+  .btn {
+    font-size:14px;
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+} */
 /* hours */
 /*------------------------------------------------------------*/
 #library-hours-header {
