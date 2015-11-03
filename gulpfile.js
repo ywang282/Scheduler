@@ -10,16 +10,28 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var preprocess = require('gulp-preprocess');
 
-gulp.task('html', function() {
+gulp.task('header', function() {
   gulp.src('./shared_content/shared_header.php')
     .pipe(preprocess( 
       {context: 
         { 
           ENV_VAR: 'gateway', 
           SEARCH_ACTION: 'search.php',
-          I_MARK_SRC: './assets/imark.png',
-          UNI_LIB_MARK_SRC: './assets/university_libraries_wordmark.png',
-          LIB_MARK_SRC: './assets/library_wordmark.png',
+          IMAGE_DIR: './assets/',
+          DEBUG: true
+        }
+      })) //To set environment variables in-line 
+    .pipe(gulp.dest('.'))
+});
+
+gulp.task('footer', function() {
+  gulp.src('./shared_content/shared_footer.php')
+    .pipe(preprocess( 
+      {context: 
+        { 
+          ENV_VAR: 'gateway', 
+          IMAGE_DIR: './assets/',
+          SEARCH_ACTION: 'search.php',
           DEBUG: true
         }
       })) //To set environment variables in-line 
