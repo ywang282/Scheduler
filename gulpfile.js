@@ -120,39 +120,45 @@ gulp.task('scripts', function() {
   .pipe( livereload() );
 });
 
-gulp.task('build', ['sass-css-build','scripts-build','scripts-unmin'], function() {});
+//gulp.task('build', ['sass-css-build','scripts-build','scripts-unmin'], function() {});
+gulp.task('build', ['css-concat-unmin','scripts-build','scripts-unmin'], function() {});
 
-gulp.task('sass-css-build', function () {
-  gulp.src('./sass/*.scss')
-  .pipe(plumber( { errorHandler: onError }))
-  //.pipe(sourcemaps.init())
-  .pipe(sass())
-  //.pipe(sourcemaps.write())
-  .pipe(gulp.dest('./assets/css/'));
-
-  gulp.src( css_array )
-  .pipe(concat('style.css'))
-  .pipe(autoprefixer())
-  //.pipe(minifyCSS({advanced:false,keepSpecialComments:0}))
-  .pipe(minifyCSS())
-  .pipe(gulp.dest('./assets/built/'));
-
-  gulp.src( css_array )
-  .pipe(concat('style.css'))
-  .pipe(autoprefixer())
-  //.pipe(minifyCSS())
-  .pipe(gulp.dest('./assets/unmin/'));
-});
+gulp.task( 'css-sass-build', function() {
+  var stream = gulp.src('./sass/*.scss')
+    .pipe(plumber( { errorHandler: onError }))
+    //.pipe(sourcemaps.init())
+    .pipe(sass())
+    //.pipe(sourcemaps.write())
+    .pipe(gulp.dest('./assets/css/'));
+  return stream; 
+})
+gulp.task( 'css-concat-built', ['css-sass-build'], function() {
+  var stream = gulp.src( css_array )
+    .pipe(concat('style.css'))
+    .pipe(autoprefixer())
+    //.pipe(minifyCSS({advanced:false,keepSpecialComments:0}))
+    .pipe(minifyCSS())
+    .pipe(gulp.dest('./assets/built/'));
+  return stream; 
+})
+gulp.task( 'css-concat-unmin', ['css-concat-built'], function() {
+  var stream = gulp.src( css_array )
+    .pipe(concat('style.css'))
+    .pipe(autoprefixer())
+    //.pipe(minifyCSS())
+    .pipe(gulp.dest('./assets/unmin/'));
+  return stream; 
+})
 
 gulp.task('scripts-build', function() {
-  return gulp.src( script_array )
+  gulp.src( script_array )
   .pipe(concat('scripts.js'))
   .pipe(uglify())
   .pipe(gulp.dest('./assets/built/'));
 });
 
 gulp.task('scripts-unmin', function() {
-  return gulp.src( script_array )
+  gulp.src( script_array )
   .pipe(concat('scripts.js'))
   //.pipe(uglify())
   .pipe(gulp.dest('./assets/unmin/'));
