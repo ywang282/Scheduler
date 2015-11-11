@@ -10,6 +10,42 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var preprocess = require('gulp-preprocess');
 
+/////////////////////////////////
+//libguides
+
+gulp.task('libguide', function() {
+  gulp.src('./shared_content/shared_header.php')
+  .pipe(preprocess( 
+    {context: 
+      { 
+        ENV_VAR: 'libguide', 
+        IMAGE_DIR: 'http://www.library.illinois.edu/assets/',
+        DEBUG: true
+      }
+    }))  
+  .pipe(gulp.dest('./libguide/'));
+
+  gulp.src('./shared_content/shared_footer.php')
+  .pipe(preprocess( 
+    {context: 
+      { 
+        ENV_VAR: 'libguide', 
+        IMAGE_DIR: 'http://www.library.illinois.edu/assets/',
+        DEBUG: true
+      }
+  })) 
+  .pipe(gulp.dest('./libguide/'));
+
+  gulp.src( './shared_content/libguide-style.scss')
+  .pipe(plumber( { errorHandler: onError }))
+  .pipe(sass())
+  .pipe(autoprefixer())
+  .pipe(gulp.dest('./libguide/'))
+});
+
+
+////////////////////////////////
+
 gulp.task('header', function() {
   gulp.src('./shared_content/shared_header.php')
     .pipe(preprocess( 
@@ -20,8 +56,8 @@ gulp.task('header', function() {
           IMAGE_DIR: './assets/',
           DEBUG: true
         }
-      })) //To set environment variables in-line 
-    .pipe(gulp.dest('.'))
+      })) 
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('footer', function() {
@@ -31,11 +67,10 @@ gulp.task('footer', function() {
         { 
           ENV_VAR: 'gateway', 
           IMAGE_DIR: './assets/',
-          SEARCH_ACTION: 'search.php',
           DEBUG: true
         }
-      })) //To set environment variables in-line 
-    .pipe(gulp.dest('.'))
+      })) 
+    .pipe(gulp.dest('.'));
 });
 
 script_array = [
