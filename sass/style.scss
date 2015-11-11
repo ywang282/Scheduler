@@ -12,40 +12,13 @@
 /*------------------------------------------------------------
 Variables & Mixins
 ------------------------------------------------------------*/
-$color__dark-blue-illinois: #022544;
-$med-blue: #1f3762;
-$color__text-med-blue: #1d407b;
-$light-blue: #CCDFF6;
 
-$color__med-gray: #f3f2f2;
-$color__med-gray-text: #333;
-$color__background-body: #dddddd;
-
-$light-orange: #DD6C2A;
-$med-orange: #C95F17;
-$dark-orange: #8d3400;
-$hr-orange:  #ffa466;
-
-
-$color__background-main-column: #fff;
-$header-color: $color__dark-blue-illinois;
-$panel-border: 1px solid  #bbb;
-$askalibrarian-color: $color__dark-blue-illinois;
-
-@mixin border-rad(){
-  border-radius: 0;
-}
-
-
+@import '../shared_content/variables';
 
 /*------------------------------------------------------------
 Bootstrap
 ------------------------------------------------------------*/
-// $border-color:  #83EB0E;
-// $wfw-border-width: 2px;
-// $cursor-disabled:not-allowed;
-// $gray-base:   #000000;
-// $body-bg: #000000;
+
 @import "bootstrap-custom";
 
 /*------------------------------------------------------------
@@ -113,7 +86,7 @@ Bourbon, Neat
 # Theme
 --------------------------------------------------------------*/
 body {
-  background-color: $color__background-body;
+  background-color: $color__light-grey;
 }
 .container {
   background-color: $color__background-main-column;
@@ -126,7 +99,7 @@ h3 {
 }
 
 .hr-orange {
-  border: 3px solid $hr-orange;
+  border: 3px solid $color__light-orange;
 }
 
 .text-block {
@@ -161,14 +134,14 @@ text-decoration: underline;
 }
 
 .alert-info {
-background-color: #ccdff6;
+background-color: $color__light-blue;
 }
 
 
 /*ask a librarian*/
 /*------------------------------------------------------------*/
 .ask-lib-box {
-  background-color: $askalibrarian-color;
+  background-color: $color__dark-navy;
   padding: 20px;
   margin-bottom: 20px;
 }
@@ -184,7 +157,7 @@ background-color: #ccdff6;
 /*------------------------------------------------------------*/
 
 h3.dynamictabs {
-  color:#1d407b;
+  color:$color__navy;
 }
 
 .accordion-tabs-minimal {
@@ -192,16 +165,16 @@ h3.dynamictabs {
 }
 
 a.dynamictabs {
-  background-color: $med-orange;
+  background-color: $color__med-orange;
   @include border-rad();
   color: #fff;
 }
 a:hover.dynamictabs {
-  background-color: $light-orange;
+  background-color: $color__light-orange-hover;
   border: 2px solid #fff;
 }
 a.is-active.dynamictabs {
-  background-color: $dark-orange;
+  background-color: $color__darkest-orange;
 }
 a.dynamictabs{
   border: 2px solid transparent;
@@ -235,7 +208,7 @@ a.dynamictabs{
 /*easy search*/
 /*------------------------------------------------------------*/
 $easysearch-text: #fff;
-$easysearch-color: $color__dark-blue-illinois;
+$easysearch-color: $color__dark-navy;
 
 #easysearch-wrapper {
   form {
@@ -251,7 +224,7 @@ $easysearch-color: $color__dark-blue-illinois;
     color: $easysearch-text;
   }
   li>a {
-    background-color: $color__background-body;
+    background-color: $color__light-grey;
     border: 0;
     color: $easysearch-color;
     font-weight: 700;
@@ -326,30 +299,18 @@ $easysearch-color: $color__dark-blue-illinois;
 /* footer */
 /*------------------------------------------------------------*/
 
-$color__med-gray: $color__lightest-grey;
-$color__dark-blue-illinois: $color__dark-navy;
-$color__background-body: $color__light-grey;  
-$color__med-gray: $color__text-light;
-$color__med-gray-text: $color__darkest-grey;
-$color__text-med-blue: $color__navy;
-
-@import 'shared_content/footer-style';
-
+@import '../shared_content/footer-style';
 
 /* header */
 /*------------------------------------------------------------*/
 
-$header-common-background: $header-color;
-$header-common-border: $color__background-body;
-
 @import '../shared_content/header-style';
-
 
 /* hours */
 /*------------------------------------------------------------*/
 #library-hours-header {
   padding: 10px;
-  background-color: $color__med-gray;
+  background-color: $color__lightest-grey;
   border-right: $panel-border;
   border-left: $panel-border;
   border-top: $panel-border;
@@ -521,88 +482,8 @@ div#libevents li {
 
 /*navbar*/
 /*------------------------------------------------------------*/
-nav {
-}
-#site-nav {
-  border: 0;
-  background-color: $color__med-gray;
-  border-radius: 0;
 
-  li a {
-    color: $color__med-gray-text;
-  }
-
-}
-.navbar {
-  @include border-rad();
-}
-nav .navbar-nav.nav {
-  width:100%;
-}
-/*off-canvas navbar*/
-/*http://www.smashingmagazine.com/2013/01/15/off-canvas-navigation-for-responsive-website/ */
-@media (max-width:767px) {
-  #site-nav {
-    right: -70%;
-    width: 70%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    margin-right:0;
-    margin-left:0;
-    padding-left:15px;
-  }
-  header {
-    margin-bottom: 15px;
-  }
-  #inner-wrap {
-    position: relative;
-    width: 100%;
-  }
-
-  #inner-wrap.off-canvas {
-    right:70%;
-    right:0;
-    transform: translateX(-70%);
-  }
-
-  #inner-wrap {
-    transition: transform 500ms ease;
-  }
-
-  .mobile-overlay.off-canvas {
-    height: 100%;
-    width: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 2;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-  }
-
-  #mobile-canvas-button {
-    color: $color__background-main-column;
-    background-color: transparent;
-  }
-
-  #outer-wrap {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-  }
-}
-
-@media (max-width:550px) {
-  #mobile-canvas-button>i {
-    font-size:2em;    
-  }
-}
-
-@media (min-width:551px) {
-  #mobile-canvas-button>i {
-    font-size:3em;    
-  }
-}
+@import '../shared_content/navbar';
 
 /*News & Events, Dynamic Tabs*/
 /*------------------------------------------------------------*/
@@ -625,11 +506,11 @@ nav .navbar-nav.nav {
 /*resource-dropdowns*/
 /*------------------------------------------------------------*/
 #resource-dropdowns {
-  background-color: $light-blue;
+  background-color: $color__light-blue;
   margin-top: 15px;
   margin-bottom: 15px;
   a {
-    color: $color__dark-blue-illinois;
+    color: $color__dark-navy;
     display: inline-block;
   }
 }
