@@ -3766,9 +3766,6 @@ div#libevents li {
 .navbar {
   border-radius: 0; }
 
-nav .navbar-nav.nav {
-  width: 100%; }
-
 /*off-canvas navbar*/
 /*http://www.smashingmagazine.com/2013/01/15/off-canvas-navigation-for-responsive-website/ */
 @media (max-width: 767px) {
