@@ -153,9 +153,6 @@ nav .navbar-nav.nav {
   #mobile-canvas-button > i {
     font-size: 3em; } }
 
-.navbar {
-  margin-bottom: 0px; }
-
 #site-nav a {
   font-size: 14px; }
 
@@ -176,3 +173,8 @@ nav .navbar-nav.nav {
 
 .footer-info {
   font-size: 14px; }
+
+@media (max-width: 767px) {
+  body {
+    padding-right: 0px;
+    padding-left: 0px; } }
