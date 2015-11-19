@@ -49,7 +49,7 @@
     					<li><a href="http://www.library.illinois.edu/bis/">Business Information Services</a></li>
     					<li><a href="http://www.library.illinois.edu/gex/">Geology Virtual Library</a></li>
     					<li><a href="http://www.library.illinois.edu/doc/">Government Information Services</a></li>
-    					<li><a href="http://www.library.illinois.edu/irrc/">Interlibrary Loan</a></li>
+    					<li><a href="http://www.library.illinois.edu/interlibrary-loan/">Interlibrary Loan</a></li>
               <li><a href="http://www.library.illinois.edu/ias/iri/">International Reference</a></li>
     					<li><a href="http://www.library.illinois.edu/lis/">LIS Virtual Library</a></li>
     					<li><a href="http://www.library.illinois.edu/ugl/mc/">Media Commons</a></li>
