@@ -247,7 +247,7 @@
                 <ul class="dropdown-menu">
                   <li><a href="http://search.grainger.uiuc.edu/linker/">Journal and Article Locator</a></li>
                   <li><a href="http://openurl.library.uiuc.edu/sfxlcl3/az">Online Journals &amp; Databases</a></li>
-                  <li><a href="http://www.library.illinois.edu/catalog/vufind/dbsubject.html">Databases by Subject</a></li>
+                  <li><a href="http://guides.library.illinois.edu/az.php">Databases by Subject</a></li>
                 </ul>
               </li>
               <li class="dropdown">
