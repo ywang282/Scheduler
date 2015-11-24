@@ -44,7 +44,7 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Find a <span class="navbar-medium-wrap">Library <b class="caret"></b></span></a>
             <ul class="dropdown-menu">
-              <li><a id="hoursloca" href="#hoursloc">Libraries and Hours</a></li>
+              <li><a id="hoursloca" href="http://www.library.illinois.edu/#hoursloc">Libraries and Hours</a></li>
               <li><a href="https://www.google.com/maps/d/viewer?mid=zKflNQk3UbzM.kOGWB2H8UY-Y&hl=en">Map of Libraries</a></li>
             </ul>
           </li>
@@ -77,7 +77,7 @@
     					<li><a href="http://www.library.illinois.edu/bis/">Business Information Services</a></li>
     					<li><a href="http://www.library.illinois.edu/gex/">Geology Virtual Library</a></li>
     					<li><a href="http://www.library.illinois.edu/doc/">Government Information Services</a></li>
-    					<li><a href="http://www.library.illinois.edu/irrc/">Interlibrary Loan</a></li>
+    					<li><a href="http://www.library.illinois.edu/interlibrary-loan/">Interlibrary Loan</a></li>
               <li><a href="http://www.library.illinois.edu/ias/iri/">International Reference</a></li>
     					<li><a href="http://www.library.illinois.edu/lis/">LIS Virtual Library</a></li>
     					<li><a href="http://www.library.illinois.edu/ugl/mc/">Media Commons</a></li>
@@ -100,7 +100,6 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
             <ul class="dropdown-menu">
   	          <li><a href="http://www.library.illinois.edu/askus/">Ask a Librarian</a></li>
-              <li><a id="resourceGuidesA" href="#helpli">Resource Guides</a></li>
   	          <li><a href="http://illinois.edu/calendar/list/4068">Workshops</a></li>
   	          <li role="presentation" class="divider"></li>
               <li role="presentation" class="dropdown-header">LEARN links</li>

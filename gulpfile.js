@@ -20,6 +20,7 @@ gulp.task('libguide', function() {
       { 
         ENV_VAR: 'libguide', 
         IMAGE_DIR: 'http://www.library.illinois.edu/assets/',
+        BASE_GW_ULR: 'http://www.library.illinois.edu/',
         DEBUG: true
       }
     }))  
@@ -29,7 +30,7 @@ gulp.task('libguide', function() {
   .pipe(preprocess( 
     {context: 
       { 
-        ENV_VAR: 'libguide', 
+        ENV_VAR: 'libguide',
         IMAGE_DIR: 'http://www.library.illinois.edu/assets/',
         DEBUG: true
       }
@@ -67,6 +68,19 @@ gulp.task('footer', function() {
         { 
           ENV_VAR: 'gateway', 
           IMAGE_DIR: './assets/',
+          DEBUG: true
+        }
+      })) 
+    .pipe(gulp.dest('.'));
+});
+
+gulp.task('navbar', function() {
+  gulp.src('./shared_content/shared_navbar.php')
+    .pipe(preprocess( 
+      {context: 
+        { 
+          ENV_VAR: 'gateway',
+          BASE_GW_ULR: '',
           DEBUG: true
         }
       })) 
@@ -142,9 +156,12 @@ gulp.task('watchsass', function () {
 gulp.task('watch', function () {
   livereload.listen();
   gulp.watch('./sass/**/*.scss', [ 'sass' ] );
-	gulp.watch('./*.php', [ 'php' ]);
+	gulp.watch('./**/*.php', [ 'php' ]);
   gulp.watch('./assets/css/*.css', [ 'css' ] );
   gulp.watch('./assets/js/*.js', [ 'scripts' ] );
+  gulp.watch('./shared_content/shared_header.php', [ 'header' ] );
+  gulp.watch('./shared_content/shared_navbar.php', [ 'navbar' ] );
+  gulp.watch('./shared_content/shared_footer.php', [ 'footer' ] );
 });
 
 gulp.task('scripts', function() {
@@ -156,7 +173,7 @@ gulp.task('scripts', function() {
 });
 
 //gulp.task('build', ['sass-css-build','scripts-build','scripts-unmin'], function() {});
-gulp.task('build', ['css-concat-unmin','scripts-build','scripts-unmin'], function() {});
+gulp.task('build', ['css-concat-unmin','scripts-build','scripts-unmin','header','footer','navbar'], function() {});
 
 gulp.task( 'css-sass-build', function() {
   var stream = gulp.src('./sass/*.scss')
