@@ -19,7 +19,7 @@ gulp.task('libguide', function() {
     {context: 
       { 
         ENV_VAR: 'libguide', 
-        IMAGE_DIR: 'http://www.library.illinois.edu/assets/',
+        IMAGE_DIR: 'http://www.library.illinois.edu/shared_content/assets/images/',
         BASE_GW_ULR: 'http://www.library.illinois.edu/',
         DEBUG: true
       }
@@ -31,7 +31,7 @@ gulp.task('libguide', function() {
     {context: 
       { 
         ENV_VAR: 'libguide',
-        IMAGE_DIR: 'http://www.library.illinois.edu/assets/',
+        IMAGE_DIR: 'http://www.library.illinois.edu/shared_content/assets/images/',
         DEBUG: true
       }
   })) 
@@ -54,7 +54,7 @@ gulp.task('header', function() {
         { 
           ENV_VAR: 'gateway', 
           SEARCH_ACTION: 'search.php',
-          IMAGE_DIR: './assets/',
+          IMAGE_DIR: './shared_content/assets/images/',
           DEBUG: true
         }
       })) 
@@ -67,7 +67,7 @@ gulp.task('footer', function() {
       {context: 
         { 
           ENV_VAR: 'gateway', 
-          IMAGE_DIR: './assets/',
+          IMAGE_DIR: './shared_content/assets/images/',
           DEBUG: true
         }
       })) 

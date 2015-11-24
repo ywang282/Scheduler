@@ -5,15 +5,15 @@
         <h1 class="sr-only">University Library, University of Illinois at Urbana-Champaign</h1>
         <div class="table-row">
           <div class="table-cell banner-image-imark-div">
-            <a href="http://illinois.edu"><img class="img-responsive col-xs-12 banner-image-imark" alt="University of Illinois I-Mark" src="http://www.library.illinois.edu/assets/imark.png"></a>
+            <a href="http://illinois.edu"><img class="img-responsive col-xs-12 banner-image-imark" alt="University of Illinois I-Mark" src="http://www.library.illinois.edu/shared_content/assets/images/imark.png"></a>
           </div>
           <div class="table-cell banner-table-spacer">
           </div>
           <div class="table-cell banner-image-library-div hidden-xs">
-            <a href="http://www.library.illinois.edu"><img class="img-responsive col-xs-12 banner-image-library" alt="University Library, University of Illinois at Urbana-Champaign" src="http://www.library.illinois.edu/assets/university_libraries_wordmark.png" ></a>
+            <a href="http://www.library.illinois.edu"><img class="img-responsive col-xs-12 banner-image-library" alt="University Library, University of Illinois at Urbana-Champaign" src="http://www.library.illinois.edu/shared_content/assets/images/university_libraries_wordmark.png" ></a>
           </div>
           <div class="table-cell banner-image-library-div visible-xs">
-            <a href="http://www.library.illinois.edu"><img class="img-responsive col-xs-12 banner-image-library banner-mobile-img" alt="Library" src="http://www.library.illinois.edu/assets/library_wordmark.png" ></a>
+            <a href="http://www.library.illinois.edu"><img class="img-responsive col-xs-12 banner-image-library banner-mobile-img" alt="Library" src="http://www.library.illinois.edu/shared_content/assets/images/library_wordmark.png" ></a>
           </div>
         </div>
       </div>

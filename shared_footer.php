@@ -47,13 +47,13 @@
       <span class="footerheading">About this site</span>
       <span class="text-block"><a class="footer-link" href="http://www.vpaa.uillinois.edu/policies/web_privacy.cfm">Privacy</a></span>
       <div class="footer-block-top-space">
-        <a href="http://www.library.illinois.edu/doc/" aria-label="Federal Depository Library Program website link"><img src="./assets/fdlp_logo.png" alt="Federal Depository Library Program Logo">
+        <a href="http://www.library.illinois.edu/doc/" aria-label="Federal Depository Library Program website link"><img src="./shared_content/assets/images/fdlp_logo.png" alt="Federal Depository Library Program Logo">
       </div>
     </div> 
   </div>
   <div class="row lg-copyright-footer">
     <div class="col-md-12 copyright-footer" aria-label="university library copyright info">
-      <p><a href="http://illinois.edu" aria-label="University of Illinois website link"><img src="./assets/illinois_wordmark_footer.png" alt="University of Illinois Logo" /></a></p>
+      <p><a href="http://illinois.edu" aria-label="University of Illinois website link"><img src="./shared_content/assets/images/illinois_wordmark_footer.png" alt="University of Illinois Logo" /></a></p>
       <p>© 2014 University of Illinois Board of Trustees</p>
     </div>
   </div>
