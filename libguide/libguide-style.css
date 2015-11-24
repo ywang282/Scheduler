@@ -100,9 +100,6 @@ footer .text-block {
 .navbar {
   border-radius: 0; }
 
-nav .navbar-nav.nav {
-  width: 100%; }
-
 /*off-canvas navbar*/
 /*http://www.smashingmagazine.com/2013/01/15/off-canvas-navigation-for-responsive-website/ */
 @media (max-width: 767px) {
@@ -167,7 +164,7 @@ nav .navbar-nav.nav {
   margin-left: 0;
   margin-right: 0; }
 
-#s-lib-public-header, #s-lib-public-nav, #s-lib-public-main, #s-lib-footer-public {
+#s-lib-public-header, #s-lib-public-nav, #s-lib-public-main, #s-lib-footer-public, #s-lg-guide-main, #s-lg-tabs-container, #s-lg-guide-header {
   padding-left: 15px;
   padding-right: 15px; }
 
