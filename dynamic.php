@@ -212,7 +212,7 @@
                         <span style="padding-right: .4em;" class="fa fa-mobile fa-2x fa-fw"></span>Mobile prototyping</a>
                       </div>
                       <div class="col-md-6">
-                        <a href="http://www.library.illinois.edu/export/ugl/mc/zones/gaming.html">
+                        <a href="http://www.library.illinois.edu/ugl/mc/services.html">
                         <span style="padding-right: .4em;" class="fa fa-gamepad fa-2x fa-fw"></span>Gaming<a/>
                       </div>
                       <div class="col-md-6">
