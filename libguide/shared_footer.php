@@ -49,7 +49,7 @@
       <span class="text-block"><a class="footer-link" href="http://www.vpaa.uillinois.edu/policies/web_privacy.cfm">Privacy</a></span>
       <span class="text-block">Icon by <a class="footer-link" href="https://icons8.com/license" target="_blank">Icons8</a></span>
       <div class="footer-block-top-space">
-        <a href="http://www.library.illinois.edu/doc/" aria-label="Federal Depository Library Program website link"><img src="http://www.library.illinois.edu/shared_content/assets/images/fdlp_logo.png" alt="Federal Depository Library Program Logo">
+        <a href="http://www.library.illinois.edu/doc/" aria-label="Federal Depository Library Program website link"><img src="http://www.library.illinois.edu/shared_content/assets/images/fdlp_logo.png" alt="Federal Depository Library Program Logo"></a>
       </div>
     </div> 
   </div>
