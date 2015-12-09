@@ -175,7 +175,7 @@ gulp.task('watch', function () {
 //build tasks
 //////////////////////////////////////
 
-gulp.task('build', ['css-concat-unmin','scripts-build','scripts-unmin','header','footer','navbar'], function() {});
+gulp.task('build', ['css-concat-unmin','scripts-build','scripts-unmin','header','footer','navbar','css-link-var'], function() {});
 
 gulp.task( 'css-sass-build', function() {
   var stream = gulp.src('./sass/*.scss')
@@ -217,11 +217,8 @@ gulp.task('scripts-unmin', function() {
   //.pipe(uglify())
   .pipe(gulp.dest('./assets/unmin/'));
 });
-
-
-//deprecated tasks
-// gulp.task('watchsass', function () {
-//   livereload.listen();
-//   gulp.watch('./sass/**/*.scss', [ 'sass' ] );
-//   gulp.watch('./assets/css/*.css', [ 'css' ] );
-// });
+gulp.task('css-link-var', function() {
+  gulp.src( './preproc_content/preproc_head.php' )
+  .pipe(preprocess({context:{QUERY_STR:Date.now()}}))
+  .pipe(gulp.dest('.'));
+});

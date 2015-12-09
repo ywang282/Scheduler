@@ -3,7 +3,7 @@
 <?php
 $title = "University Library, University of Illinois";
 //contains the HTML declarations and the logo bar
-include("header.php");
+include("preproc_head.php");
 ?>
 <?php
 //contains the sitewide navigation bar
