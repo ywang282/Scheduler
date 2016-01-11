@@ -34,7 +34,7 @@
             <ul class="dropdown-menu">
               <li><a href="http://www.library.illinois.edu/administration/librarian/">Welcome from the University Librarian</a></li>
   		        <li><a href="http://www.library.illinois.edu/administration/">Library Administration</a></li>
-              <li><a href="http://www.library.illinois.edu/friends/index.html">Library Friends</a></li>
+              <li><a href="http://www.library.illinois.edu/friends/">Library Friends</a></li>
               <li><a href="http://www.library.illinois.edu/geninfo/history.html">About the Collections</a></li>
               <li><a href="http://www.library.illinois.edu/administration/human/positions/employment.html">Library Employment</a></li>
               <li><a href="http://www.library.illinois.edu/diversity/">Diversity &amp; Multicultural Information</a></li>
@@ -111,7 +111,7 @@
             </ul>
           </li>
     			<li class="dropdown hidden-xs">
-    				<a id="donate_navbar_link" href="http://www.library.illinois.edu/friends/gift.html"><span class="fa fa-gift fa-1x"></span>
+    				<a id="donate_navbar_link" href="http://www.library.illinois.edu/friends/make-a-gift/"><span class="fa fa-gift fa-1x"></span>
     				Give</a>
     			</li>
         </ul> 

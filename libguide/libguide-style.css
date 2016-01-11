@@ -121,7 +121,6 @@ footer .text-block {
     right: 70%;
     right: 0;
     -webkit-transform: translateX(-70%);
-        -ms-transform: translateX(-70%);
             transform: translateX(-70%); }
   #inner-wrap {
     -webkit-transition: -webkit-transform 500ms ease;
