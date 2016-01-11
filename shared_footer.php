@@ -16,7 +16,7 @@
       <div class="footer-block-top-space">
         <span class="text-block"><a class="footer-link" href="https://www.facebook.com/universitylibrary">
         <span class="fa fa-facebook fa-lg footer-icon-social" aria-label="facebook"></span><small> Find us on Facebook</small></a></span>
-        <span class="text-block"><a class="footer-link" href="http://www.library.illinois.edu/friends/gift.html">
+        <span class="text-block"><a class="footer-link" href="http://www.library.illinois.edu/friends/make-a-gift/">
         <span class="fa fa-gift fa-lg footer-icon-social" aria-label="make a gift"></span><small> Make a Gift</small></a></span>
       </div>
     </div>
