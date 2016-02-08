@@ -29,7 +29,7 @@
                             <form class="form-inline">
                               <div class="col-md-4">
                                 <label for="search-field" class="sr-only">Filter libraries by name</label>
-                                <input style="width:100%;" type="text" class="form-control" id="search-field" placeholder="Filter libraries by name" aria-required="false"></input>
+                                <input style="width:100%;" type="text" class="form-control" id="search-field" placeholder="Filter libraries by name" aria-required="false"/>
                               </div>
                               <div class="col-md-2">
                                 <label id="show-open-lib-label">
@@ -261,68 +261,60 @@
             </div>
           </li>
 
-          <li class="tab-header-and-content" role="presentation">
-            <a id="roomresli" href="#" class="tab-link dynamictabs dynamic-tab-text arrow-access"><span class="fa fa-pencil-square-o fa-3x"></span><span class="dynamic-tab-label"><span class="text-block">Study </span>Rooms</span></a>
-            <div class="tab-content-bourbon">
-              <div class="dynamic-tab-pane" id="roomres"><!-- TAB: STUDY ROOMS --> 
-                <div class="dynamic-panel-body">
-                  <div class="container-fluid"><!-- TAB TITLE -->
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <h3 class="dynamictabs">Study Room Reservation</h3>
-                        <hr class="hr-orange"/>
-                      </div>
-                    </div><!-- END TAB TITLE -->
-                    <div class="row-fluid">
-                        <!-- begin Loanable Technology column -->
-                        <!-- placeholder for any instruction or description content -->
-                    </div>    
-                    <div class="row"><!--  mobile phone view-->
-                      <div class="mobilephonehide">
-                        <div class="panel panel-default mobile" >
-                          <div class="panel-heading">Reserve the Study Room</div>
-                          <div class="panel-body">
-                            <p class="">University net ID login is required for the reservation.</p>
-                              <p>
-                                  <a type="button" class="btn btn-primary btn-lg btn-block" href=" http://uiuc.evanced.info/Dibs" >Make a Reservation</a>
-                          </div>
-                        </div>
-                        <div class="panel panel-default mobile">
-                          <div class="panel-heading">Reservation Process</div>
-                          <div class="panel-body">
-                            <ol class="list-group">
-                              <li class="list-group-item">How many people? How long? What date?(2 active reservations, 2 reservations per day)</li>
-                              <li class="list-group-item">Pick library location to reserve a room.</li>
-                              <li class="list-group-item">Pick the available time slots.(Each slot has 30 min and you can pick 4 maximum, 2 hours)</li>
-                              <li class="list-group-item">Pick the room. (It will show room features and the picture)</li>
-                              <li class="list-group-item">Confirm the registration. (You will get email confirmation for the registration. Text confirmation is optional)</li>
-                            </ol>
-                          </div>
-                        </div>
-                      </div><!-- CLOSING mobile phone view-->
-                      <div class="col-md-8">
-                        <div id="buildc"><h4>Study Room Location</h4></div>
-                      </div>
-                      <div class="col-md-4 col-xs-12">
-                        <h4>Schedule the room</h4>
-                        <div id="calenc"></div>
-                        <div class="calc">
-                          <div class="calcinitial">Please choose a building location to the left to start the reservation process.</div>
-                        </div>
-                        <div id="additional-room-reserve-info">
-                          <p>
-                          <ul>
-                              <li>Other places to study on campus: <a href="https://illinispaces.illinois.edu/">IlliniSpaces.</a></li>
-                              <li><a href="http://uiuc.libguides.com/roomreserve"> Library Room Reservation Policy and Guidelines</a></li>
-                          </ul>
-                          </p>
-                        </div>
-                      </div>   
-                    </div><!--closing for row-->
-                  </div><!-- should end container -->
+          <!-- TAB: STUDY ROOMS -->
+          <div class="tab-pane" id="roomres">
+            <div class="container-fluid">
+              <!-- TAB TITLE -->
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3>STUDY ROOM RESERVATION</h3>
+                  <hr class="orange-line"/>
                 </div>
-              </div><!-- should end roomres tab --><!-- END TAB: STUDY ROOMS -->     
-            </div>
+              </div>
+              <!-- END TAB TITLE -->
+              <div class="row-fluid">
+                <!-- begin Loanable Technology column ?-->
+                <!-- placeholder for any instruction or description content? -->
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-12">
+                  <div id="buildc"><h4>Study Room Location</h4></div>
+
+
+                </div>
+                <div class="col-md-4 col-xs-12" style="display: none;">
+                  <h4>Schedule the room</h4>
+                  <div id="calenc"></div>
+
+                  <div class="calc">
+                    <div class="calcinitial">Please choose a building location to the left to start the reservation process.</div>
+                  </div>
+                  <div id="additional-room-reserve-info">
+                    <p>
+                    <ul>
+                      <li>Other places to study on campus: <a href="https://illinispaces.illinois.edu/">IlliniSpaces.</a></li>
+                      <li><a href="http://uiuc.libguides.com/roomreserve"> Library Room Reservation Policy and Guidelines</a></li>
+                    </ul>
+                    </p>
+                  </div>
+
+
+                </div>
+              </div>
+              <!--closing for row-->
+
+
+
+
+
+
+            </div><!-- should end container -->
+          </div><!-- should end roomres tab -->
+          <!-- END TAB: STUDY ROOMS -->
+
+      </div>
           </li>
           <li class="tab-header-and-content" role="presentation">
             <a id="newsli" href="#" class="tab-link dynamictabs dynamic-tab-text arrow-access"><span class="fa fa-calendar fa-3x"></span><span class="dynamic-tab-label"><span class="text-block">News and</span>Events</span></a>
