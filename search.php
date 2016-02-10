@@ -2,8 +2,9 @@
 <html lang="en">
 <?php
 $title = "University of Illinois Library Gateway";
+include("preproc_head.php");
 //contains the HTML declarations and the logo bar
-include("header.php");
+
 ?>
 <?php
 //contains the sitewide navigation bar
@@ -13,6 +14,6 @@ include("siteheader.php");
 //searches the site
 include("search/search.php");
 //contains the footer and external JS resources
-include("footer.php");
+include("shared_footer.php");
 ?>
 </html>
