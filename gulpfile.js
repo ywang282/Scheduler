@@ -3,7 +3,8 @@ var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var plumber = require('gulp-plumber');
 var livereload = require('gulp-livereload');
-var minifyCSS = require('gulp-minify-css');
+//var minifyCSS = require('gulp-minify-css');
+var cssnano = require('gulp-cssnano');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
@@ -190,8 +191,8 @@ gulp.task( 'css-concat-built', ['css-sass-build'], function() {
   var stream = gulp.src( css_array )
     .pipe(concat('style.css'))
     .pipe(autoprefixer())
-    //.pipe(minifyCSS({advanced:false,keepSpecialComments:0}))
-    .pipe(minifyCSS())
+    //.pipe(cssnano({advanced:false,keepSpecialComments:0}))
+    .pipe(cssnano())
     .pipe(gulp.dest('./assets/built/'));
   return stream; 
 })
@@ -199,7 +200,7 @@ gulp.task( 'css-concat-unmin', ['css-concat-built'], function() {
   var stream = gulp.src( css_array )
     .pipe(concat('style.css'))
     .pipe(autoprefixer())
-    //.pipe(minifyCSS())
+    //.pipe(cssnano())
     .pipe(gulp.dest('./assets/unmin/'));
   return stream; 
 })
