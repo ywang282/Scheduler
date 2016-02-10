@@ -262,22 +262,24 @@
           </li>
 
           <!-- TAB: STUDY ROOMS -->
-          <div class="tab-pane" id="roomres">
-            <div class="container-fluid">
-              <!-- TAB TITLE -->
-              <div class="row">
-                <div class="col-sm-12">
-                  <h3>STUDY ROOM RESERVATION</h3>
-                  <hr class="orange-line"/>
-                </div>
-              </div>
-              <!-- END TAB TITLE -->
-              <div class="row-fluid">
-                <!-- begin Loanable Technology column ?-->
-                <!-- placeholder for any instruction or description content? -->
-              </div>
+            <li class="tab-header-and-content" role="presentation">
+                <a id="roomresli" href="#" class="tab-link dynamictabs dynamic-tab-text arrow-access"><span class="fa fa-pencil-square-o fa-3x"></span><span class="dynamic-tab-label"><span class="text-block">Study </span>Rooms</span></a>
+                <div class="tab-content-bourbon">
+                    <div class="dynamic-tab-pane" id="roomres"><!-- TAB: STUDY ROOMS -->
+                        <div class="dynamic-panel-body">
+                            <div class="container-fluid"><!-- TAB TITLE -->
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h3 class="dynamictabs">Study Room Reservation</h3>
+                                        <hr class="hr-orange"/>
+                                    </div>
+                                </div><!-- END TAB TITLE -->
+                                <div class="row-fluid">
+                                    <!-- begin Loanable Technology column -->
+                                    <!-- placeholder for any instruction or description content -->
+                                </div>
 
-              <div class="row">
+                                <div class="row">
 
                 <div class="col-md-12">
                   <div id="buildc"><h4>Study Room Location</h4></div>
@@ -310,7 +312,7 @@
 
 
 
-            </div><!-- should end container -->
+            </a><!-- should end container -->
           </div><!-- should end roomres tab -->
           <!-- END TAB: STUDY ROOMS -->
 
