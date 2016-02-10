@@ -6,6 +6,7 @@
 </div>
 </body>
 <script type="text/javascript" src="//cdn.jsdelivr.net/g/underscorejs@1.6,backbonejs@1.1,fancybox,xdate"></script>
+
   <!-- UNDERSCORE TEMPLATES -->
 
   <script type="text/html" id="buildtemplate">
@@ -15,7 +16,7 @@
       <div class="buildinfo">
 
         <div class="imagec">
-          <img src="<%= picurl %>" width="90px" height="60px" class="hidden-xs" alt="<%= name %>"></img>
+          <img src="<%= picurl %>" width="90px" height="60px" class="hidden-xs" alt="<%= name %>"/>
         </div>
         <span class="selectbutton" id="badge-and-button">Rooms: <span class="badge-green badge"><%= numOfRooms %></span> <a aria-controls="build_<%= id %>" class="btn btn-primary btn-xs">Select</a> <a aria-label="map of <%= name %>" class="fancybox fancybox.iframe btn btn-primary btn-xs hidden-map" href="http://maps.google.com/maps?q=+(<%= name %>)&z=16&ll=<%= lat %>,<%= lon %>&output=embed&iwloc=near">Map</a></span>
 
@@ -73,7 +74,7 @@
         </h6>
       </div>
 
-      <img class="roompic hidden-xs hidden" src="<%= picurl %>" alt="<%= desc %>" width="60px" height="40px"><p class="hidden rdesc"><%= desc %><br><a class="fancybox fancybox.iframe btn btn-primary btn-xs hidden-xs" id="<%= roomID %>" href="<%= mapurl %>">Floor Plan</a></p>
+      <img class="roompic hidden-xs hidden" src="<%= picurl %>" alt="<%= desc %>" width="60px" height="40px"><p class="hidden hidden-xs rdesc"><br></p>
       <p></p>
     </div>
 
@@ -106,6 +107,8 @@
       <center><a class="btn-primary btn-xs button">Make Reservation</a></center>
     </div>
   </script>
+
+
 
 
   <script type="text/javascript" src="./assets/js/get_time.php"></script>
