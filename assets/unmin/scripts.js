@@ -3411,13 +3411,13 @@ function printLibraryTemplate(key,objectData) {
 				'</div>' +
 				'<div class="hourshide">' +
 				'<p class="hidden-xs"><%= description %></p>' +
-				'<p class="list-group-item-text hourshide"><%= street %></p>' +
-				'<p class="list-group-item-text"><%= city %>, <%= state %> <%= zip %>' +
-				'<p class="list-group-item-text"><%= tel %></p>' +
+				'<% if (typeof(street) !== "undefined" && street.trim() !== "" ) { %><p class="list-group-item-text hourshide"><%= street %></p><% } %>' +
+				'<% if (typeof(state) !== "undefined" && state.trim() !== "" && typeof(zip) !== "undefined" && zip.trim() !== "") { %><p class="list-group-item-text"><%= city %>, <%= state %> <%= zip %></p><% } %>' +
+				'<% if (typeof(tel) !== "undefined" && tel.trim() !== "" ) { %><p class="list-group-item-text"><%= tel %></p><% } %>' +
 				'<a class="stopProp" href="<%= url %>"><%= url %></a></p>' +
 				'<br />' +
-				'<a id="carparking" aria-label="Parking for <%= name %>" class="fancybox btn btn-primary btn-sm stopProp" title="Parking near <%= name %>" href="./assets/parking/parking_<%= number %>.png">PARKING</a> ' +
-				'<a class="fancybox fancybox.iframe btn btn-primary btn-sm stopProp" aria-label="Map of <%= name %>" href="<%= map %>">MAP</a>' +
+				'<% if (typeof(street) !== "undefined" && street.trim() !== "" ) { %><a id="carparking" aria-label="Parking for <%= name %>" class="fancybox btn btn-primary btn-sm stopProp" title="Parking near <%= name %>" href="./assets/parking/parking_<%= number %>.png">PARKING</a><% } %> ' +
+				'<% if (typeof(street) !== "undefined" && street.trim() !== "" ) { %><a class="fancybox fancybox.iframe btn btn-primary btn-sm stopProp" aria-label="Map of <%= name %>" href="<%= map %>">MAP</a><% } %>' +
 				'</div>' +
 			  '</div>' +
 			  '<div class="col-md-3 hoursListClass" id="libHourswfw<%= number %>">' +
@@ -3449,9 +3449,9 @@ function printLibraryTemplate(key,objectData) {
 					'</button>' +
 				  '</div>' +
 				'</div>' +
-				'<a class="fancybox hourshide hidden-xs" href="./assets/buildings/full/building_<%= building %>.jpg">' +
+				'<% if (typeof(building) !== "undefined" && building.trim() !== "" ) { %><a class="fancybox hourshide hidden-xs" href="./assets/buildings/full/building_<%= building %>.jpg">' +
 				  '<img class="img-responsive stopProp buildingimage" src="./assets/buildings/display/building_<%= building %>.jpg" alt="<%= name %>" />' +
-				'</a>' +
+				'</a><% } %>' +
 			  '</div>' +
 			'</div>' +
 		'</li>' , variables);
