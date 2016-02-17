@@ -176,7 +176,7 @@ gulp.task('watch', function () {
 //build tasks
 //////////////////////////////////////
 
-gulp.task('build', ['css-concat-unmin','scripts-build','scripts-unmin','header','footer','navbar','css-link-var'], function() {});
+gulp.task('build', ['css-concat-unmin','scripts-build','scripts-unmin','header','footer','navbar','css-link-var','footer-link-var'], function() {});
 
 gulp.task( 'css-sass-build', function() {
   var stream = gulp.src('./sass/*.scss')
@@ -220,6 +220,11 @@ gulp.task('scripts-unmin', function() {
 });
 gulp.task('css-link-var', function() {
   gulp.src( './preproc_content/preproc_head.php' )
+  .pipe(preprocess({context:{QUERY_STR:Date.now()}}))
+  .pipe(gulp.dest('.'));
+});
+gulp.task('footer-link-var', function() {
+  gulp.src( './preproc_content/preproc_footer.php' )
   .pipe(preprocess({context:{QUERY_STR:Date.now()}}))
   .pipe(gulp.dest('.'));
 });

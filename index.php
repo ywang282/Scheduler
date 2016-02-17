@@ -19,6 +19,6 @@ include("content.php");
 //contains the dynamic content tabs
 include("dynamic.php");
 //contains the footer and external JS resources
-include("footer.php");
+include("preproc_footer.php");
 ?>
 </html>
