@@ -219,12 +219,14 @@ gulp.task('scripts-unmin', function() {
   .pipe(gulp.dest('./assets/unmin/'));
 });
 gulp.task('css-link-var', function() {
+  var now = Date.now();
   gulp.src( './preproc_content/preproc_head.php' )
-  .pipe(preprocess({context:{QUERY_STR:Date.now()}}))
+  .pipe(preprocess({context:{QUERY_STR: now }}))
   .pipe(gulp.dest('.'));
 });
 gulp.task('footer-link-var', function() {
+  var now = Date.now();
   gulp.src( './preproc_content/preproc_footer.php' )
-  .pipe(preprocess({context:{QUERY_STR:Date.now()}}))
+  .pipe(preprocess({context:{QUERY_STR: now }}))
   .pipe(gulp.dest('.'));
 });
