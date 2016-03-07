@@ -3676,7 +3676,6 @@ $(document).ready(function () {
     var vHeight = $(vhref + "+div>div").height();
     var vVis = fracs.visible * vHeight;
     if (vVis <= 200) {
-      console.log("bourbon vhref : ",vhref);
       $('html, body').animate({
         scrollTop: $(vhref).offset().top
       }, 1000);
@@ -3687,7 +3686,8 @@ $(document).ready(function () {
     $('.accordion-tabs-minimal').each(function(index) {
       $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
     });
-  } 
+  }
+
 
   $('.accordion-tabs-minimal').on('click', 'li > a.tab-link', function(event) {
     if (!$(this).hasClass('is-active')) {
@@ -3698,8 +3698,6 @@ $(document).ready(function () {
       $(this).next().toggleClass('is-open').toggle();
       accordionTabs.find('.is-active').removeClass('is-active');
       $(this).addClass('is-active');
-      console.log("this in accordionTabs: ",this);
-
       tabScroll(this);
 
       } else {
@@ -3714,6 +3712,44 @@ $(document).ready(function () {
       }
     }
   });
+
+  (function () {
+    //console.log("hey there");
+    var hashVal = location.hash;
+    //console.log('before if hashVal = ,',hashVal);
+    //console.log('hashVal = ',hashVal);
+    //verify there is a hashvalue in URL
+    if ( hashVal ) {
+      //console.log('there is a hashVal');
+      //console.log($( hashVal + '.tab-link' ));
+      //verify the hash value exists in .tab-link class
+      if ( $( hashVal + '.tab-link' ).length ){
+        // console.log($( hashVal + '.tab-link' ));
+         //console.log('THIS hashval exists');
+        if (!$(hashVal).hasClass('is-active')) {
+         // event.preventDefault();
+          var accordionTabs = $(hashVal).closest('.accordion-tabs-minimal');
+          accordionTabs.find('.is-open').removeClass('is-open').hide();
+
+          $(hashVal).next().toggleClass('is-open').toggle();
+          accordionTabs.find('.is-active').removeClass('is-active');
+          $(hashVal).addClass('is-active');
+          tabScroll(hashVal);
+
+          } else {
+          //event.preventDefault();
+
+          tabScroll(hashVal);
+
+          if (window.innerWidth < 768) {
+            var accordionTabs = $(hashVal).closest('.accordion-tabs-minimal');
+            accordionTabs.find('.is-open').removeClass('is-open').hide();
+            $(hashVal).removeClass('is-active');
+          }
+        }
+      }
+    }
+  })();
 
 });
 
@@ -3766,21 +3802,39 @@ $(".easy-search-text-input").keyup(function() {
 	}
 
 });
+//script targeting everything easy search tab on gateway
+//when any option in dropdown other than multi-subject is 
+//chosen then classic ES form action and required inputs
+//are used, otherwise 
 //changing form action url on changes to select
 $( '#dropdown' ).change(function(){
-  //console.log("new selection = ",$( '#dropdown' ).val());
   if ( $( '#dropdown' ).val() == "gen" ) {
-    //console.log("dropdown value = ",$( '#dropdown' ).val());
     $( '#search_everything' ).attr( 'action', 'http://search.grainger.uiuc.edu/discovery/splitsearch.asp');
     $( '#keyword' ).attr( 'name', 'searcharg' );
     $( '#search_everything .es-classic' ).prop( 'disabled', true);
     $( '#search_everything .es-bento' ).prop( 'disabled', false);
   } else {
-    //console.log("dropdown value = ",$( '#dropdown' ).val());
     $( '#search_everything' ).attr( 'action', 'http://search.grainger.illinois.edu/searchaid2/saresultsug.asp');
     $( '#keyword' ).attr( 'name', 'keyword' );
     $( '#search_everything .es-bento' ).prop( 'disabled', true);
     $( '#search_everything .es-classic' ).prop( 'disabled', false);
+  }
+});
+
+$( '#selection2' ).change(function(){
+  console.log("new selection = ",$( '#selection2' ).val());
+  if ( $( '#selection2' ).val() == "articles" ) {
+    console.log("selection2 value = ",$( '#selection2' ).val());
+    $( '#search_articles' ).attr( 'action', 'http://search.grainger.illinois.edu/discovery/splitsearch.asp');
+    $( '#artclSubject' ).attr( 'name', 'searcharg' );
+    $( '#search_articles .es-articles-classic' ).prop( 'disabled', true);
+    $( '#search_articles .es-articles-bento' ).prop( 'disabled', false);
+  } else {
+    console.log("selection2 value = ",$( '#selection2' ).val());
+    $( '#search_articles' ).attr( 'action', 'http://search.grainger.illinois.edu/searchaid2/saresultsug.asp');
+    $( '#artclSubject' ).attr( 'name', 'keyword' );
+    $( '#search_articles .es-articles-bento' ).prop( 'disabled', true);
+    $( '#search_articles .es-articles-classic' ).prop( 'disabled', false);
   }
 });
         //libguides search function
