@@ -48,7 +48,10 @@
                           <option value="lifesci">Life Sciences</option>
                           <option value="music">Music &amp; Performing Arts</option>
                           <option value="Physsci">Physical Sciences/Math</option>
-                          <option value="Socsci">Social Sciences</option>                                
+                          <option value="Socsci">Social Sciences</option>  
+                          <option value="theses">Dissertations and Theses</option> 
+                          <option value="datasets">Datasets</option> 
+                          <option value="ref">Dictionaries, Encyclopedias, etc.</option>                             
                         </select>
                         <input type="hidden" alt="submit" value="keyword" name="typeofsearch" class="es-bento">
                         <input type="hidden" alt="submit" value="direct" name="s2" >
@@ -81,17 +84,15 @@
                     </div>
                   </div>
                 <div class="row">
-                  <form class="form-inline" id="search_books" action="http://search.grainger.illinois.edu/searchaid2/saresultsug.asp" method="get">
+                  <form class="form-inline" id="search_books" action="http://search.grainger.illinois.edu/discovery/splitsearch.asp" method="get">
                     <label class="sr-only" for="Search_Argument">Enter Search Terms</label>
-                    <input id="Search_Argument" class="form-control easy-search-text-input" type="text" placeholder="Enter search terms" maxlength="255" size="25" name="keyword" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter search terms'">
-                    <input type="hidden" alt="submit" value="direct" name="s2">
-                    <input type="hidden" alt="submit" value="gatewayopac" name="project">
-                    <input type="hidden" alt="submit" value="opac" name="selection">
+                    <input id="Search_Argument" class="form-control easy-search-text-input" type="text" placeholder="Enter search terms" maxlength="255" size="25" name="searcharg" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter search terms'">
+                    <input type="hidden" alt="submit" value="books" name="selection">
                     <label class="sr-only" for="booksSearch_Code">Book Search</label>
-                    <select id="booksSearch_Code" class="form-control" name="booksSearch_Code" aria-required="true">
-                      <option value="FT*">Keyword</option>
-                      <option value="TALL">Title words</option>
-                      <option value="NAME+">Author (last name, first)</option>
+                    <select id="booksSearch_Code" class="form-control" name="typeofsearch" aria-required="true">
+                      <option value="keyword">Keyword</option>
+                      <option value="tiwords">Title words</option>
+                      <option value="author">Author</option>
                     </select>
                     <input type="submit" class="btn btn-primary" alt="submit" value="Search" name="searchbutton">
                   </form>
@@ -116,14 +117,15 @@
                     </div>
                   </div>
                 <div class="row">   
-                  <form id="search_articles" class="form-inline" action="http://search.grainger.illinois.edu/searchaid2/saresultsug.asp" method="get">
+                  <form id="search_articles" class="form-inline" action="http://search.grainger.illinois.edu/discovery/splitsearch.asp" method="get">
                     <label for="artclSubject" class="sr-only">article</label>
-                    <input id="artclSubject" class="form-control easy-search-text-input"  type="text" placeholder="Enter article subject"  maxlength="255" size="25" name="keyword" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter article subject'">
-                    <input type="hidden" alt="submit" value="direct" name="s2">
-                    <input type="hidden" alt="submit" value="gatewayjnlarticle" name="project">
+                    <input id="artclSubject" class="form-control easy-search-text-input"  type="text" placeholder="Enter article subject"  maxlength="255" size="25" name="searcharg" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter article subject'">
+                    <input class="es-articles-bento" type="hidden" alt="submit" value="keyword" name="typeofsearch">
+                    <input class="es-articles-classic" type="hidden" alt="submit" value="direct" name="s2" disabled>
+                    <input class="es-articles-classic" type="hidden" alt="submit" value="gatewayjnlarticle" name="project" disabled>
                       <label for="selection2" class="sr-only">choose the subject</label>
                       <select id="selection2" class="form-control"  name="selection" aria-required="true">
-                        <option value="gen">Multi-Subject Resources</option>
+                        <option value="articles">Multi-Subject Resources</option>
                         <option value="news">Current News Sources</option>
                         <option value="ArHu">Arts &amp; Humanities</option>
                         <option value="Bus">Business</option>
