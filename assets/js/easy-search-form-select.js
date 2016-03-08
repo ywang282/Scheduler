@@ -18,15 +18,12 @@ $( '#dropdown' ).change(function(){
 });
 
 $( '#selection2' ).change(function(){
-  console.log("new selection = ",$( '#selection2' ).val());
   if ( $( '#selection2' ).val() == "articles" ) {
-    console.log("selection2 value = ",$( '#selection2' ).val());
     $( '#search_articles' ).attr( 'action', 'http://search.grainger.illinois.edu/discovery/splitsearch.asp');
     $( '#artclSubject' ).attr( 'name', 'searcharg' );
     $( '#search_articles .es-articles-classic' ).prop( 'disabled', true);
     $( '#search_articles .es-articles-bento' ).prop( 'disabled', false);
   } else {
-    console.log("selection2 value = ",$( '#selection2' ).val());
     $( '#search_articles' ).attr( 'action', 'http://search.grainger.illinois.edu/searchaid2/saresultsug.asp');
     $( '#artclSubject' ).attr( 'name', 'keyword' );
     $( '#search_articles .es-articles-bento' ).prop( 'disabled', true);
