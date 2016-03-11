@@ -391,7 +391,6 @@ $( window ).load(function() {
 	 afterLoad: function() {
         this.title = '<h5>' + this.title +'</h5>'
 		+ '<small><img src="./assets/parking/yellowbox.jpg" alt="public parking legend"> Campus Public Parking <img src="./assets/parking/buildingbox.jpg" alt="campus building legend"> Buildings</small>' 
-		+ '<a href="http://www.parking.illinois.edu/home" style="float:right">Additional Campus Parking Information.<span class="glyphicon glyphicon-new-window"</span></a>' 
 		 ;	
     },
       helpers : {
