@@ -77,8 +77,21 @@ gulp.task('footer', function() {
     .pipe(gulp.dest('.'));
 });
 
-gulp.task('navbar', function() {
-  gulp.src('./shared_content/shared_navbar.php')
+// gulp.task('navbar', function() {
+//   gulp.src('./shared_content/shared_navbar.php')
+//     .pipe(preprocess( 
+//       {context: 
+//         { 
+//           ENV_VAR: 'gateway',
+//           BASE_GW_ULR: '',
+//           DEBUG: true
+//         }
+//       })) 
+//     .pipe(gulp.dest('.'));
+// });
+
+gulp.task('global-nav', function() {
+  gulp.src('./shared_content/shared-global-nav.php')
     .pipe(preprocess( 
       {context: 
         { 
@@ -168,7 +181,7 @@ gulp.task('watch', function () {
   gulp.watch('./assets/css/*.css', [ 'css' ] );
   gulp.watch('./assets/js/*.js', [ 'scripts' ] );
   gulp.watch('./shared_content/shared_header.php', [ 'header' ] );
-  gulp.watch('./shared_content/shared_navbar.php', [ 'navbar' ] );
+  //gulp.watch('./shared_content/shared_navbar.php', [ 'navbar' ] );
   gulp.watch('./shared_content/shared_footer.php', [ 'footer' ] );
 });
 
@@ -176,7 +189,7 @@ gulp.task('watch', function () {
 //build tasks
 //////////////////////////////////////
 
-gulp.task('build', ['css-concat-unmin','scripts-build','scripts-unmin','header','footer','navbar','css-link-var','footer-link-var'], function() {});
+gulp.task('build', ['css-concat-unmin','scripts-build','scripts-unmin','header','footer','global-nav','css-link-var','footer-link-var'], function() {});
 
 gulp.task( 'css-sass-build', function() {
   var stream = gulp.src('./sass/*.scss')
