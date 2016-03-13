@@ -305,6 +305,9 @@ $easysearch-color: $color__dark-navy;
 /*------------------------------------------------------------*/
 
 @import '../shared_content/header-style';
+#gateway-header {
+  margin-bottom:15px;
+}
 
 /* hours */
 /*------------------------------------------------------------*/
@@ -587,3 +590,9 @@ div#libevents li {
 .display-block {
   display:block;
 }
+
+/*--------------------------------------------------------------
+# shared utility styles
+--------------------------------------------------------------*/
+
+@import '../shared_content/shared-utility-style';
