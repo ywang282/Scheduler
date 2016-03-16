@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <title>University Library, University of Illinois</title>
-    <link rel="stylesheet" href="./assets/built/style.css?v=1457454733675">
+    <link rel="stylesheet" href="./assets/built/style.css?v=1458153035530">
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css">
     <link rel="icon" href="./assets/favicon.png" type="image/png" />
     <script src="//cdn.jsdelivr.net/g/jquery@2.1"></script>
     <script>window.jQuery || document.write('<script src="./assets/js/jquery-1.10.2.min.js"><\/script>')</script>
-    <!--[if lt IE 10]>
+    <!--[if lt IE 9]>
     <script src="./assets/js/respond.min.js"></script>
     <script src="./assets/js/html5shiv.js"></script>
     <script src="./assets/js/css_browser_selector.js"></script>
