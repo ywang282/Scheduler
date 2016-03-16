@@ -3,7 +3,8 @@ var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var plumber = require('gulp-plumber');
 var livereload = require('gulp-livereload');
-var minifyCSS = require('gulp-minify-css');
+//var minifyCSS = require('gulp-minify-css');
+var cssnano = require('gulp-cssnano');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
@@ -175,7 +176,7 @@ gulp.task('watch', function () {
 //build tasks
 //////////////////////////////////////
 
-gulp.task('build', ['css-concat-unmin','scripts-build','scripts-unmin','header','footer','navbar','css-link-var'], function() {});
+gulp.task('build', ['css-concat-unmin','scripts-build','scripts-unmin','header','footer','navbar','css-link-var','footer-link-var'], function() {});
 
 gulp.task( 'css-sass-build', function() {
   var stream = gulp.src('./sass/*.scss')
@@ -190,8 +191,8 @@ gulp.task( 'css-concat-built', ['css-sass-build'], function() {
   var stream = gulp.src( css_array )
     .pipe(concat('style.css'))
     .pipe(autoprefixer())
-    //.pipe(minifyCSS({advanced:false,keepSpecialComments:0}))
-    .pipe(minifyCSS())
+    //.pipe(cssnano({advanced:false,keepSpecialComments:0}))
+    .pipe(cssnano())
     .pipe(gulp.dest('./assets/built/'));
   return stream; 
 })
@@ -199,7 +200,7 @@ gulp.task( 'css-concat-unmin', ['css-concat-built'], function() {
   var stream = gulp.src( css_array )
     .pipe(concat('style.css'))
     .pipe(autoprefixer())
-    //.pipe(minifyCSS())
+    //.pipe(cssnano())
     .pipe(gulp.dest('./assets/unmin/'));
   return stream; 
 })
@@ -218,7 +219,14 @@ gulp.task('scripts-unmin', function() {
   .pipe(gulp.dest('./assets/unmin/'));
 });
 gulp.task('css-link-var', function() {
+  var now = Date.now();
   gulp.src( './preproc_content/preproc_head.php' )
-  .pipe(preprocess({context:{QUERY_STR:Date.now()}}))
+  .pipe(preprocess({context:{QUERY_STR: now }}))
+  .pipe(gulp.dest('.'));
+});
+gulp.task('footer-link-var', function() {
+  var now = Date.now();
+  gulp.src( './preproc_content/preproc_footer.php' )
+  .pipe(preprocess({context:{QUERY_STR: now }}))
   .pipe(gulp.dest('.'));
 });

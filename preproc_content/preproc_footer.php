@@ -6,7 +6,6 @@
 </div>
 </body>
 <script type="text/javascript" src="//cdn.jsdelivr.net/g/underscorejs@1.6,backbonejs@1.1,fancybox,xdate"></script>
-
   <!-- UNDERSCORE TEMPLATES -->
 
   <script type="text/html" id="buildtemplate">
@@ -107,12 +106,8 @@
       <center><a class="btn-primary btn-xs button">Make Reservation</a></center>
     </div>
   </script>
-
-
-
-
-  <script type="text/javascript" src="./assets/js/get_time.php"></script>
-<script type="text/javascript" src="./assets/built/scripts.js"></script>
+<script type="text/javascript" src="./assets/js/get_time.php"></script>
+<script type="text/javascript" src="./assets/built/scripts.js?v=/* @echo QUERY_STR */"></script>
 <script type="text/javascript">
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
