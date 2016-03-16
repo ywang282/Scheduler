@@ -14,6 +14,6 @@ include("siteheader.php");
 //searches the site
 include("search/search.php");
 //contains the footer and external JS resources
-include("shared_footer.php");
+include("preproc_footer.php");
 ?>
 </html>
