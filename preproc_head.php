@@ -11,7 +11,7 @@
     <link rel="icon" href="./assets/favicon.png" type="image/png" />
     <script src="//cdn.jsdelivr.net/g/jquery@2.1"></script>
     <script>window.jQuery || document.write('<script src="./assets/js/jquery-1.10.2.min.js"><\/script>')</script>
-    <!--[if lt IE 9]>
+    <!--[if lt IE 10]>
     <script src="./assets/js/respond.min.js"></script>
     <script src="./assets/js/html5shiv.js"></script>
     <script src="./assets/js/css_browser_selector.js"></script>
