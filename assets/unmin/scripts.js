@@ -3981,23 +3981,28 @@ $( '#selection2' ).change(function(){
         });
       }
   });
-  //library technology, ugl loanable technology function
-  $( window ).load(function () {
-      $.getJSON(window.location.origin + "/api/tech/list",
-      //using this proxy until gateway tech api is corrected 
+//library technology, ugl loanable technology function
+$( document ).ready(function() {
+    $("#techli").click(loadLoanableTech);
+});
+  
+function loadLoanableTech()
+{
+	$.getJSON(window.location.origin + "/api/tech/list",
+		//using this proxy until gateway tech api is corrected 
 
-          function processData(jsonData) {
+		function processData(jsonData) {
 
-          // Loop through each data block
-          $.each(jsonData, function (object, objectData) {
-        var vdesc = objectData.name.replace('<','&lt;').replace('>', '&gt;');
-              $('#uglTechItem').append("<li><a href='http://vufind.carli.illinois.edu/vf-uiu/Record/" +
-                objectData.bibId + "/Holdings'>" +
-                vdesc + "</a>" + "<span class='badge'>" + objectData.count + "</span></li>");
+			// Loop through each data block
+			$.each(jsonData, function (object, objectData) {
+			var vdesc = objectData.name.replace('<','&lt;').replace('>', '&gt;');
+			$('#uglTechItem').append("<li><a href='http://vufind.carli.illinois.edu/vf-uiu/Record/" +
+			objectData.bibId + "/Holdings'>" +
+			vdesc + "</a>" + "<span class='badge'>" + objectData.count + "</span></li>");
 
-          });
-      });
-  });
+		});
+	});
+}
 //provides keyboard support for orange accordion/tabs.  
 
 $( '.arrow-access' ).keydown( function(e) {
