@@ -6,6 +6,7 @@
     <div id="inner-wrap">
       <div class="mobile-overlay" role="button" aria-label="hide mobile navigation"></div>
       <div class="container">
-        <header class="" role="banner" aria-label="University of Illinois Library Banner">
+        <?php require_once( 'shared-global-nav.php' ); ?>
+        <header id="gateway-header" class="" role="banner" aria-label="University of Illinois Library Banner">
           <?php require_once( 'shared_header.php' ); ?>
         </header>

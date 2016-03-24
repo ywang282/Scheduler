@@ -8,8 +8,6 @@ include("preproc_head.php");
 <?php
 //contains the sitewide navigation bar
 include("siteheader.php");
-//contains the gateway navigation bar
-include("shared_navbar.php");
 //contains the gateway alert 
 include("alert.php");
 //contains (manually edited) optional "info" box, less glaring than alerts but still noticeable
