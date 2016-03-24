@@ -1,4 +1,73 @@
 <div class="container s-cus-illinois-header s-lib-side-borders">
+  <nav id="ui-lib-global-nav" class="global-nav-menu row">
+    <div id="ui-lib-mobile-utilities" class="ui-lib-mobile-show">
+      <div>
+        <a href="https://vufind.carli.illinois.edu/vf-uiu/MyResearch/Home"><span class="fa fa-user"> </span> My Account</a>
+      </div>
+      <div>
+        <a data-toggle="collapse" data-parent="#site-header-controls-small" href="#site_search_collapse_mobile"> <span class="fa fa-search"></span> Site Search</a>
+        <div id="site_search_collapse_mobile" class="collapse site-header-control-group">
+          <form id="sitesearch" class="search form-inline" method="get" action="undefined" role="search">
+            <div class="form-group">
+              <input name="hl" value="en" type="hidden" />
+              <input name="safe" value="off" type="hidden" />
+              <input name="filter" value="0" type="hidden" />
+              <input id="searchQuery_mobile" class="form-control input-sm" maxlength="1000" size="25" name="q" placeholder="Search Library Webpages" type="text"  aria-required="true" aria-label="Enter keywords to search library web pages.  Press enter to submit."/>
+              <span class="sr-only">enter keywoards to search library web pages. Press enter to submit</span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div>
+        <a href="http://www.library.illinois.edu/iwonder"><span class="fa fa-comments"> </span> Ask A Librarian</a>
+      </div>
+    </div>
+    <div id="ui-lib-global-menu" class="menu-top-level-menu-container">
+  <ul id="menu-global" class="nav navbar-nav"><li id="menu-item-81" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-81 dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+  <ul role="menu" class=" dropdown-menu">
+    <li id="menu-item-99" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-99" role="presentation"><a href="http://www.library.illinois.edu/people/" role="menuitem" tabindex="-1">Employee Directory</a></li>
+    <li id="menu-item-190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-190" role="presentation"><a href="http://www.library.illinois.edu/people/directory.html" role="menuitem" tabindex="-1">Departmental Directory</a></li>
+    <li id="menu-item-191" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-191" role="presentation"><a href="http://illinois.edu/calendar/list/4092?cal=20160118&amp;skinId=1977" role="menuitem" tabindex="-1">Events &amp; Workshops</a></li>
+    <li id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-98" role="presentation"><a href="http://www.library.illinois.edu/administration/human/positions/employment.html" role="menuitem" tabindex="-1">Library Employment</a></li>
+    <li id="menu-item-243" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-243" role="presentation"><a href="http://www.library.illinois.edu/geninfo/history.html" role="menuitem" tabindex="-1">About Our Collections</a></li>
+    <li id="menu-item-333" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-333" role="presentation"><a href="http://www.library.illinois.edu/administration/services/policies/" role="menuitem" tabindex="-1">Policies</a></li>
+    <li id="menu-item-242" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-242" role="presentation"><a href="http://www.library.illinois.edu/friends/make-a-gift/" role="menuitem" tabindex="-1">Make a Gift</a></li>
+    <li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-172" role="presentation"><a title="More about the library" href="http://www.library.illinois.edu/about/" role="menuitem" tabindex="-1"><span class="glyphicon More about the library"></span>&nbsp;MORE</a></li>
+  </ul>
+  </li>
+  <li id="menu-item-369" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-369"><a href="http://www.library.illinois.edu/#hoursloc">Libraries &amp; Hours</a></li>
+  <li id="menu-item-105" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-105 dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Using the Library <span class="caret"></span></a>
+  <ul role="menu" class=" dropdown-menu">
+    <li id="menu-item-103" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-103" role="presentation"><a href="http://www.library.illinois.edu/circ/policies/Policies.html#account" role="menuitem" tabindex="-1">Setup &amp; Use My Account</a></li>
+    <li id="menu-item-106" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-106" role="presentation"><a href="http://www.library.illinois.edu/#roomresli" role="menuitem" tabindex="-1">Study Room Reservations</a></li>
+    <li id="menu-item-107" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-107" role="presentation"><a href="http://www.library.illinois.edu/services/librarycomputing.html" role="menuitem" tabindex="-1">Print, Copy, Scan</a></li>
+    <li id="menu-item-230" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-230" role="presentation"><a href="http://www.library.illinois.edu/it/helpdesk/howto/vpn.html" role="menuitem" tabindex="-1">Connect From Off-Campus</a></li>
+    <li id="menu-item-199" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-199" role="presentation"><a title="More about using the library" href="http://www.library.illinois.edu/using/" role="menuitem" tabindex="-1"><span class="glyphicon More about using the library"></span>&nbsp;MORE</a></li>
+  </ul>
+  </li>
+  <li id="menu-item-108" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-108 dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Help &amp; Services <span class="caret"></span></a>
+  <ul role="menu" class=" dropdown-menu">
+    <li id="menu-item-112" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-112" role="presentation"><a href="http://www.library.illinois.edu/askus/" role="menuitem" tabindex="-1">Ask a Librarian</a></li>
+    <li id="menu-item-110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-110" role="presentation"><a href="http://guides.library.illinois.edu/" role="menuitem" tabindex="-1">Guides</a></li>
+    <li id="menu-item-111" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111" role="presentation"><a href="http://www.library.illinois.edu/ill" role="menuitem" tabindex="-1">Interlibrary Loan</a></li>
+    <li id="menu-item-113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-113" role="presentation"><a href="http://illinois.edu/calendar/list/4068" role="menuitem" tabindex="-1">Savvy Researcher Workshops</a></li>
+    <li id="menu-item-200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-200" role="presentation"><a title="More about library help and services" href="http://www.library.illinois.edu/help-services/" role="menuitem" tabindex="-1"><span class="glyphicon More about library help and services"></span>&nbsp;MORE</a></li>
+  </ul>
+  </li>
+  <li id="menu-item-100" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-100 dropdown ui-lib-global-menu-top-highlight"><a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Search Tools <span class="caret"></span></a>
+  <ul role="menu" class=" dropdown-menu">
+    <li id="menu-item-101" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-101" role="presentation"><a href="http://search.grainger.illinois.edu/searchaid2/searchassist.asp" role="menuitem" tabindex="-1">Easy Search</a></li>
+    <li id="menu-item-235" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-235" role="presentation"><a href="http://vufind.carli.illinois.edu/vf-uiu/" role="menuitem" tabindex="-1">Library Catalog</a></li>
+    <li id="menu-item-234" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-234" role="presentation"><a href="https://i-share.carli.illinois.edu/uiu/cgi-bin/Pwebrecon.cgi?DB=local&amp;PAGE=rbSearch" role="menuitem" tabindex="-1">Course Reserves</a></li>
+    <li id="menu-item-256" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-256" role="presentation"><a href="http://sfx.carli.illinois.edu/sfxuiu/az" role="menuitem" tabindex="-1">Online Journals</a></li>
+    <li id="menu-item-102" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-102" role="presentation"><a href="http://search.grainger.uiuc.edu/linker/" role="menuitem" tabindex="-1">Article Locator</a></li>
+    <li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-104" role="presentation"><a href="http://guides.library.illinois.edu/az.php" role="menuitem" tabindex="-1">Databases (A-Z List)</a></li>
+    <li id="menu-item-201" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-145 current_page_item menu-item-201 active" role="presentation"><a title="More about search tools" href="http://www.library.illinois.edu/search-tools/" role="menuitem" tabindex="-1"><span class="glyphicon More about search tools"></span>&nbsp;MORE</a></li>
+  </ul>
+  </li>
+  </ul>
+    </div>
+  </nav>
   <header>
     <div class="row lib-shared-header">
       <div class="col-sm-6 col-xs-10">
@@ -17,105 +86,14 @@
           </div>
         </div>
       </div>
+      
       <div class="col-xs-2 visible-xs">
         <a id="mobile-canvas-button" class="pull-right" href="javascript:void(0)">
-          <i class="fa fa-bars"><span class="sr-only">Site Navigation Menu</span> </i>
+          <span class="sr-only">Site Navigation Menu</span>
         </a>
       </div>
+
     </div>
   </header>
-</div>
-<div id="container-site-nav" class="container s-lib-side-borders">
-  <nav id="site-nav" class="row navbar navbar-default" role="presentation">
-    <div class="" role="navigation" aria-label="main navigation">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="http://www.library.illinois.edu/administration/librarian/">Welcome from the University Librarian</a></li>
-  		        <li><a href="http://www.library.illinois.edu/administration/">Library Administration</a></li>
-              <li><a href="http://www.library.illinois.edu/friends/">Library Friends</a></li>
-              <li><a href="http://www.library.illinois.edu/geninfo/history.html">About the Collections</a></li>
-              <li><a href="http://www.library.illinois.edu/administration/human/positions/employment.html">Library Employment</a></li>
-              <li><a href="http://www.library.illinois.edu/diversity/">Diversity &amp; Multicultural Information</a></li>
-              <li><a href="http://www.library.illinois.edu/administration/services/policies/">Library Policies</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Find a <span class="navbar-medium-wrap">Library <b class="caret"></b></span></a>
-            <ul class="dropdown-menu">
-              <li><a id="hoursloca" href="http://www.library.illinois.edu/#hoursloc">Libraries and Hours</a></li>
-              <li><a href="https://www.google.com/maps/d/viewer?mid=zKflNQk3UbzM.kOGWB2H8UY-Y&hl=en">Map of Libraries</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Special <span class="navbar-medium-wrap">Collections <b class="caret"></b></span></a>
-            <ul class="dropdown-menu">
-              <li role="presentation" class="dropdown-header">Special Collections Units</li>
-              <li><a href="http://www.library.illinois.edu/ihx/index.html ">Illinois History &amp; Lincoln Collections</a></li>
-              <li><a href="http://www.library.illinois.edu/max/ ">Map Library</a></li>
-              <li><a href="http://www.library.illinois.edu/rbx/">Rare Book &amp; Manuscript Library</a></li>
-              <li><a href="http://www.library.illinois.edu/sousa/">Sousa Archives &amp; Center for American Music</a></li>
-  	          <li><a href="http://archives.library.illinois.edu/slc/">Student Life and Culture Archives</a></li>
-              <li><a href="http://archives.library.illinois.edu/">University Archives</a></li>
-              <li role="presentation" class="divider"></li>
-              <li role="presentation" class="dropdown-header">Other Special Collections</li>
-              <li><a href="http://www.library.illinois.edu/sshel/s-coll/index.htm ">Children's Books (Social Sciences, Health, and Education Library)</a></li>
-              <li><a href="http://www.library.illinois.edu/cmx/darcy/index.html">D'Arcy Advertising Collection (Communications Library)</a></li>
-              <li><a href="http://imagesearchnew.library.illinois.edu/cdm/">Digital Image Collections</a></li>
-              <li><a href="http://www.library.illinois.edu/kolbp/">Kolb-Proust Archive for Research (Rare Books &amp; Manuscript Library)</a></li>
-              <li><a href="http://www.law.illinois.edu/library/rare-books-collection">Law Rare Book Collection (Law Library)</a></li>
-              <li><a href="http://www.library.illinois.edu/mux/about/collections/specialcollections/index.html"> Music Special Collections (Music and Performing Arts Library)</a></li>
-              <li><a href="http://www.library.illinois.edu/hpnl/">Newspapers (History, Philosophy, and Newspaper Library)</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="http://www.library.illinois.edu/afx/unit.htm">African American Research Center</a></li>
-    					<li><a href="http://www.library.illinois.edu/bix/">Biology Virtual Library</a></li>
-    					<li><a href="http://www.library.illinois.edu/bis/">Business Information Services</a></li>
-    					<li><a href="http://www.library.illinois.edu/gex/">Geology Virtual Library</a></li>
-    					<li><a href="http://www.library.illinois.edu/doc/">Government Information Services</a></li>
-    					<li><a href="http://www.library.illinois.edu/interlibrary-loan/">Interlibrary Loan</a></li>
-              <li><a href="http://www.library.illinois.edu/ias/iri/">International Reference</a></li>
-    					<li><a href="http://www.library.illinois.edu/lis/">LIS Virtual Library</a></li>
-    					<li><a href="http://www.library.illinois.edu/ugl/mc/">Media Commons</a></li>
-    					<li><a href="http://www.library.illinois.edu/phx/">Physics & Astronomy Virtual Library</a></li>
-    					<li><a href="http://www.library.illinois.edu/prescons/">Preservation and Conservation</a></li>
-    					<li><a href="http://researchdataservice.illinois.edu/">Research Data Service</a></li>
-    					<li><a href="http://www.library.illinois.edu/sc/">Scholarly Commons</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></span></a>
-            <ul class="dropdown-menu">
-  		        <li><a href="http://www.library.illinois.edu/people/directory.html">Departmental Directory</a></li>
-              <li><a href="http://www.library.illinois.edu/people/phone.php ">Employee Directory</a></li>
-              <li><a href="http://www.library.illinois.edu/secondary/contactUs.html">General contact information</a></li>
-              <li><a href="https://illinois.edu/fb/sec/1454867">Feedback and suggestions</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-  	          <li><a href="http://www.library.illinois.edu/askus/">Ask a Librarian</a></li>
-  	          <li><a href="http://illinois.edu/calendar/list/4068">Workshops</a></li>
-  	          <li role="presentation" class="divider"></li>
-              <li role="presentation" class="dropdown-header">LEARN links</li>
-              <li><a href="http://library.illinois.edu/learn">LEARN to use the Library</a></li>
-  	          <li><a href="http://www.library.illinois.edu/learn/intro/index.html">Introduction to the Library</a></li>
-              <li><a href="http://www.library.illinois.edu/learn/find/index.html">Find books, articles and more</a></li>
-  	          <li><a href="http://www.library.illinois.edu/learn/research/citation/index.html">Cite a source</a></li>
-              <li><a href="http://www.library.illinois.edu/learn/intro/faq.html">FAQ</a></li>
-            </ul>
-          </li>
-    			<li class="dropdown hidden-xs">
-    				<a id="donate_navbar_link" href="http://www.library.illinois.edu/friends/make-a-gift/"><span class="fa fa-gift fa-1x"></span>
-    				Give</a>
-    			</li>
-        </ul> 
-  	</div>  
-  </nav>
 </div>
   
