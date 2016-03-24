@@ -121,7 +121,7 @@ script_array = [
   './assets/js/news-events.js',
   './assets/js/loan-tech.js',
   './assets/js/accordion-tab-support.js',
-  './shared_content/js/global-access.js'
+  './assets/js/global-access.js'
   ];
 
 css_array = [
