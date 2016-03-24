@@ -1,6 +1,6 @@
   <div id="ui-lib-shared-footer" class="row footer-info">
     <div class="col-md-3 col-sm-3 col-xs-12" role="region">
-      <div class="dropdown" aria-labelledby="University library address" role="navigation">
+      <div class="dropdown">
         <a href="#" class="dropdown-toggle footer-link" data-toggle="dropdown"><span class="footerheading">Contact Us:<b class="caret"></b></span></a>
         <ul class="dropdown-menu">
           <li><a href="http://www.library.illinois.edu/people/phone.php" aria-labelledby="Employee Directory">Employee Directory</a></li>
@@ -38,7 +38,7 @@
       <div class="row" role="navigation" aria-labelledby="groups">
         <div class="col-md-6" id="info"> 
           <ul class="usergroups">
-           <li><a class="footer-link" href="http://www.library.illinois.edu/ugl/">Undergraduates</a></li><br>
+           <li><a class="footer-link" href="http://www.library.illinois.edu/ugl/">Undergraduates</a></li>
            <li><a class="footer-link" href="http://www.library.illinois.edu/learn/users/gradstudents.html">Graduate Students</a></li>
            <li><a class="footer-link" href="http://www.library.illinois.edu/learn/users/faculty.html">Faculty</a></li>
            <li><a class="footer-link" href="http://www.library.illinois.edu/learn/users/alumni.html">Alumni</a></li>
@@ -47,7 +47,7 @@
         </div>
         <div class="col-md-6" id="info">
           <ul class="usergroups">
-           <li><a class="footer-link" href="http://www.library.illinois.edu/learn/users/affiliates.html">Affiliated Organizations</a></li>
+           <li><a class="footer-link" href="http://guides.library.illinois.edu/affiliates">Affiliated Organizations</a></li>
            <li><a class="footer-link" href="http://guides.library.illinois.edu/usersdisabilities">Users with Disabilities</a></li>
            <li><a class="footer-link" href="http://guides.library.illinois.edu/distance_learners/">Distance Learners</a></li>
            <li><a class="footer-link" href="http://www.library.illinois.edu/staff/">Library Staff</a></li>

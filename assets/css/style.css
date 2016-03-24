@@ -3677,9 +3677,11 @@ a.dynamictabs {
   #ui-lib-shared-footer ul.usergroups li,
   #ui-lib-shared-footer ul.feedback li,
   #ui-lib-shared-footer ul.about li {
-    display: inline-block;
+    display: block;
     padding-right: 7px;
     padding-bottom: 7px; }
+  #ui-lib-shared-footer ul.socialmedia li {
+    display: inline-block; }
   #ui-lib-shared-footer ul.socialmedia li a {
     color: #337ab7; }
 
