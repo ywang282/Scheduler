@@ -1,0 +1,315 @@
+body {
+  background-color:#dddddd;
+  font-size: 14px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/*guide padding fix */
+
+#s-lg-tabs-container {
+padding-bottom: 10px;
+} 
+
+#s-lg-tabs-container.container {
+padding-left:15px;
+padding-right:15px;
+}
+
+
+/*guide page previous next padding fix */
+
+.pager {
+padding-left: 15px;
+padding-right: 15px;
+}
+
+/*edit screen header space fix */
+
+#s-lg-guide-header {
+padding-bottom:10px;
+}
+
+/* hompage fix */
+
+#s-lib-bc .breadcrumb {
+  margin: 10px 0 10px;
+}
+
+#s-lg-index-cols {
+  margin-bottom: 15px;
+
+}
+
+#s-lg-public-skiplink {
+font-size: 11px;
+}
+
+.s-lg-public-search-field {
+  width: inherit;
+}
+
+.navbar-nav {
+  font-size: 12px;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+
+/* A-Z fixes */
+
+.label-success {
+    background-color: #F47F24;
+    font-size: 11px;
+}
+
+/*Search Page result fix*/
+
+#s-lg-srch-form .tt-dropdown-menu {
+    margin-top: 33px;}
+
+
+
+/*tab sub-page dropdown */
+
+
+#s-lg-tabs-container .nav .dropdown-toggle .caret {
+    border-top-color: initial;
+}
+
+.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+
+/* Add box underline and increase h2 font size in box title */
+
+.s-lib-box .s-lib-box-title {
+font-size: 16px;
+padding: 6px 2px;
+margin-bottom: 10px;
+border-bottom: 1px solid #FFA466;
+}
+
+/* remove box shadows throughout site*/
+.s-lib-box {
+box-shadow: none;
+}
+
+/*decrease email me button text and change background color */
+.label-info {
+    background-color: #337ab7;
+    font-size: 1.3em !important;
+}
+
+/* h3, h4, h5 */
+
+.h3, h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.h4, h4 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.h5, h5 {
+  font-size: 13px;
+}
+
+/*align ul, ol with link lists */
+
+div.s-lib-box-content ul, ol {
+  -webkit-padding-start: 20px;
+  margin-bottom: 10px;
+}
+
+/* change link color */
+
+a {
+  color: #337ab7;
+}
+
+/* hide guide list account and view information */
+
+span.s-lg-guide-info-account { display: none; }
+span.s-lg-guide-info-views { display: none; }
+span.s-lg-guide-info-updated { display: none; }
+
+/* Override the bootstrap style on blockquote */
+blockquote {
+   border-left: none;
+   font-size: 14px;
+   font-style: italic;
+ }
+
+/* Insert the pseudo element - replicating what FontAwesome does */
+blockquote:before {
+    content: "\f10d"; 
+    font-family: FontAwesome;
+    float: left;
+    margin-right: 10px;
+}
+
+blockquote:after { 
+  content: "\f10e"; 
+  font-family: FontAwesome; 
+  float: right; 
+  margin-left: 10px; 
+}
+
+/* add a border under the guide tabs */
+
+#s-lg-tabs-container .nav-tabs {
+border-bottom: 1px solid #ddd;
+}
+
+#s-lg-guide-tabs-title-bar { 
+  border-top: none;
+}
+
+
+/* customize tab box look and feel */
+
+.ui-widget-content { 
+  border: none;
+}
+.ui-widget-content a, a {
+  color: #337ab7;
+}
+.ui-widget-header { 
+  border: none;    background: none;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { 
+background: #dddddd!important;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+color: #333 !important;
+outline: none;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { 
+background: none;
+border: 1px solid #ddd;
+}
+.ui-state-hover a, .ui-state-hover a:hover {
+background: #dddddd;
+border-radius: 4px 4px 0 0;
+outline: none;
+}
+.s-lib-box-content .ui-tabs .ui-tabs-panel {
+padding: 10 px;    
+background:#fff;
+border: 1px solid #dddddd;
+}
+.s-lib-box-content .ui-tabs-nav li>a {
+  color: #337ab7;
+}
+
+/* fix table padding */
+
+.s-lib-box-content table { 
+border: 1px solid #000; border-collapse: collapse; 
+}
+.s-lib-box-content td, .s-lib-box-content th  {
+border: 1px solid #000; padding: 5px;
+ }
+
+/* fix piktochart mobile view*/
+
+.pik-chart-340 {
+    position: relative;
+    padding-bottom: 340%;
+    padding-top: 0px;
+    height: 0;
+    overflow: hidden;
+}
+
+.pik-chart-340 iframe {
+    min-width: 100%;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pik-chart-287 {
+    position: relative;
+    padding-bottom: 287%;
+    padding-top: 0px;
+    height: 0;
+    overflow: hidden;
+}
+
+.pik-chart-287 iframe {
+    min-width: 100%;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pik-chart-186 {
+    position: relative;
+    padding-bottom: 186%;
+    padding-top: 0px;
+    height: 0;
+    overflow: hidden;
+}
+
+.pik-chart-186 iframe {
+    min-width: 100%;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pik-chart-140 {
+    position: relative;
+    padding-bottom: 140%;
+    padding-top: 0px;
+    height: 0;
+    overflow: hidden;
+}
+
+.pik-chart-140 iframe {
+    min-width: 100%;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+/* fix height and width of profile image*/
+
+div.s-lib-featured-profile-image { 
+  max-width:170px; 
+  max-height:170px; 
+  width: auto; 
+  height: auto; 
+}
+
+/* crystal guide page footer fix*/
+
+div.s-lib-footer {
+  font-size: 11px;
+  border-top: none;
+  background-color: #fff;
+}
+div.s-lib-cus-footer { 
+  font-size: 14px; line-height: 14px; padding-top: 10px; padding-bottom: 5px; background-color: #eeeeee; 
+}
+
+/*libanswer widget style overwrite */
+
+.s-la-faq-listing-meta {
+display:none; 
+}

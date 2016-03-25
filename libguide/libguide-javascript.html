@@ -1,0 +1,17 @@
+<script>
+$( document ).ready(function() {
+  var content = $('body').contents();
+  $('body').prepend('<div id="inner-wrap"></div>');
+  $('#inner-wrap').prepend(content);
+  $('#inner-wrap').prepend('<div class="mobile-overlay"></div>');
+  $('#inner-wrap').wrap('<div id="outer-wrap"></div>');
+  $( "#mobile-canvas-button, .mobile-overlay" ).on( "click", function() {
+    if ( $( "#inner-wrap" ).hasClass( "off-canvas" ) === true ) {
+      $( "#inner-wrap, .mobile-overlay" ).removeClass( "off-canvas" );
+    } else if ( $( "#inner-wrap" ).hasClass( "off-canvas" ) === false ) {
+      $( "#inner-wrap, .mobile-overlay" ).addClass( "off-canvas" );
+    }
+  });
+});
+</script>
+<script src="//api2.libanswers.com/1.0/widgets/2673"></script>

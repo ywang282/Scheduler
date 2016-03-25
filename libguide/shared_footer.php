@@ -52,7 +52,7 @@
            <li><a class="footer-link" href="http://guides.library.illinois.edu/usersdisabilities">Users with Disabilities</a></li>
            <li><a class="footer-link" href="http://guides.library.illinois.edu/distance_learners/">Distance Learners</a></li>
            <li><a class="footer-link" href="http://www.library.illinois.edu/staff/">Library Staff</a></li>
-          <ul> 
+          </ul> 
         </div>
       </div>
     </div>
@@ -66,9 +66,9 @@
     <div class="col-md-3 col-sm-3 col-xs-12" id="vertical" role="region" aria-label="about the site">
       <span class="footerheading">About this site</span>
       <ul class="about">
-       <li><a class="footer-link" href="http://www.vpaa.uillinois.edu/policies/web_privacy.cfm">Privacy</a></li>
+        <li><a class="footer-link" href="http://www.vpaa.uillinois.edu/policies/web_privacy.cfm">Privacy</a></li>
+        <li>Icons by <a class="footer-link" href="https://icons8.com/license" target="_blank">Icons8</a></li>
       </ul> 
-      <span class="text-block">Icon by <a class="footer-link" href="https://icons8.com/license" target="_blank">Icons8</a></span>
       <div class="footer-block-top-space">
         <a href="http://www.library.illinois.edu/doc/"><img src="http://www.library.illinois.edu/shared_content/assets/images/fdlp_logo.png" alt="Federal Depository Library Program Logo"></a>
       </div>
