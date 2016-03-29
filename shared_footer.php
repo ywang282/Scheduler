@@ -19,11 +19,11 @@
             <span class="fa fa-facebook-official fa-2x" aria-label="Univeristy of Illinois library facebook"></span></a>
             </li>
             <li>   
-            <a href="https://twitter.com/IllinoisLibrary">
+            <a href="https://www.instagram.com/uillinoislibrary/">
             <span class="fa fa-instagram fa-2x" aria-label="Univeristy of Illinois library Twitter"></span></a>
             </li>
             <li>   
-            <a href="https://www.instagram.com/uillinoislibrary/">
+            <a href="https://twitter.com/IllinoisLibrary">
             <span class="fa fa-twitter fa-2x" aria-label="Univeristy of Illinois library instagram"></span></a>
             </li>
         </ul>
@@ -51,7 +51,7 @@
            <li><a class="footer-link" href="http://guides.library.illinois.edu/usersdisabilities">Users with Disabilities</a></li>
            <li><a class="footer-link" href="http://guides.library.illinois.edu/distance_learners/">Distance Learners</a></li>
            <li><a class="footer-link" href="http://www.library.illinois.edu/staff/">Library Staff</a></li>
-          <ul> 
+          </ul> 
         </div>
       </div>
     </div>
@@ -65,7 +65,7 @@
     <div class="col-md-3 col-sm-3 col-xs-12" id="vertical" role="region" aria-label="about the site">
       <span class="footerheading">About this site</span>
       <ul class="about">
-       <li><a class="footer-link" href="http://www.vpaa.uillinois.edu/policies/web_privacy.cfm">Privacy</a></li>
+        <li><a class="footer-link" href="http://www.vpaa.uillinois.edu/policies/web_privacy.cfm">Privacy</a></li>
       </ul> 
       <div class="footer-block-top-space">
         <a href="http://www.library.illinois.edu/doc/"><img src="./shared_content/assets/images/fdlp_logo.png" alt="Federal Depository Library Program Logo"></a>
