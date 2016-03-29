@@ -21,11 +21,11 @@
             </li>
             <li>   
             <a href="https://www.instagram.com/uillinoislibrary/">
-            <span class="fa fa-instagram fa-2x" aria-label="Univeristy of Illinois library Twitter"></span></a>
+            <span class="fa fa-instagram fa-2x" aria-label="Univeristy of Illinois library instagram"></span></a>
             </li>
             <li>   
             <a href="https://twitter.com/IllinoisLibrary">
-            <span class="fa fa-twitter fa-2x" aria-label="Univeristy of Illinois library instagram"></span></a>
+            <span class="fa fa-twitter fa-2x" aria-label="Univeristy of Illinois library Twitter"></span></a>
             </li>
         </ul>
       </div>  
