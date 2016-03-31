@@ -3,7 +3,7 @@
       <div id="dynamictabs">
         <ul class="accordion-tabs-minimal dynamictabs" role="tablist">
           <li class="tab-header-and-content" role="presentation">
-            <a id="hoursloc" href="#" class="tab-link dynamictabs dynamic-tab-text arrow-access"><span class="fa fa-clock-o fa-3x"></span> <span class="dynamic-tab-label"><span class="text-block">Libraries </span>and Hours</span></a>
+            <a id="hoursloc" href="#" class="tab-link dynamictabs dynamic-tab-text arrow-access"><span class="fa fa-clock-o fa-3x"></span> <span class="dynamic-tab-label"><span class="text-block">Libraries </span>& Hours</span></a>
             <div class="tab-content-bourbon">
               <div class="tab-pane active dynamic-tab-pane" id="hours" role="tabpanel" aria-label="LIBRARIES AND HOURS">
                 <div class="dynamic-panel-body">
@@ -318,7 +318,7 @@
       </div>
           </li>
           <li class="tab-header-and-content" role="presentation">
-            <a id="newsli" href="#" class="tab-link dynamictabs dynamic-tab-text arrow-access"><span class="fa fa-calendar fa-3x"></span><span class="dynamic-tab-label"><span class="text-block">News and</span>Events</span></a>
+            <a id="newsli" href="#" class="tab-link dynamictabs dynamic-tab-text arrow-access"><span class="fa fa-calendar fa-3x"></span><span class="dynamic-tab-label"><span class="text-block">News &</span>Events</span></a>
             <div class="tab-content-bourbon">
               <div class="dynamic-tab-pane" id="news"><!-- TAB: NEWS and EVENTS -->
                 <div class="dynamic-panel-body">
