@@ -107,7 +107,7 @@
     </div>
   </script>
 <script type="text/javascript" src="./assets/js/get_time.php"></script>
-<script type="text/javascript" src="./assets/built/scripts.js?v=1458857612424"></script>
+<script type="text/javascript" src="./assets/built/scripts.js?v=1459456073455"></script>
 <script type="text/javascript">
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -117,7 +117,12 @@
   ga('create', 'UA-55158287-1', 'auto');
   ga('send', 'pageview');
   </script>
+
+<!--  Begin Campus Emergency Alert Script - DO NOT REMOVE -->
+<script type="text/javascript" src="https://emergency.webservices.illinois.edu/illinois.js"></script>
+<!--  End Campus Emergency Alert Script -->
+
 <script src="./assets/js/ga/gaelt.js" type="text/javascript"></script>
-  <script type="text/javascript">
+<script type="text/javascript">
   add_GA_Events(window.location.host);
 </script>

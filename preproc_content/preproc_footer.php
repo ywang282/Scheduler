@@ -117,7 +117,12 @@
   ga('create', 'UA-55158287-1', 'auto');
   ga('send', 'pageview');
   </script>
+
+<!--  Begin Campus Emergency Alert Script - DO NOT REMOVE -->
+<script type="text/javascript" src="https://emergency.webservices.illinois.edu/illinois.js"></script>
+<!--  End Campus Emergency Alert Script -->
+
 <script src="./assets/js/ga/gaelt.js" type="text/javascript"></script>
-  <script type="text/javascript">
+<script type="text/javascript">
   add_GA_Events(window.location.host);
 </script>
