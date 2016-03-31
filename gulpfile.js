@@ -121,7 +121,8 @@ script_array = [
   './assets/js/news-events.js',
   './assets/js/loan-tech.js',
   './assets/js/accordion-tab-support.js',
-  './assets/js/global-access.js'
+  './assets/js/global-access.js',
+  './assets/js/fix_emergency_alert.js'
   ];
 
 css_array = [
@@ -130,7 +131,8 @@ css_array = [
   './assets/css/jquery-ui.min.css',
   './assets/css/bootstrap-accessibility.css',
   './assets/css/columnselect.css',
-  './bower_components/fontawesome/css/font-awesome.css'
+  './bower_components/fontawesome/css/font-awesome.css',
+  './assets/css/fix_emergency_alert.css'
   ];
 
 var onError = function( err ) {

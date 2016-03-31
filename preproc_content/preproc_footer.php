@@ -118,11 +118,9 @@
   ga('send', 'pageview');
   </script>
 
-<!--  Begin Campus Emergency Alert Script plus cleanup -->
-<script type="text/javascript" src="https://emergency.webservices.illinois.edu/test/alert.js"></script>
-<script src="./assets/js/fix_emergency_alert.js" type="text/javascript"></script>
-<link rel="stylesheet" href="./assets/css/fix_emergency_alert.css">
-<!--  End Campus Emergency Alert Script plus cleanup -->
+<!--  Begin Campus Emergency Alert Script - DO NOT REMOVE -->
+<script type="text/javascript" src="https://emergency.webservices.illinois.edu/illinois.js"></script>
+<!--  End Campus Emergency Alert Script -->
 
 <script src="./assets/js/ga/gaelt.js" type="text/javascript"></script>
 <script type="text/javascript">
