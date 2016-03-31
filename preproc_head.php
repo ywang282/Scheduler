@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <title>University Library, University of Illinois</title>
-    <link rel="stylesheet" href="./assets/built/style.css?v=1458857612424">
+    <link rel="stylesheet" href="./assets/built/style.css?v=1459452948521">
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css">
     <link rel="icon" href="./assets/favicon.png" type="image/png" />
     <script src="//cdn.jsdelivr.net/g/jquery@2.1"></script>

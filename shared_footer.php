@@ -66,6 +66,7 @@
       <span class="footerheading">About this site</span>
       <ul class="about">
         <li><a class="footer-link" href="http://www.vpaa.uillinois.edu/policies/web_privacy.cfm">Privacy</a></li>
+        <li><span class="fa fa-wordpress fa-1" aria-label="wordpress staff login"></span><a class="footer-link" href="https://wordpress.library.illinois.edu/wp-login.php"> Staff Login</a></li>
       </ul> 
       <div class="footer-block-top-space">
         <a href="http://www.library.illinois.edu/doc/"><img src="./shared_content/assets/images/fdlp_logo.png" alt="Federal Depository Library Program Logo"></a>

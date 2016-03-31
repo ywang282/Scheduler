@@ -117,7 +117,14 @@
   ga('create', 'UA-55158287-1', 'auto');
   ga('send', 'pageview');
   </script>
+
+<!--  Begin Campus Emergency Alert Script plus cleanup -->
+<script type="text/javascript" src="https://emergency.webservices.illinois.edu/test/alert.js"></script>
+<script src="./assets/js/fix_emergency_alert.js" type="text/javascript"></script>
+<link rel="stylesheet" href="./assets/css/fix_emergency_alert.css">
+<!--  End Campus Emergency Alert Script plus cleanup -->
+
 <script src="./assets/js/ga/gaelt.js" type="text/javascript"></script>
-  <script type="text/javascript">
+<script type="text/javascript">
   add_GA_Events(window.location.host);
 </script>

@@ -1,0 +1,30 @@
+/*
+"Worst case" CSS fall backs to position ewas alret divs as 
+well as possibly should the scripts fail to reposition alert 
+content in the page for some reason.
+*/
+
+/*
+CSS overrides for if/when the alert divs have been properly moved in the DOM into the #alert-div
+*/
+.ewas-alert-box-inside {
+max-width: 100% !important;
+}
+
+#ewas-mini-wrapper {
+position:static !important;
+margin-bottom: 1rem;
+width: auto !important;
+}
+
+#alert-div #ewas-mini-wrapper {
+display:block !important;
+position:static !important;
+padding:1rem !important;
+margin:auto !important;
+}
+
+.uiuc_emergency_alert_wrapper {
+background-color:#d60000;
+margin-bottom: 1rem;
+}
