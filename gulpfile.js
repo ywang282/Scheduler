@@ -1,57 +1,45 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var watch = require('gulp-watch');
-var plumber = require('gulp-plumber');
-var livereload = require('gulp-livereload');
-//var minifyCSS = require('gulp-minify-css');
-var cssnano = require('gulp-cssnano');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var preprocess = require('gulp-preprocess');
+var gulp            = require('gulp');
+var sass            = require('gulp-sass');
+var watch           = require('gulp-watch');
+var plumber         = require('gulp-plumber');
+var livereload      = require('gulp-livereload');
+var cssnano         = require('gulp-cssnano');
+var sourcemaps      = require('gulp-sourcemaps');
+var autoprefixer    = require('gulp-autoprefixer');
+var concat          = require('gulp-concat');
+var uglify          = require('gulp-uglify');
+var preprocess      = require('gulp-preprocess');
+var del             = require('del');
+var rev             = require('gulp-rev');
 
-//////////////////////////////////////
-//libguide tasks
-//////////////////////////////////////
-
-gulp.task('libguide', function() {
-  gulp.src('./shared_content/shared_header.php')
-  .pipe(preprocess( 
-    {context: 
-      { 
-        ENV_VAR: 'libguide', 
-        IMAGE_DIR: 'http://www.library.illinois.edu/shared_content/assets/images/',
-        BASE_GW_ULR: 'http://www.library.illinois.edu/',
-        DEBUG: true
-      }
-    }))  
-  .pipe(gulp.dest('./libguide/'));
-
-  gulp.src('./shared_content/shared_footer.php')
-  .pipe(preprocess( 
-    {context: 
-      { 
-        ENV_VAR: 'libguide',
-        IMAGE_DIR: 'http://www.library.illinois.edu/shared_content/assets/images/',
-        DEBUG: true
-      }
-  })) 
-  .pipe(gulp.dest('./libguide/'));
-
-  gulp.src( './shared_content/libguide-style.scss')
-  .pipe(plumber( { errorHandler: onError }))
-  .pipe(sass())
-  .pipe(autoprefixer())
-  .pipe(gulp.dest('./libguide/'))
+gulp.task('testrev', function () {
+  return gulp.src('./assets/css/*.css')
+    .pipe(rev())
+    .pipe(gulp.dest('build/assets'))  // write rev'd assets to build dir 
+    .pipe(rev.manifest())
+    .pipe(gulp.dest('build/assets')); // write manifest to build dir 
 });
 
-//////////////////////////////////////
-//shared_content tasks
-//////////////////////////////////////
+//environment variable to be used by gulp-if plugin
+// for build tasks.  determines whether minification tasks
+// will run or not
+var production = false;
+
+//clean:dist tasks deletes all contents of /dist 
+//directory before build to prevent files 
+//that have been deleted from  source directories 
+//remaining in the dist directory
+gulp.task( 'clean:dist', function() {
+  return del(['./build/**/*']);
+});
+
+
+//header and footer array for build these two 
+//tasks need to be run prior to the copy:wp task
+var headFootArray = [ 'header', 'footer' ];
 
 gulp.task('header', function() {
-  gulp.src('./shared_content/shared_header.php')
+  gulp.src('./shared_content/php/shared_header.php')
     .pipe(preprocess( 
       {context: 
         { 
@@ -61,11 +49,11 @@ gulp.task('header', function() {
           DEBUG: true
         }
       })) 
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('./src'));
 });
 
 gulp.task('footer', function() {
-  gulp.src('./shared_content/shared_footer.php')
+  gulp.src('./shared_content/php/shared_footer.php')
     .pipe(preprocess( 
       {context: 
         { 
@@ -74,7 +62,7 @@ gulp.task('footer', function() {
           DEBUG: true
         }
       })) 
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('./src'));
 });
 
 // gulp.task('navbar', function() {

@@ -116,7 +116,7 @@
   
   ga('create', 'UA-55158287-1', 'auto');
   ga('send', 'pageview');
-  </script>
+</script>
 
 <!--  Begin Campus Emergency Alert Script - DO NOT REMOVE -->
 <script type="text/javascript" src="https://emergency.webservices.illinois.edu/illinois.js"></script>
