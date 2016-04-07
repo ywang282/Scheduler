@@ -9,6 +9,11 @@ $( '#dropdown' ).change(function(){
     $( '#keyword' ).attr( 'name', 'searcharg' );
     $( '#search_everything .es-classic' ).prop( 'disabled', true);
     $( '#search_everything .es-bento' ).prop( 'disabled', false);
+  } else if ( $( '#dropdown' ).val() == "images" || $( '#dropdown' ).val() == "datasets" || $( '#dropdown' ).val() == "theses" || $( '#dropdown' ).val() == "news" ) {
+    $( '#search_everything' ).attr( 'action', 'http://search.grainger.illinois.edu/searchaid2/saresultsug.asp');
+    $( '#search_everything .es-classic' ).prop( 'disabled', true);
+    $( '#search_everything .es-bento' ).prop( 'disabled', true);
+    $( '#keyword' ).attr( 'name', 'keyword' );
   } else {
     $( '#search_everything' ).attr( 'action', 'http://search.grainger.illinois.edu/searchaid2/saresultsug.asp');
     $( '#keyword' ).attr( 'name', 'keyword' );
@@ -17,6 +22,8 @@ $( '#dropdown' ).change(function(){
   }
 });
 
+// similar to script above but for articles tab changing the form action
+// to bento or classic versions of easy search depending on option selected
 $( '#selection2' ).change(function(){
   if ( $( '#selection2' ).val() == "articles" ) {
     $( '#search_articles' ).attr( 'action', 'http://search.grainger.illinois.edu/discovery/splitsearch.asp');
