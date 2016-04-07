@@ -3,7 +3,7 @@
       <div id="dynamictabs">
         <ul class="accordion-tabs-minimal dynamictabs" role="tablist">
           <li class="tab-header-and-content" role="presentation">
-            <a id="hoursloc" href="#" class="tab-link dynamictabs dynamic-tab-text arrow-access"><span class="fa fa-clock-o fa-3x"></span> <span class="dynamic-tab-label"><span class="text-block">Libraries </span>and Hours</span></a>
+            <a id="hoursloc" href="#" class="tab-link dynamictabs dynamic-tab-text arrow-access"><span class="fa fa-clock-o fa-3x"></span> <span class="dynamic-tab-label"><span class="text-block">Libraries </span>& Hours</span></a>
             <div class="tab-content-bourbon">
               <div class="tab-pane active dynamic-tab-pane" id="hours" role="tabpanel" aria-label="LIBRARIES AND HOURS">
                 <div class="dynamic-panel-body">
@@ -58,20 +58,20 @@
             </div>
           </li>
           <li class="tab-header-and-content" role="presentation">
-            <a id="helpli" href="#" class="tab-link dynamictabs dynamic-tab-text arrow-access"><span class="fa fa-question fa-3x"></span><span class="dynamic-tab-label"><span class="text-block">Resource </span>Guides</span></a>
+            <a id="helpli" href="#" class="tab-link dynamictabs dynamic-tab-text arrow-access"><span class="fa fa-question fa-3x"></span><span class="dynamic-tab-label"><span class="text-block">Library </span>Guides</span></a>
             <div class="tab-content-bourbon">
               <div class=" dynamic-tab-pane" id="help">    <!-- TAB: HELP -->
                 <div class="dynamic-panel-body">
                   <div class="container-fluid">
                     <div class="row"><!-- TAB TITLE -->
                       <div class="col-sm-12">
-                        <h3 class="dynamictabs" aria-labelledby="resource guides">Resource Guides</h3>
+                        <h3 class="dynamictabs" aria-labelledby="resource guides">Library Guides</h3>
                         <hr class="hr-orange" role="presentation"/>
                       </div>
                     </div><!-- TAB TITLE -->
                     <div class="row-fluid"><!--begin Resource Guides column -->              
                       <div class="col-sm-6">
-                        <h4>Resource Guides:</h4>
+                        <h4>Library Guides:</h4>
                         <ul id="libguidelist" class="nav nav-tabs libguides" role="tablist">
 
                           <li class="active">
@@ -117,7 +117,7 @@
                         </div>
                       </div><!-- end Resource Guides column -->
                       <div class="col-sm-6"><!--begin Search Resource Guides column -->
-                        <h4>Search Resource Guides:</h4>
+                        <h4>Search Library Guides:</h4>
                         <div class="panel panel-default libguides">
                           <div class="panel-heading" role="search"  aria-label="Search resource guides">
                             <form class="form-inline" id="libSearchForm">
@@ -229,8 +229,7 @@
                       <h4>Loanable Technology</h4>
                       <p>Technology and equipment sorted by popularity and currrently available at the following libraries:</p>
                       <ul class="nav nav-tabs libguides" role="tablist">
-                        <li class="active"><a href="#uglTech" role="tab" data-toggle="tab">UGL</a></li>
-                        <li><a href="#mpalTech" role="tab" data-toggle="tab">MPAL</a></li>
+                        <li class="active"><a href="#uglTech" role="tab" data-toggle="tab">Undergraduate Library</a></li>
                       </ul><!-- Loanable Technology Tab panes -->
                       <div class="tab-content libguides">
                         <div class="tab-pane active" id="uglTech" role="tabpanel">
@@ -319,7 +318,7 @@
       </div>
           </li>
           <li class="tab-header-and-content" role="presentation">
-            <a id="newsli" href="#" class="tab-link dynamictabs dynamic-tab-text arrow-access"><span class="fa fa-calendar fa-3x"></span><span class="dynamic-tab-label"><span class="text-block">News and</span>Events</span></a>
+            <a id="newsli" href="#" class="tab-link dynamictabs dynamic-tab-text arrow-access"><span class="fa fa-calendar fa-3x"></span><span class="dynamic-tab-label"><span class="text-block">News &</span>Events</span></a>
             <div class="tab-content-bourbon">
               <div class="dynamic-tab-pane" id="news"><!-- TAB: NEWS and EVENTS -->
                 <div class="dynamic-panel-body">
