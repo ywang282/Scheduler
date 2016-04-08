@@ -1,27 +1,92 @@
-var gulp            = require('gulp');
-var sass            = require('gulp-sass');
-var watch           = require('gulp-watch');
-var plumber         = require('gulp-plumber');
-var livereload      = require('gulp-livereload');
-var cssnano         = require('gulp-cssnano');
-var sourcemaps      = require('gulp-sourcemaps');
 var autoprefixer    = require('gulp-autoprefixer');
 var concat          = require('gulp-concat');
-var uglify          = require('gulp-uglify');
-var preprocess      = require('gulp-preprocess');
+var cssnano         = require('gulp-cssnano');
+var decomment       = require('gulp-strip-comments');
 var del             = require('del');
-var rev             = require('gulp-rev');
-var streamqueue     = require('streamqueue');
+var gulp            = require('gulp');
 var gulpif          = require('gulp-if');
+var livereload      = require('gulp-livereload');
+var plumber         = require('gulp-plumber');
+var preprocess      = require('gulp-preprocess');
+var rev             = require('gulp-rev');
+var revReplace      = require("gulp-rev-replace");
+var runSequence     = require('run-sequence');
+var sass            = require('gulp-sass');
+var sourcemaps      = require('gulp-sourcemaps');
+var streamqueue     = require('streamqueue');
+var uglify          = require('gulp-uglify');
+var watch           = require('gulp-watch');
 
-gulp.task('testrev', function () {
-  return gulp.src('./assets/css/*.css')
-  .pipe(concat('style.css'))
-  .pipe(gulp.dest( 'unmin/'))
-  .pipe(rev())
-  .pipe(gulp.dest('build/assets'))  // write rev'd assets to build dir 
-  .pipe(rev.manifest())
-  .pipe(gulp.dest('build/assets')); // write manifest to build dir 
+//environment variable to be used by gulp-if plugin
+// for build tasks.  determines whether minification tasks
+// will run or not
+var production = true;
+
+gulp.task( 'build:prod', function(cb) {
+  production = true;
+  runSequence( 'clean', headFootArray, copyArray, 'style', 'script', 'indextest' );
+});
+
+var copyArray = [ 
+'copy:fonts', 
+'copy:buildings', 
+'copy:shared-images', 
+'copy:dirs', 
+'copy:utility', 
+'copy:ga', 
+'copy:jq-ui-images'
+]
+gulp.task( 'copy:fonts', function() {
+  return gulp.src( './shared_content/bower_components/font-awesome/fonts/*' )
+  .pipe(gulp.dest( './dist/assets/fonts' ));
+});
+gulp.task( 'copy:buildings', function() {
+  return gulp.src( './assets/buildings/**/*' )
+  .pipe(gulp.dest( './dist/assets/buildings' ));
+});
+gulp.task( 'copy:shared-images', function() {
+  return gulp.src( './shared_content/assets/images/*' )
+  .pipe(gulp.dest( './dist/assets/images' ));
+});
+gulp.task( 'copy:dirs', function() {
+  return gulp.src( [ './hours/**/*', './search/**/*', './proxies/*' ], { base: './' })
+  .pipe(gulp.dest( './dist' ));
+});
+gulp.task( 'copy:utility', function() {
+  return gulp.src( './assets/js/utilities/*' )
+  .pipe(gulp.dest( './dist/assets/js' ));
+});
+gulp.task( 'copy:ga', function() {
+  return gulp.src( './assets/js/ga/*')
+  .pipe(gulp.dest( './dist/assets/js/ga'));
+});
+//copy jquery ui images for datepicker in library hours
+gulp.task( 'copy:jq-ui-images', function() {
+  return gulp.src( './assets/built/images/*')
+  .pipe(gulp.dest( './dist/assets/css/images'));
+});
+
+
+
+
+//clean:dist tasks deletes all contents of /dist 
+//directory before build to prevent files 
+//that have been deleted from  source directories 
+//remaining in the dist directory
+gulp.task( 'clean', function() {
+  return del(['./dist/*', './unmin/*']);
+});
+
+gulp.task('indextest', function() {
+  var manifest = gulp.src( './unmin/rev-manifest.json' );
+  return gulp.src( './src/index.php' )
+  .pipe(preprocess({context:{ENV_VAR:'dist'}}))
+  .pipe(decomment({ safe: true }))
+  .pipe(revReplace({ 
+    manifest: manifest,
+    replaceInExtensions: '.php'
+    }))
+  .pipe(gulp.dest( './dist'));
 });
 
 gulp.task( 'style', function() {
@@ -43,23 +108,25 @@ gulp.task( 'style', function() {
   .pipe(gulp.dest( './unmin' ))
   .pipe(gulpif( production, cssnano()))
   .pipe(gulpif( production, rev()))
-  .pipe(gulp.dest( './dist/'))
-  .pipe(rev.manifest())
-  .pipe(gulp.dest('./unmin'))
+  .pipe(gulp.dest( './dist/assets/css'))
+  .pipe(gulpif( production, rev.manifest()))
+  .pipe(gulpif( production, gulp.dest('./unmin')))
   .pipe( livereload() );
 });
 
-//environment variable to be used by gulp-if plugin
-// for build tasks.  determines whether minification tasks
-// will run or not
-var production = true;
-
-//clean:dist tasks deletes all contents of /dist 
-//directory before build to prevent files 
-//that have been deleted from  source directories 
-//remaining in the dist directory
-gulp.task( 'clean:dist', function() {
-  return del(['./build/**/*']);
+gulp.task( 'script', function() {
+  return gulp.src( script_array )
+  .pipe(concat( 'script.js'))
+  .pipe(gulp.dest( './unmin' ))
+  .pipe(gulpif( production, uglify()))
+  .pipe(gulpif( production, rev()))
+  .pipe(gulp.dest( './dist/assets/js' ))
+  .pipe(gulpif( production, rev.manifest( './unmin/rev-manifest.json', {
+    base: './unmin',
+    merge: true 
+  })))
+  .pipe(gulpif( production, gulp.dest('./unmin')))
+  .pipe( livereload() );
 });
 
 
@@ -74,10 +141,11 @@ gulp.task('header', function() {
         { 
           ENV_VAR: 'gateway', 
           SEARCH_ACTION: 'search.php',
-          IMAGE_DIR: './shared_content/assets/images/',
+          IMAGE_DIR: './assets/images/',
           DEBUG: true
         }
       })) 
+
     .pipe(gulp.dest('./src'));
 });
 
@@ -87,37 +155,11 @@ gulp.task('footer', function() {
       {context: 
         { 
           ENV_VAR: 'gateway', 
-          IMAGE_DIR: './shared_content/assets/images/',
+          IMAGE_DIR: './assets/images/',
           DEBUG: true
         }
       })) 
     .pipe(gulp.dest('./src'));
-});
-
-// gulp.task('navbar', function() {
-//   gulp.src('./shared_content/shared_navbar.php')
-//     .pipe(preprocess( 
-//       {context: 
-//         { 
-//           ENV_VAR: 'gateway',
-//           BASE_GW_ULR: '',
-//           DEBUG: true
-//         }
-//       })) 
-//     .pipe(gulp.dest('.'));
-// });
-
-gulp.task('global-nav', function() {
-  gulp.src('./shared_content/shared-global-nav.php')
-    .pipe(preprocess( 
-      {context: 
-        { 
-          ENV_VAR: 'gateway',
-          BASE_GW_ULR: '',
-          DEBUG: true
-        }
-      })) 
-    .pipe(gulp.dest('.'));
 });
 
 script_array = [
