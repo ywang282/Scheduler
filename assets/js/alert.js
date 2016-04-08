@@ -23,7 +23,7 @@ $(document).ready(function()
 {
 	$.ajax({
     type: "GET",
-    url: "assets/alertproxy.php",
+    url: "proxies/alertproxy.php",
 	cache : false,
     dataType: "xml",
 	success: function(xml) {

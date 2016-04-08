@@ -5,7 +5,7 @@
   //full for img and headline link, summary for description
     $.ajax({
       type: "GET",
-      url: "libnewsfeatured.php",
+      url: "proxies/libnewsfeatured.php",
       dataType: "html",
       success: parseFeatured
     });
@@ -29,7 +29,7 @@
               //nested within full function to preserve order
               $.ajax({
                   type: "GET",
-                  url: "libnewsfeaturedsum.php",
+                  url: "proxies/libnewsfeaturedsum.php",
                   dataType: "xml",
                   success: parseFeatSum
               });
@@ -44,7 +44,7 @@
       //ajax call for library rss news feed
       $.ajax({
           type: "GET",
-          url: "libnewsproxy.php?",
+          url: "proxies/libnewsproxy.php?",
           dataType: "xml",
           success: parseXml
       });

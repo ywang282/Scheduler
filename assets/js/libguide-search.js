@@ -7,7 +7,7 @@
             event.preventDefault();
             //ajax call to proxy at libguidessearch.php?
                 $.ajax({
-                     url: "libguidessearch.php?",
+                     url: "proxies/libguidessearch.php?",
                      dataType: 'html',
                      data: libstring,
                      success: function(data) {
