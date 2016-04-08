@@ -11,19 +11,48 @@ var uglify          = require('gulp-uglify');
 var preprocess      = require('gulp-preprocess');
 var del             = require('del');
 var rev             = require('gulp-rev');
+var streamqueue     = require('streamqueue');
+var gulpif          = require('gulp-if');
 
 gulp.task('testrev', function () {
   return gulp.src('./assets/css/*.css')
-    .pipe(rev())
-    .pipe(gulp.dest('build/assets'))  // write rev'd assets to build dir 
-    .pipe(rev.manifest())
-    .pipe(gulp.dest('build/assets')); // write manifest to build dir 
+  .pipe(concat('style.css'))
+  .pipe(gulp.dest( 'unmin/'))
+  .pipe(rev())
+  .pipe(gulp.dest('build/assets'))  // write rev'd assets to build dir 
+  .pipe(rev.manifest())
+  .pipe(gulp.dest('build/assets')); // write manifest to build dir 
+});
+
+gulp.task( 'style', function() {
+
+  return streamqueue( { objectMode: true }, 
+    gulp.src( './sass/style.scss' )
+    .pipe(plumber( { errorHandler: onError }))
+    .pipe(gulpif( !production, sourcemaps.init()))
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(gulpif( !production, sourcemaps.write())),
+
+    //fa-replace rewrites the file paths in the
+    // font-awesome css file to refer to the correct
+    // fonts path relative to wordpress style.css
+    gulp.src( css_array )
+  )
+  .pipe(concat('style.css'))
+  .pipe(gulp.dest( './unmin' ))
+  .pipe(gulpif( production, cssnano()))
+  .pipe(gulpif( production, rev()))
+  .pipe(gulp.dest( './dist/'))
+  .pipe(rev.manifest())
+  .pipe(gulp.dest('./unmin'))
+  .pipe( livereload() );
 });
 
 //environment variable to be used by gulp-if plugin
 // for build tasks.  determines whether minification tasks
 // will run or not
-var production = false;
+var production = true;
 
 //clean:dist tasks deletes all contents of /dist 
 //directory before build to prevent files 
