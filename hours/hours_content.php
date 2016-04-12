@@ -2,7 +2,7 @@
 
 <!--mobile view for light blue box links starts here--> 
 
-<div class="container" role="main" aria-label="library hours page">
+<div role="main" aria-label="library hours page">
 	<div class="row">
 		<div class="col-md-12">
 			<h2>Library Hours <span id="hoursListHeading">by Date</span></h2>
@@ -41,7 +41,7 @@
 	</div>
 	<div  id="library-container" class="hoursListClass">
 		<div id="loader-image" class="text-center">
-			<img src="./assets/loader.gif" alt="loader image">
+			<img src="./assets/images/ajax-loader-big.gif" alt="loader image">
 		</div>
 	</div>
 </div>
