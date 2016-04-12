@@ -114,28 +114,7 @@ gulp.task( 'header-footer-rev-replace', function() {
   .pipe(gulp.dest( './dist'));
 });
 
-// gulp.task( 'header-footer-script-style-hours', function() {
-//   var manifest = gulp.src( './unmin/hours/rev-manifest.json' );
-//   return gulp.src( [ './src/preprocess/header.php', './src/preprocess/footer.php' ] )
-//   .pipe(preprocess(
-//       {context: 
-//         { 
-//           ENV_VAR: 'gateway', 
-//           SEARCH_ACTION: 'search.php',
-//           IMAGE_DIR: './assets/images/',
-//           DEBUG: true
-//         }
-//       }))
-//   //.pipe(decomment({ safe: true }))
-//   .pipe(revReplace({ 
-//     manifest: manifest,
-//     replaceInExtensions: '.php'
-//     }))
-//   .pipe(gulp.dest( './dist/hours'));
-// });
 
-// // var styleTasks  = [ 'style', 'hours-page-style' ];
-// // var scriptTasks = [ 'script', 'hours-page-script' ];
 
 gulp.task( 'style', function() {
   return streamqueue( { objectMode: true }, 
@@ -177,77 +156,6 @@ gulp.task( 'script', function() {
   .pipe( livereload() );
 });
 
-// gulp.task( 'hours-page-style', function() {
-//   return streamqueue( { objectMode: true }, 
-//     gulp.src( './sass/style.scss' )
-//     .pipe(plumber( { errorHandler: onError }))
-//     .pipe(gulpif( !production, sourcemaps.init()))
-//     .pipe(sass())
-//     .pipe(autoprefixer())
-//     .pipe(gulpif( !production, sourcemaps.write())),
-
-//     //fa-replace rewrites the file paths in the
-//     // font-awesome css file to refer to the correct
-//     // fonts path relative to wordpress style.css
-//     gulp.src( hours_page_css_array )
-//   )
-//   .pipe(concat('hours-page-style.css'))
-//   .pipe(gulp.dest( './unmin/hours' ))
-//   .pipe(gulpif( production, cssnano()))
-//   .pipe(gulpif( production, rev()))
-//   .pipe(gulp.dest( './dist/assets/css'))
-//   .pipe(gulpif( production, rev.manifest()))
-//   .pipe(gulpif( production, gulp.dest('./unmin/hours')))
-//   .pipe( livereload() );
-// });
-
-// gulp.task( 'hours-page-script', function() {
-//   return gulp.src( hours_page_script_arr )
-//   .pipe(concat( 'hours-page-script.js'))
-//   .pipe(gulp.dest( './unmin/hours' ))
-//   .pipe(gulpif( production, uglify()))
-//   .pipe(gulpif( production, rev()))
-//   .pipe(gulp.dest( './dist/assets/js' ))
-//   .pipe(gulpif( production, rev.manifest( './unmin/hours/rev-manifest.json', {
-//     base: './unmin/hours',
-//     merge: true 
-//   })))
-//   .pipe(gulpif( production, gulp.dest('./unmin/hours')))
-//   .pipe( livereload() );
-// });
-
-
-//header and footer array for build these two 
-//tasks need to be run prior to the copy:wp task
-// var headFootArray = [ 'header', 'footer' ];
-
-// gulp.task('header', function() {
-//   gulp.src('./shared_content/php/shared_header.php')
-//     .pipe(preprocess( 
-//       {context: 
-//         { 
-//           ENV_VAR: 'gateway', 
-//           SEARCH_ACTION: 'search.php',
-//           IMAGE_DIR: './assets/images/',
-//           DEBUG: true
-//         }
-//       })) 
-
-//     .pipe(gulp.dest('./src/preprocess'));
-// });
-
-// gulp.task('footer', function() {
-//   gulp.src('./shared_content/php/shared_footer.php')
-//     .pipe(preprocess( 
-//       {context: 
-//         { 
-//           ENV_VAR: 'gateway', 
-//           IMAGE_DIR: './assets/images/',
-//           DEBUG: true
-//         }
-//       })) 
-//     .pipe(gulp.dest('./src/preprocess'));
-// });
 
 var script_array = [
   './assets/js/utilities.js',
@@ -272,64 +180,6 @@ var script_array = [
   './assets/js/hours_page.js'
   ];
 
-// var hours_page_script_arr = [
-//   './assets/js/utilities.js',
-//   './assets/js/alert.js', 
-//   './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
-//   './assets/js/bootstrap-accessibility.js',
-//   './assets/js/jquery-ui.min.js',
-//   './assets/js/off-canvas.js',
-//   './assets/js/roomreserve.js',
-//   './assets/js/hours.js',
-//   './assets/js/bourbon-accordion-tabs.js',
-//   './assets/js/orange_bar_scroll.js', 
-//   './assets/js/jquery.fracs-0.15.0.min.js',
-//   './assets/js/easy_search_text.js',
-//   './assets/js/easy-search-form-select.js',
-//   './assets/js/libguide-search.js',
-//   './assets/js/news-events.js',
-//   './assets/js/loan-tech.js',
-//   './assets/js/accordion-tab-support.js',
-//   './assets/js/global-access.js',
-//   './assets/js/fix_emergency_alert.js',
-//   './assets/js/hours_page.js'
-// ];
-
-// var script_array = [
-//   './assets/js/utilities.js',
-//   './assets/js/alert.js', 
-//   './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
-//   './assets/js/bootstrap-accessibility.js',
-//   './assets/js/jquery-ui.min.js',
-//   './assets/js/off-canvas.js',
-//   './assets/js/roomreserve.js',
-//   './assets/js/hours.js',
-//   './assets/js/bourbon-accordion-tabs.js',
-//   './assets/js/orange_bar_scroll.js', 
-//   './assets/js/jquery.fracs-0.15.0.min.js',
-//   './assets/js/easy_search_text.js',
-//   './assets/js/easy-search-form-select.js',
-//   './assets/js/libguide-search.js',
-//   './assets/js/news-events.js',
-//   './assets/js/loan-tech.js',
-//   './assets/js/accordion-tab-support.js',
-//   './assets/js/global-access.js',
-//   './assets/js/fix_emergency_alert.js'
-//   ];
-
-// var hours_page_script_arr = [
-//   './assets/js/utilities.js',
-//   './assets/js/alert.js', 
-//   './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
-//   './assets/js/bootstrap-accessibility.js',
-//   './assets/js/jquery-ui.min.js',
-//   './assets/js/off-canvas.js',
-//   './assets/js/bourbon-accordion-tabs.js',
-//   './assets/js/jquery.fracs-0.15.0.min.js',
-//   './assets/js/global-access.js',
-//   './assets/js/fix_emergency_alert.js',
-//   './assets/js/hours_page.js'
-// ];
 
 var css_array = [
   './bower_components/normalize.css/normalize.css',
@@ -342,36 +192,6 @@ var css_array = [
   './assets/css/hours_page.css'
   ];
 
-// var hours_page_css_array = [
-//   './bower_components/normalize.css/normalize.css',
-//   './assets/css/style.css',
-//   './assets/css/jquery-ui.min.css',
-//   './assets/css/bootstrap-accessibility.css',
-//   './assets/css/columnselect.css',
-//   './bower_components/fontawesome/css/font-awesome.css',
-//   './assets/css/fix_emergency_alert.css',
-//   './assets/css/hours_page.css'
-//   ]; 
-
-// var css_array = [
-//   './bower_components/normalize.css/normalize.css',
-//   './assets/css/style.css',
-//   './assets/css/jquery-ui.min.css',
-//   './assets/css/bootstrap-accessibility.css',
-//   './assets/css/columnselect.css',
-//   './bower_components/fontawesome/css/font-awesome.css',
-//   './assets/css/fix_emergency_alert.css'
-//   ];
-
-// var hours_page_css_array = [
-//   './bower_components/normalize.css/normalize.css',
-//   './assets/css/style.css',
-//   './assets/css/jquery-ui.min.css',
-//   './assets/css/bootstrap-accessibility.css',
-//   './bower_components/fontawesome/css/font-awesome.css',
-//   './assets/css/fix_emergency_alert.css',
-//   './assets/css/hours_page.css'
-//   ];  
 
 var onError = function( err ) {
   console.log( 'An error occurred:', err.message );
@@ -425,62 +245,3 @@ gulp.task('watch', function () {
   //gulp.watch('./shared_content/shared_navbar.php', [ 'navbar' ] );
   gulp.watch('./shared_content/shared_footer.php', [ 'footer' ] );
 });
-
-//////////////////////////////////////
-//build tasks
-//////////////////////////////////////
-
-// gulp.task('build', ['css-concat-unmin','scripts-build','scripts-unmin','header','footer','global-nav','css-link-var','footer-link-var'], function() {});
-
-// gulp.task( 'css-sass-build', function() {
-//   var stream = gulp.src('./sass/*.scss')
-//     .pipe(plumber( { errorHandler: onError }))
-//     //.pipe(sourcemaps.init())
-//     .pipe(sass())
-//     //.pipe(sourcemaps.write())
-//     .pipe(gulp.dest('./assets/css/'));
-//   return stream; 
-// })
-// gulp.task( 'css-concat-built', ['css-sass-build'], function() {
-//   var stream = gulp.src( css_array )
-//     .pipe(concat('style.css'))
-//     .pipe(autoprefixer())
-//     //.pipe(cssnano({advanced:false,keepSpecialComments:0}))
-//     .pipe(cssnano())
-//     .pipe(gulp.dest('./assets/built/'));
-//   return stream; 
-// })
-// gulp.task( 'css-concat-unmin', ['css-concat-built'], function() {
-//   var stream = gulp.src( css_array )
-//     .pipe(concat('style.css'))
-//     .pipe(autoprefixer())
-//     //.pipe(cssnano())
-//     .pipe(gulp.dest('./assets/unmin/'));
-//   return stream; 
-// })
-
-// gulp.task('scripts-build', function() {
-//   gulp.src( script_array )
-//   .pipe(concat('scripts.js'))
-//   .pipe(uglify())
-//   .pipe(gulp.dest('./assets/built/'));
-// });
-
-// gulp.task('scripts-unmin', function() {
-//   gulp.src( script_array )
-//   .pipe(concat('scripts.js'))
-//   //.pipe(uglify())
-//   .pipe(gulp.dest('./assets/unmin/'));
-// });
-// gulp.task('css-link-var', function() {
-//   var now = Date.now();
-//   gulp.src( './preproc_content/preproc_head.php' )
-//   .pipe(preprocess({context:{QUERY_STR: now }}))
-//   .pipe(gulp.dest('.'));
-// });
-// gulp.task('footer-link-var', function() {
-//   var now = Date.now();
-//   gulp.src( './preproc_content/preproc_footer.php' )
-//   .pipe(preprocess({context:{QUERY_STR: now }}))
-//   .pipe(gulp.dest('.'));
-// });
