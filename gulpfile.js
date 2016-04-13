@@ -40,7 +40,7 @@ var copyArray = [
 'copy:utility', 
 'copy:ga', 
 'copy:jq-ui-images',
-'copy:php', 
+'copy:src', 
 'copy:gw-images'
 ];
 
@@ -73,17 +73,21 @@ gulp.task( 'copy:jq-ui-images', function() {
   return gulp.src( './assets/built/images/*')
   .pipe(gulp.dest( './dist/assets/css/images'));
 });
-//copy php files to dist, decomment
-gulp.task( 'copy:php', function() {
-  //construct filter to remove robots.txt file from decomment
-  //pipe.  pipe will throw error if file is included. 
-  const f = filter( [ '*', '!./src/robots.txt' ], {restore: true} );
-  return gulp.src([ './src/**/*', '!./src/preprocess/**/*', '!./src/preprocess' ])
-  .pipe(f)
-  .pipe(decomment({ safe: true }))
-  .pipe(f.restore)
+gulp.task( 'copy:src', function() {
+  return gulp.src( [ './src/robots.txt', './src/proxies/*' ], { base: './src' } )
   .pipe(gulp.dest( './dist' ));
-});
+})
+//copy php files to dist, decomment
+// gulp.task( 'copy:src', function() {
+//   //construct filter to remove robots.txt file from decomment
+//   //pipe.  pipe will throw error if file is included. 
+//   const f = filter( [ '*', '!./src/robots.txt' ], {restore: true} );
+//   return gulp.src([ './src/**/*', '!./src/preprocess/**/*', '!./src/preprocess' ])
+//   .pipe(f)
+//   .pipe(decomment({ safe: true }))
+//   .pipe(f.restore)
+//   .pipe(gulp.dest( './dist' ));
+// });
 
 
 //clean:dist tasks deletes all contents of /dist 
@@ -96,7 +100,7 @@ gulp.task( 'clean', function() {
 
 gulp.task( 'header-footer-rev-replace', function() {
   var manifest = gulp.src( './unmin/rev-manifest.json' );
-  return gulp.src( [ './src/preprocess/header.php', './src/preprocess/footer.php' ] )
+  return gulp.src( [ './src/index.php', './src/search.php', './src/hours.php' ], { base: './src' } )
   .pipe(preprocess(
     {context: 
         { 
