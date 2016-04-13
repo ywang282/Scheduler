@@ -205,7 +205,7 @@ $(document).ready(function() {
 
 			daycal_container = $( ".daycal" );
 
-			daycal_container.html("").append('<div id="loader-image" class="text-center"><img src="./assets/newloader.gif" alt="loader image"></div>');
+			daycal_container.html("").append('<div id="loader-image" class="text-center"><img src="./assets/images/ajax-loader-big.gif" alt="loader image"></div>');
 
 			var times = new Times();
 
@@ -460,7 +460,7 @@ $(document).ready(function() {
 	$("a#carparking").fancybox({
 	 afterLoad: function() {
         this.title = '<h5>' + this.title +'</h5>'
-		+ '<small><img src="./assets/parking/yellowbox.jpg" alt="public parking legend"> Campus Public Parking <img src="./assets/parking/buildingbox.jpg" alt="campus building legend"> Buildings</small>' 
+		+ '<small><img src="./assets/images/parking/yellowbox.jpg" alt="public parking legend"> Campus Public Parking <img src="./assets/images/parking/buildingbox.jpg" alt="campus building legend"> Buildings</small>' 
 		 ;	
     },
       helpers : {

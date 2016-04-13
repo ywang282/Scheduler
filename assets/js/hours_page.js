@@ -152,7 +152,7 @@ if ( ((window.location.pathname).search( '/hours.php' )) !== -1 )  {
 				var hours_id = "#hrsRowHolder" + value;
 				$( hours_id ).html( '\
 					<div class="text-center" style="display: block;">\
-						<img alt="loader image" src="./assets/loader.gif">\
+						<img alt="loader image" src="./assets/images/ajax-loader-big.gif">\
 					</div>\
 					');
 			});		

@@ -27,7 +27,7 @@ if ( ((window.location.pathname).search( '/hours.php' )) === -1 )  {
 			//based on .library-closed class
 			filterOpenStatus();
 			filterLibraryNames();
-			preload(["./assets/ajax-loader.gif"]);
+			preload(["./assets/images/ajax-loader.gif"]);
 			
 		});
 	});
@@ -181,7 +181,7 @@ if ( ((window.location.pathname).search( '/hours.php' )) === -1 )  {
 					'<% if (typeof(tel) !== "undefined" && tel.trim() !== "" ) { %><p class="list-group-item-text"><%= tel %></p><% } %>' +
 					'<a class="stopProp" href="<%= url %>"><%= url %></a></p>' +
 					'<br />' +
-					'<% if (typeof(street) !== "undefined" && street.trim() !== "" ) { %><a id="carparking" aria-label="Parking for <%= name %>" class="fancybox btn btn-primary btn-sm stopProp" title="Parking near <%= name %>" href="./assets/parking/parking_<%= number %>.png">PARKING</a><% } %> ' +
+					'<% if (typeof(street) !== "undefined" && street.trim() !== "" ) { %><a id="carparking" aria-label="Parking for <%= name %>" class="fancybox btn btn-primary btn-sm stopProp" title="Parking near <%= name %>" href="./assets/images/parking/parking_<%= number %>.png">PARKING</a><% } %> ' +
 					'<% if (typeof(street) !== "undefined" && street.trim() !== "" ) { %><a class="fancybox fancybox.iframe btn btn-primary btn-sm stopProp" aria-label="Map of <%= name %>" href="<%= map %>">MAP</a><% } %>' +
 					'</div>' +
 				  '</div>' +
@@ -214,8 +214,8 @@ if ( ((window.location.pathname).search( '/hours.php' )) === -1 )  {
 						'</button>' +
 					  '</div>' +
 					'</div>' +
-					'<% if (typeof(building) !== "undefined" && building.trim() !== "" ) { %><a class="fancybox hourshide hidden-xs" href="./assets/buildings/full/building_<%= building %>.jpg">' +
-					  '<img class="img-responsive stopProp buildingimage" src="./assets/buildings/display/building_<%= building %>.jpg" alt="<%= name %>" />' +
+					'<% if (typeof(building) !== "undefined" && building.trim() !== "" ) { %><a class="fancybox hourshide hidden-xs" href="./assets/images/buildings/full/building_<%= building %>.jpg">' +
+					  '<img class="img-responsive stopProp buildingimage" src="./assets/images/buildings/display/building_<%= building %>.jpg" alt="<%= name %>" />' +
 					'</a><% } %>' +
 				  '</div>' +
 				'</div>' +
@@ -391,7 +391,7 @@ if ( ((window.location.pathname).search( '/hours.php' )) === -1 )  {
 		$( "#open-filter-checkbox" ).change(function() {
 			//on button click, perform ajax call from library hours api to determine current
 			//open/close status.  
-			$( ".open-closed-status" ).replaceWith( '<img alt="loader image" src="./assets/ajax-loader.gif">' );
+			$( ".open-closed-status" ).replaceWith( '<img alt="loader image" src="./assets/images/ajax-loader.gif">' );
 			$.getJSON(window.location.origin + "/api/times_locations/librarieshours", function( hoursData ) {
 				//console.log("hoursData.timeAndLocArray " + hoursData.timeAndLocArray);
 				$.each( hoursData.timeAndLocArray, function(key,objectData) {

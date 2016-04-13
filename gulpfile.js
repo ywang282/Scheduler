@@ -35,29 +35,24 @@ gulp.task( 'build:dev', function(cb) {
 
 var copyArray = [ 
 'copy:fonts', 
-'copy:buildings', 
+'copy:images',
 'copy:shared-images', 
 'copy:utility', 
 'copy:ga', 
 'copy:jq-ui-images',
-'copy:src', 
-'copy:gw-images'
+'copy:src'
 ];
 
 gulp.task( 'copy:fonts', function() {
   return gulp.src( './shared_content/bower_components/font-awesome/fonts/*' )
   .pipe(gulp.dest( './dist/assets/fonts' ));
 });
-gulp.task( 'copy:buildings', function() {
-  return gulp.src( [ './assets/buildings/**/*', './assets/parking/*' ], { base: './'} )
-  .pipe(gulp.dest( './dist' ));
-});
+gulp.task( 'copy:images', function() {
+  return gulp.src( './assets/images/**/*' )
+  .pipe(gulp.dest( './dist/assets/images' ));
+})
 gulp.task( 'copy:shared-images', function() {
   return gulp.src( './shared_content/assets/images/*' )
-  .pipe(gulp.dest( './dist/assets/images' ));
-});
-gulp.task( 'copy:gw-images', function() {
-  return gulp.src( './assets/ajax-loader-big.gif' )
   .pipe(gulp.dest( './dist/assets/images' ));
 });
 gulp.task( 'copy:utility', function() {
@@ -70,24 +65,13 @@ gulp.task( 'copy:ga', function() {
 });
 //copy jquery ui images for datepicker in library hours
 gulp.task( 'copy:jq-ui-images', function() {
-  return gulp.src( './assets/built/images/*')
+  return gulp.src( './assets/css/images/*')
   .pipe(gulp.dest( './dist/assets/css/images'));
 });
 gulp.task( 'copy:src', function() {
   return gulp.src( [ './src/robots.txt', './src/proxies/*' ], { base: './src' } )
   .pipe(gulp.dest( './dist' ));
 })
-//copy php files to dist, decomment
-// gulp.task( 'copy:src', function() {
-//   //construct filter to remove robots.txt file from decomment
-//   //pipe.  pipe will throw error if file is included. 
-//   const f = filter( [ '*', '!./src/robots.txt' ], {restore: true} );
-//   return gulp.src([ './src/**/*', '!./src/preprocess/**/*', '!./src/preprocess' ])
-//   .pipe(f)
-//   .pipe(decomment({ safe: true }))
-//   .pipe(f.restore)
-//   .pipe(gulp.dest( './dist' ));
-// });
 
 
 //clean:dist tasks deletes all contents of /dist 
