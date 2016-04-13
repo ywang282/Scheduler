@@ -1,4 +1,4 @@
-/* @include ./preprocess/header.php */
+/* @include ../preprocess/header.php */
 <div role="main" aria-label="library hours page">
 	<div class="row">
 		<div class="col-md-12">
@@ -42,4 +42,4 @@
 		</div>
 	</div>
 </div>
-/* @include ./preprocess/footer.php */
+/* @include ../preprocess/footer.php */

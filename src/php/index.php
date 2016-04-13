@@ -1,4 +1,4 @@
-/* @include ./preprocess/header.php */
+/* @include ../preprocess/header.php */
         <!-- begin main content box with search/chat -->
         <!--container and row that are closed at end of dynamic.php to allow for proper aria landmark role=main application-->
         <div role="main" aria-label="main of the site including libray catalogs, ask a librarian, library hours and location, room servervation, news and event">
@@ -664,4 +664,4 @@
             </div>
           </div><!--closing div from beginning of content include, role="main" -->
           <!-- end dynamic content tabs -->
-/* @include ./preprocess/footer.php */          
+/* @include ../preprocess/footer.php */          

@@ -1,7 +1,7 @@
 <?php
 header('Content-type: text/html');
 
-$libguidesURL = "https://status-dev.uillinois.edu/SystemStatus/jsp/rss_feed.jsp?id=300&sub=2";
+$libguidesURL = "https://status-dev.uillinois.edu/SystemStatus/jsp/rss_feed.jsp?id=300&sub=1";
 
 $fixed_url = $libguidesURL;
                 

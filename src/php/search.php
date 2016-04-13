@@ -1,4 +1,4 @@
-/* @include ./preprocess/header.php */
+/* @include ../preprocess/header.php */
 <div class="hero-unit">
 	<h2> Website Search Results </h2>
 </div>
@@ -19,4 +19,4 @@
 
 </div>
 <hr>
-/* @include ./preprocess/footer.php */
+/* @include ../preprocess/footer.php */
