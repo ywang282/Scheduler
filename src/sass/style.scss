@@ -13,7 +13,7 @@
 Variables & Mixins
 ------------------------------------------------------------*/
 
-@import '../shared_content/sass/variables';
+@import '../../shared_content/sass/variables';
 
 /*------------------------------------------------------------
 Bootstrap
@@ -25,8 +25,8 @@ Bootstrap
 Bourbon, Neat
 ------------------------------------------------------------*/
 
-@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
-@import "../bower_components/neat/app/assets/stylesheets/neat";
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../../bower_components/neat/app/assets/stylesheets/neat";
 
 .tab-link {
   text-align: center;
@@ -299,12 +299,12 @@ $easysearch-color: $color__dark-navy;
 /* footer */
 /*------------------------------------------------------------*/
 
-@import '../shared_content/sass/footer-style';
+@import '../../shared_content/sass/footer-style';
 
 /* header */
 /*------------------------------------------------------------*/
 
-@import '../shared_content/sass/header-style';
+@import '../../shared_content/sass/header-style';
 #gateway-header {
   margin-bottom:15px;
 }
@@ -486,7 +486,7 @@ div#libevents li {
 /*navbar*/
 /*------------------------------------------------------------*/
 
-@import '../shared_content/sass/navbar';
+@import '../../shared_content/sass/navbar';
 
 /*News & Events, Dynamic Tabs*/
 /*------------------------------------------------------------*/
@@ -595,4 +595,4 @@ div#libevents li {
 # shared utility styles
 --------------------------------------------------------------*/
 
-@import '../shared_content/sass/shared-utility-style';
+@import '../../shared_content/sass/shared-utility-style';
