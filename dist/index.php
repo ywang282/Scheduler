@@ -1,30 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <title>University Library, University of Illinois</title>
-    <link rel="stylesheet" href="./assets/css/style-7f2ccf302a.css"> 
-    <link rel="stylesheet" href="http://cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css">
-    <link rel="icon" href="./assets/images/favicon.png" type="image/png" />
-    <script src="//cdn.jsdelivr.net/g/jquery@2.1"></script>
-    <script>window.jQuery || document.write('<script src="./assets/js/jquery-1.10.2.min.js"><\/script>')</script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>University Library, University of Illinois</title>
+  <link rel="stylesheet" href="./assets/css/style-7f2ccf302a.css"> 
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css">
+  <link rel="icon" href="./assets/images/favicon.png" type="image/png" />
+  <script src="//cdn.jsdelivr.net/g/jquery@2.1"></script>
+  <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><\/script>')</script>
 <!--[if lt IE 9]>
-    <script src="./assets/js/respond.min.js"></script>
-    <script src="./assets/js/html5shiv.js"></script>
-    <script src="./assets/js/css_browser_selector.js"></script>
-    <![endif]-->
-<!--[if gte IE 8]>
-    <link href="./assets/css/ie.css" rel="stylesheet" type="text/css" />
-    <![endif]-->
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 <!--[if lte IE 7]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <h1 class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</h1>
   <![endif]-->
    <div id="outer-wrap">
     <div id="inner-wrap">
