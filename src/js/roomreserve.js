@@ -1,4 +1,4 @@
-$(document).ready(function() {
+window.onload = function() {
 
 	//Initialize the Backbone Model
 	var Times = Backbone.Model.extend({
@@ -472,4 +472,4 @@ $(document).ready(function() {
  }); //fancybox
 
 
-});
+};

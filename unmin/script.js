@@ -2873,7 +2873,7 @@ $( "#mobile-canvas-button, .mobile-overlay" ).on( "click", function() {
 }); 
 
 
-$(document).ready(function() {
+window.onload = function() {
 
 	//Initialize the Backbone Model
 	var Times = Backbone.Model.extend({
@@ -3347,7 +3347,7 @@ $(document).ready(function() {
  }); //fancybox
 
 
-});
+};
 
 //conditionally run script if is NOT hours page. 
 if ( ((window.location.pathname).search( '/hours.php' )) === -1 )  {
