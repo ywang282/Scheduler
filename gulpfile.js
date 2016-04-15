@@ -24,15 +24,22 @@ var watch           = require('gulp-watch');
 // will run or not
 var production;
 
-//gulp default task for production. creates dev build and 
+//default task for production. creates dev build and 
 //starts watches
 gulp.task( 'default', [ 'build:dev', 'watch' ] );
 
+// build task for production.  sets production variable
+// to true which triggers conditionals that minify js, css,
+// decomments html, and versions css and js references in 
+// head and footer
 gulp.task( 'build:prod', function(cb) {
   production = true;
   runSequence( 'clean', copyArray, 'style', 'script', 'header-footer-rev-replace' );
 });
 
+// build task for development. sets production variable to false
+// which triggers conditional to creat sourcemaps for css but 
+// does not minify, uglify or version css and js. 
 gulp.task( 'build:dev', function(cb) {
   production = false;
   runSequence( 'clean', copyArray, 'style', 'script', 'header-footer-rev-replace' );
@@ -62,6 +69,7 @@ gulp.task('watch', function () {
   gulp.watch('./src/preprocess/*.php', [ 'header-footer-rev-replace' ]);
 });
 
+//tasks that copy necessary assets to dist directory
 var copyArray = [ 
 'copy:fonts', 
 'copy:shared-images', 
@@ -90,6 +98,10 @@ gulp.task( 'clean', function() {
   return del(['./dist/*', './unmin/*']);
 });
 
+// task stitches together php pages for dist; index, hours, and
+// search.  if production variable is true this is
+// when hashed versions of css and js filenames 
+// replace unversioned filenames in php and html comments removed.  
 gulp.task( 'header-footer-rev-replace', function() {
   if ( production === true ) {
     var manifest = gulp.src( './unmin/rev-manifest.json' );
@@ -113,8 +125,14 @@ gulp.task( 'header-footer-rev-replace', function() {
   .pipe( livereload() );
 });
 
-
-
+// style task queues two streams, first one is sass file, second
+// is array of css.  sass file has sourcemaps inserted if
+// production variable is false. the two are concatenated.
+// depending on production variable the resulting file is
+// minified and versioned and a manifest created. style task
+// must be run prior to script in a build as this tasks
+// rev.manifest will replace the existing manifest and scripts
+// is set to merge. 
 gulp.task( 'style', function() {
   return streamqueue( { objectMode: true }, 
     gulp.src( './src/sass/style.scss' )
@@ -139,7 +157,11 @@ gulp.task( 'style', function() {
   .pipe( livereload() );
 });
 
-
+// task to concat various javascript files. if production
+// variable is true then files are uglified and versioned. 
+// for versioning this task must be run after style as 
+// the style task's manifest will replace existing manifest
+// and this tasks's manifest will merge with existing manifest.
 gulp.task( 'script', function() {
   return gulp.src( script_array )
   .pipe(concat( 'script.js'))
@@ -181,7 +203,7 @@ var script_array = [
 
 
 var css_array = [
-  './bower_components/normalize.css/normalize.css',
+  //'./bower_components/normalize.css/normalize.css',
   './src/css/jquery-ui.min.css',
   './src/css/bootstrap-accessibility.css',
   './src/css/columnselect.css',
@@ -190,9 +212,8 @@ var css_array = [
   './src/css/hours_page.css'
   ];
 
-
+//error variable for plumber
 var onError = function( err ) {
   console.log( 'An error occurred:', err.message );
   this.emit( 'end' );
 };
-
