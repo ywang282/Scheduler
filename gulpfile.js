@@ -34,7 +34,7 @@ gulp.task( 'default', [ 'build:dev', 'watch' ] );
 // head and footer
 gulp.task( 'build:prod', function(cb) {
   production = true;
-  runSequence( 'clean', copyArray, 'style', 'script', 'header-footer-rev-replace' );
+  runSequence( 'clean', copyArray, 'style', 'script', 'php-stitch-rev' );
 });
 
 // build task for development. sets production variable to false
@@ -42,7 +42,7 @@ gulp.task( 'build:prod', function(cb) {
 // does not minify, uglify or version css and js. 
 gulp.task( 'build:dev', function(cb) {
   production = false;
-  runSequence( 'clean', copyArray, 'style', 'script', 'header-footer-rev-replace' );
+  runSequence( 'clean', copyArray, 'style', 'script', 'php-stitch-rev' );
 });
 
 //task to run for creating alert-training dist version.
@@ -61,12 +61,12 @@ gulp.task('watch', function () {
   gulp.watch('./src/js/*.js', [ 'scripts' ] );
   gulp.watch('./src/sass/**/*.scss', [ 'style' ] );
   gulp.watch('./shared_content/js/*.js', [ 'scripts' ] );
-  gulp.watch('./shared_content/php/*', [ 'header-footer-rev-replace' ] );
-  gulp.watch('./shared_content/php/*', [ 'header-footer-rev-replace' ] );
+  gulp.watch('./shared_content/php/*', [ 'php-stitch-rev' ] );
+  gulp.watch('./shared_content/php/*', [ 'php-stitch-rev' ] );
   gulp.watch('./shared_content/sass/**/*.scss', [ 'style' ] );
-  gulp.watch('./src/php/*.php', [ 'header-footer-rev-replace' ]);
-  gulp.watch('./src/preprocess/*.php', [ 'header-footer-rev-replace' ]);
-  gulp.watch('./src/preprocess/*.php', [ 'header-footer-rev-replace' ]);
+  gulp.watch('./src/php/*.php', [ 'php-stitch-rev' ]);
+  gulp.watch('./src/preprocess/*.php', [ 'php-stitch-rev' ]);
+  gulp.watch('./src/preprocess/*.php', [ 'php-stitch-rev' ]);
 });
 
 //tasks that copy necessary assets to dist directory
@@ -102,7 +102,7 @@ gulp.task( 'clean', function() {
 // search.  if production variable is true this is
 // when hashed versions of css and js filenames 
 // replace unversioned filenames in php and html comments removed.  
-gulp.task( 'header-footer-rev-replace', function() {
+gulp.task( 'php-stitch-rev', function() {
   if ( production === true ) {
     var manifest = gulp.src( './unmin/rev-manifest.json' );
   }
