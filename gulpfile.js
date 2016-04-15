@@ -9,6 +9,7 @@ var gulpif          = require('gulp-if');
 var livereload      = require('gulp-livereload');
 var plumber         = require('gulp-plumber');
 var preprocess      = require('gulp-preprocess');
+var replace         = require('gulp-replace');
 var rev             = require('gulp-rev');
 var revReplace      = require("gulp-rev-replace");
 var runSequence     = require('run-sequence');
@@ -35,6 +36,15 @@ gulp.task( 'build:prod', function(cb) {
 gulp.task( 'build:dev', function(cb) {
   production = false;
   runSequence( 'clean', copyArray, 'style', 'script', 'header-footer-rev-replace' );
+});
+
+//task to run for creating alert-training dist version.
+//updates alert proxy to point to dev machine. 
+//run after build:prod task
+gulp.task( 'alert-training', function() {
+  return gulp.src( './dist/proxies/alertproxy.php' )
+  .pipe(replace( 'status.uillinois.edu', 'status-dev.uillinois.edu' ))
+  .pipe(gulp.dest( './dist/proxies'));
 });
 
 gulp.task('watch', function () {
