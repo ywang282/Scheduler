@@ -64,11 +64,7 @@ gulp.task('watch', function () {
 
 var copyArray = [ 
 'copy:fonts', 
-// 'copy:images',
 'copy:shared-images', 
-// 'copy:utility', 
-// 'copy:ga', 
-// 'copy:jq-ui-images',
 'copy:src'
 ];
 
@@ -163,7 +159,7 @@ gulp.task( 'script', function() {
 var script_array = [
   './src/js/utilities.js',
   './src/js/alert.js', 
-  './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
+  './shared_content/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
   './src/js/bootstrap-accessibility.js',
   './src/js/jquery-ui.min.js',
   './src/js/off-canvas.js',
@@ -189,7 +185,7 @@ var css_array = [
   './src/css/jquery-ui.min.css',
   './src/css/bootstrap-accessibility.css',
   './src/css/columnselect.css',
-  './bower_components/fontawesome/css/font-awesome.css',
+  './shared_content/bower_components/font-awesome/css/font-awesome.css',
   './src/css/fix_emergency_alert.css',
   './src/css/hours_page.css'
   ];

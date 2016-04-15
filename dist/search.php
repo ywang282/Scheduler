@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>University Library, University of Illinois</title>
-  <link rel="stylesheet" href="./assets/css/style-7f2ccf302a.css"> 
+  <link rel="stylesheet" href="./assets/css/style-eebeaf129c.css"> 
   <link rel="stylesheet" href="http://cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css">
   <link rel="icon" href="./assets/images/favicon.png" type="image/png" />
   <script src="//cdn.jsdelivr.net/g/jquery@2.1"></script>
@@ -348,7 +348,7 @@
     </div>
   </script>
   <script type="text/javascript" src="./assets/js/get_time.php"></script>
-  <script type="text/javascript" src="./assets/js/script-6af815ef31.js"></script>
+  <script type="text/javascript" src="./assets/js/script-52a264eac6.js"></script>
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
