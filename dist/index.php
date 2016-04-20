@@ -73,7 +73,7 @@
               <li class="menu-item dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Help &amp; Services <span class="caret"></span></a>
                 <ul role="menu" class=" dropdown-menu">
                   <li class="menu-item" role="presentation"><a href="http://www.library.illinois.edu/askus/" role="menuitem" tabindex="-1">Ask a Librarian</a></li>
-                  <li class="menu-item" role="presentation"><a href="http://guides.library.illinois.edu/" role="menuitem" tabindex="-1">Guides</a></li>
+                  <li class="menu-item" role="presentation"><a href="http://guides.library.illinois.edu/" role="menuitem" tabindex="-1">Library Guides</a></li>
                   <li class="menu-item" role="presentation"><a href="http://www.library.illinois.edu/ill" role="menuitem" tabindex="-1">Interlibrary Loan</a></li>
                   <li class="menu-item" role="presentation"><a href="http://illinois.edu/calendar/list/4068" role="menuitem" tabindex="-1">Savvy Researcher Workshops</a></li>
                   <li class="menu-item" role="presentation"><a title="More about library help and services" href="http://www.library.illinois.edu/help-services/" role="menuitem" tabindex="-1"><span class="glyphicon More about library help and services"></span>&nbsp;MORE</a></li>
