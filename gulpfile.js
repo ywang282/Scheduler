@@ -1,3 +1,60 @@
+/*
+
+OVERVIEW: 
+
+In general only two tasks will need to be run for development.  The default gulp task, or "gulp" in the command line.  This will be used in development and produces unminified and unversioned css and js files and starts watches on files and reload content when necessary.  Reloading content requires the Chrome Browser extension, livereload.  The other task is 'build:prod' which will produce a /dist build that is ready for deployment with versioned and minified css and js files.  
+
+TASK LIST: 
+
+'default'
+  deps: 'build:dev', 'watch'
+  Run this task during development.  It will build the /dist directory with unminified css with sourcemaps and unuglified script. Watches will be places on relevant files and if Chrome Browser livereload, http://livereload.com/ , is installed and running the page will reload when any of the watched files are altered. 
+
+'build:prod'
+  deps: 'clean', copyArray, 'style', 'script', 'php-stitch-rev'
+  Run when prepared to deploy or prior to committing changes. The dependencies are run in sequence. The environment variable "production" is set to true for this task triggering several conditionals. 
+
+'build:dev'
+  deps: 'clean', copyArray, 'style', 'script', 'php-stitch-rev' 
+  This is a dependency of default gulp task.  Usually will not need to be run on it's own. Environment variable "production" set to false for this task.  Several conditionals rely on this variable.  Sourcemaps are produced for css from this task.  CSS and JS files are not minified nor are they versioned.
+
+'watch'
+  Triggers watches on multiple file locations and runs the corresponding gulp task to process the files. 
+
+'copy:fonts' 
+  Copies Font-Awesome font files to /dist/assets/fonts.
+
+'copy:shared-images'
+  Copies images from shared_content submodule to /dist/assets/images.
+
+'copy:src'
+  Copies static files that need no processing to /dist.
+
+'clean'
+  Deletes all files from /dist and /unmin to prevent orphaned or deleted files from lingering in production distribution codebase.
+
+'php-stitch-rev'
+  Produces /dist php files, index.php, hours.php and search.php.   Uses all php files in in /src/php/ as gulp.src.  Sets environment variables for shared content.  If production strips out comments and versions references in html header and footer to style.css and script.js based on rev-manifest.json created by 'style' and 'script' tasks.  
+
+'style'
+  Queues two streams, first one is sass file, second is array of css.  sass file has sourcemaps inserted if production variable is false. The two are concatenated. Depending on production variable the resulting file is minified and versioned and rev-manifest.json created. Style task must be run prior to script in a build as this tasks rev.manifest.json will replace the existing manifest and scripts rev-replace function is set to merge. An unminified version of the resulting file is saved in /unmin and the final version is saved in /dist/assets/css.
+
+'script'
+  Concatenates javascript files.  If production variable set to true then the resulting file is versioned with a hash value and uglified.  The rev-manifest.json file values created by this task are merged with the pre-existing rev-manifest.json created by the 'style' task. An unminified version of the resulting file is saved in /unmin and the final version is saved in /dist/assets/js.
+
+  'alert-training'
+    Task to be run after 'build:prod' to produce a version of the distribution code to be used for training on the University Alert Proxy Server.  A hostname reference is changed in the alertproxy.php file in /dist/proxies.  After the resulting code from this task has been copied to it's ultimate destination the repo should be reverted to previous commit or 'build:prod' should be run.  
+
+ARRAY LIST:
+
+css_array
+  List of css files to be concatenated with sass file.  
+
+script_array
+  List of js files to be concatened into main script.js file. This is where to add js file reference if a new file needs to be included in the project.  
+
+*/
+
 var autoprefixer    = require('gulp-autoprefixer');
 var concat          = require('gulp-concat');
 var cssnano         = require('gulp-cssnano');
@@ -43,15 +100,6 @@ gulp.task( 'build:prod', function(cb) {
 gulp.task( 'build:dev', function(cb) {
   production = false;
   runSequence( 'clean', copyArray, 'style', 'script', 'php-stitch-rev' );
-});
-
-//task to run for creating alert-training dist version.
-//updates alert proxy to point to dev machine. 
-//run after build:prod task
-gulp.task( 'alert-training', function() {
-  return gulp.src( './dist/proxies/alertproxy.php' )
-  .pipe(replace( 'status.uillinois.edu', 'status-dev.uillinois.edu' ))
-  .pipe(gulp.dest( './dist/proxies'));
 });
 
 gulp.task('watch', function () {
@@ -177,6 +225,14 @@ gulp.task( 'script', function() {
   .pipe( livereload() );
 });
 
+//task to run for creating alert-training dist version.
+//updates alert proxy to point to dev machine. 
+//run after build:prod task
+gulp.task( 'alert-training', function() {
+  return gulp.src( './dist/proxies/alertproxy.php' )
+  .pipe(replace( 'status.uillinois.edu', 'status-dev.uillinois.edu' ))
+  .pipe(gulp.dest( './dist/proxies'));
+});
 
 var script_array = [
   './src/js/utilities.js',
