@@ -368,6 +368,13 @@ $easysearch-color: $color__dark-navy;
   text-transform: uppercase;
 }
 
+.light-area .btn-primary:hover, .light-area .btn-primary:focus {
+    color: #2d4f8e;
+    background-color: #fff;
+    font-weight: 700;
+    outline: none;
+}
+
 .hoursMoreButton {
   padding: 2px 10px;
 }
